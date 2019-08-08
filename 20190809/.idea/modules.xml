@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/20190809.iml" filepath="$PROJECT_DIR$/.idea/20190809.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04-lesson/activities/katas/starter-code/RectPavingCompany/RectPavingCompany.iml" filepath="$PROJECT_DIR$/04-lesson/activities/katas/starter-code/RectPavingCompany/RectPavingCompany.iml" />
+      <module fileurl="file://$PROJECT_DIR$/05-lesson/activities/katas/starter-code/U1M1L5Katas/U1-M1-L5-katas.iml" filepath="$PROJECT_DIR$/05-lesson/activities/katas/starter-code/U1M1L5Katas/U1-M1-L5-katas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04-lesson/activities/katas/starter-code/minmaxavg/minmaxavg.iml" filepath="$PROJECT_DIR$/04-lesson/activities/katas/starter-code/minmaxavg/minmaxavg.iml" />
+    </modules>
+  </component>
+</project>
