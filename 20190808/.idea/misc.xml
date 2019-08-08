@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/activities/katas/starter-code/U1M1L3Katas/pom.xml" />
+        <option value="$PROJECT_DIR$/activities/04-Loan-Calculator/starter-code/LoanCalculator/pom.xml" />
+        <option value="$PROJECT_DIR$/activities/03-Fizz-Buzz/starter-code/FizzBuzz/pom.xml" />
+        <option value="$PROJECT_DIR$/activities/02-How-many-times-to-7/HowManyTimesTo7/pom.xml" />
+        <option value="$PROJECT_DIR$/activities/01-Hi-Lo/starter-code/HiLo/pom.xml" />
+        <option value="$PROJECT_DIR$/activities/05-Prime-Finder/starter-code/PrimeFinder/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+</project>
