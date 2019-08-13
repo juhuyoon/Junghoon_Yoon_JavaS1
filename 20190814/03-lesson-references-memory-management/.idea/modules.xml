@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/03-lesson-references-memory-management.iml" filepath="$PROJECT_DIR$/.idea/03-lesson-references-memory-management.iml" />
+      <module fileurl="file://$PROJECT_DIR$/activities/simple-calculator/starter-code/Calculator/Calculator.iml" filepath="$PROJECT_DIR$/activities/simple-calculator/starter-code/Calculator/Calculator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/activities/katas/starter-code/U1M2L3Katas/U1M2L3Katas.iml" filepath="$PROJECT_DIR$/activities/katas/starter-code/U1M2L3Katas/U1M2L3Katas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/code/parameterFun/parameterFun.iml" filepath="$PROJECT_DIR$/code/parameterFun/parameterFun.iml" />
+    </modules>
+  </component>
+</project>
