@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/05-lesson-interfaces/code/interfaces/pom.xml" />
+        <option value="$PROJECT_DIR$/05-lesson-interfaces/activities/katas/starter-code/U1M2L5Katas/pom.xml" />
+        <option value="$PROJECT_DIR$/05-lesson-interfaces/activities/implementation-userIO-interface/starter-code/UserIO/pom.xml" />
+        <option value="$PROJECT_DIR$/05-lesson-interfaces/activities/pbd/YoonJunghoonU1M2L5PBD/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+</project>
