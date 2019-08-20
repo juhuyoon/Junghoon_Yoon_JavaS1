@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/20190820.iml" filepath="$PROJECT_DIR$/.idea/20190820.iml" />
+      <module fileurl="file://$PROJECT_DIR$/01-lesson-collections/activities/katas/starter-code/U1M3L1Katas/U1M3L1Katas.iml" filepath="$PROJECT_DIR$/01-lesson-collections/activities/katas/starter-code/U1M3L1Katas/U1M3L1Katas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/02-lesson-maps/activities/katas/starter-code/U1M3L2Katas/U1M3L2Katas.iml" filepath="$PROJECT_DIR$/02-lesson-maps/activities/katas/starter-code/U1M3L2Katas/U1M3L2Katas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/01-lesson-collections/code/lists/lists.iml" filepath="$PROJECT_DIR$/01-lesson-collections/code/lists/lists.iml" />
+      <module fileurl="file://$PROJECT_DIR$/02-lesson-maps/code/maps/maps.iml" filepath="$PROJECT_DIR$/02-lesson-maps/code/maps/maps.iml" />
+    </modules>
+  </component>
+</project>
