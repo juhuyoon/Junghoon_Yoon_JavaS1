@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/20190822.iml" filepath="$PROJECT_DIR$/.idea/20190822.iml" />
+      <module fileurl="file://$PROJECT_DIR$/05-lesson-lambdas-streams/activities/pbd/JunghoonYoonU1M2L1PBD/JunghoonYoonU1M2L1PBD.iml" filepath="$PROJECT_DIR$/05-lesson-lambdas-streams/activities/pbd/JunghoonYoonU1M2L1PBD/JunghoonYoonU1M2L1PBD.iml" />
+      <module fileurl="file://$PROJECT_DIR$/05-lesson-lambdas-streams/activities/katas/U1M3L5Katas/U1M3L5Katas.iml" filepath="$PROJECT_DIR$/05-lesson-lambdas-streams/activities/katas/U1M3L5Katas/U1M3L5Katas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/05-lesson-lambdas-streams/code/lambdasstreams/lambdas-streams.iml" filepath="$PROJECT_DIR$/05-lesson-lambdas-streams/code/lambdasstreams/lambdas-streams.iml" />
+    </modules>
+  </component>
+</project>
