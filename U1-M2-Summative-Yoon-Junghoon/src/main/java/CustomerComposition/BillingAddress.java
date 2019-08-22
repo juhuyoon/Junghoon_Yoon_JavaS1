@@ -1,17 +1,21 @@
 package CustomerComposition;
 
+//BillingAddress class
 public class BillingAddress {
+    //individual properties
     private String street1;
     private String street2;
     private String city;
     private String state;
     private int zip;
 
+    //Override toString for display
     @Override
     public String toString() {
         return street1 + " " + street2 + " " + city + " " + state + "  " + zip;
     }
 
+    //Getters && Setters
     public String getStreet1() {
         return street1;
     }

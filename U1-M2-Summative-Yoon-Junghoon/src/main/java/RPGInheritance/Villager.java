@@ -1,5 +1,6 @@
 package RPGInheritance;
 
+//Main interface
 public interface Villager {
     public void run();
     public void attack();

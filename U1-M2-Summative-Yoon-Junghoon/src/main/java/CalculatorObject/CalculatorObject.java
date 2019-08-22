@@ -1,6 +1,9 @@
 package CalculatorObject;
 
 public class CalculatorObject {
+
+    //void methods to pull and do calculations.
+
     public void addition(int a, int b) {
         int sum = a + b;
         System.out.printf(a + " + " + b + " = " + sum + "\n");

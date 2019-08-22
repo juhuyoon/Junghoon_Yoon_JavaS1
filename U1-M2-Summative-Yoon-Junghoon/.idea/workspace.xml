@@ -1,7 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9c0ba014-5bfc-4cf5-84d5-608a3b80a864" name="Default Changelist" comment="" />
+    <list default="true" id="9c0ba014-5bfc-4cf5-84d5-608a3b80a864" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../20190822/05-lesson-lambdas-streams/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../20190822/05-lesson-lambdas-streams/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_8_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../20190822/05-lesson-lambdas-streams/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_8_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../20190822/05-lesson-lambdas-streams/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_8_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../20190822/05-lesson-lambdas-streams/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../U1-M1-Summative-Yoon-Junghoon/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20190822/05-lesson-lambdas-streams/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../20190822/05-lesson-lambdas-streams/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20190822/05-lesson-lambdas-streams/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../20190822/05-lesson-lambdas-streams/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20190822/05-lesson-lambdas-streams/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../20190822/05-lesson-lambdas-streams/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20190822/05-lesson-lambdas-streams/activities/katas/U1M3L5Katas/src/main/java/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../20190822/05-lesson-lambdas-streams/activities/katas/U1M3L5Katas/src/main/java/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20190822/05-lesson-lambdas-streams/activities/katas/U1M3L5Katas/target/classes/App$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../20190822/05-lesson-lambdas-streams/activities/katas/U1M3L5Katas/target/classes/App$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20190822/05-lesson-lambdas-streams/activities/katas/U1M3L5Katas/target/classes/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/../20190822/05-lesson-lambdas-streams/activities/katas/U1M3L5Katas/target/classes/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/U1-M2-Summative-Yoon-Junghoon.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CalculatorObject/CalculatorObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CalculatorObject/CalculatorObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CalculatorObject/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CalculatorObject/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ConverterInterface/ConverterApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ConverterInterface/ConverterApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ConverterInterface/ConverterIf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ConverterInterface/ConverterIf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ConverterInterface/ConverterSwitch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ConverterInterface/ConverterSwitch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CustomerComposition/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CustomerComposition/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CustomerComposition/BillingAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CustomerComposition/BillingAddress.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CustomerComposition/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CustomerComposition/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CustomerComposition/ShippingAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CustomerComposition/ShippingAddress.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/IceCreamClassDesign/IceCreamFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/IceCreamClassDesign/IceCreamFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/IceCreamClassDesign/IceCreamPOS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/IceCreamClassDesign/IceCreamPOS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RPGInheritance/Villager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RPGInheritance/Villager.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +47,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -27,7 +58,9 @@
     </option>
   </component>
   <component name="ProjectId" id="1PdyOFkyhC8z2NWWd1mdPm4Cdfr" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -131,5 +164,18 @@
       <updated>1566218234067</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

@@ -1,8 +1,12 @@
 package ConverterInterface;
 
+//Interface implementation
 public class ConverterSwitch implements Converter {
+
+    //abstract method pulled from interface
     @Override
     public String convertMonth(int monthNumber) {
+        //Main switch case logic for convertMonth
         String month = null;
         String errorMessage = "Please enter a number between 1 and 12";
         switch(monthNumber) {
@@ -48,10 +52,12 @@ public class ConverterSwitch implements Converter {
         return month;
     }
 
+    //abstract method pulled from convertDay
     @Override
     public String convertDay(int dayNumber) {
         String day = null;
         String errorMessage = "Please enter a number between 1 and 12";
+        //Main switch case logic for convertDay
 
         switch (dayNumber) {
 

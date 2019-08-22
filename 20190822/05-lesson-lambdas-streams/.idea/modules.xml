@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/05-lesson-lambdas-streams.iml" filepath="$PROJECT_DIR$/.idea/05-lesson-lambdas-streams.iml" />
+      <module fileurl="file://$PROJECT_DIR$/activities/katas/U1M3L5Katas/U1M3L5Katas.iml" filepath="$PROJECT_DIR$/activities/katas/U1M3L5Katas/U1M3L5Katas.iml" />
     </modules>
   </component>
 </project>

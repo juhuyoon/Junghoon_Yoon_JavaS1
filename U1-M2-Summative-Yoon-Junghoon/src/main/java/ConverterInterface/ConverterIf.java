@@ -1,8 +1,12 @@
 package ConverterInterface;
 
+//Interface implementation
 public class ConverterIf implements Converter {
+
+    //Interface abstract methods pulled for convertMonth
     @Override
     public String convertMonth(int monthNumber) {
+            //Main if/elif logic
             if(monthNumber == 1) {
                 return "January";
             } else if (monthNumber == 2) {
@@ -32,8 +36,10 @@ public class ConverterIf implements Converter {
         }
     }
 
+    //Interface abstract methods pulled for convertDay
     @Override
     public String convertDay(int dayNumber) {
+        //Main if/elif logic
         if(dayNumber == 1) {
             return "Sunday";
         } else if (dayNumber == 2) {

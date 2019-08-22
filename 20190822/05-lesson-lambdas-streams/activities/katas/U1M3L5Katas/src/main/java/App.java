@@ -3,10 +3,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class App {
@@ -54,6 +51,22 @@ public class App {
                     .max().getAsInt();
 
             System.out.println(maxTvScreenSize);
+
+//            System.out.println("===========");
+//            System.out.println("Sorting by Screen Size:");
+
+//            List<String> sortedList = televisionJson.stream()
+//                    .sorted(Comparator.comparingInt(Television::getScreenSize))
+//                    .collect(Collectors.toList());
+//
+//                    televisionJson.stream().sorted().forEach(t -> {
+//                        System.out.println("===============");
+//                        System.out.println("Screensize: " + t.getScreenSize());
+//                        System.out.println("Brand: " + t.getBrand());
+//                        System.out.println("Model: " + t.getModel());
+//                        System.out.println("Price: " + t.getPrice());
+//                            }
+//                    );
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }

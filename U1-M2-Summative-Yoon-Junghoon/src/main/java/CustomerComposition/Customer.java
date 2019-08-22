@@ -1,6 +1,8 @@
 package CustomerComposition;
 
+//Main Customer class
 public class Customer {
+    //initial properties
     private String firstName;
     private String lastname;
     private String email;
@@ -8,9 +10,11 @@ public class Customer {
     private String phoneNumber;
     private boolean rewardsMember;
 
+    //Using the separate classes.
     private ShippingAddress shippingAddress;
     private BillingAddress billingAddress;
 
+    //Constructor
     public Customer(String firstName, String lastname, String email, String phoneNumber, boolean rewardsMember, ShippingAddress shippingAddress, BillingAddress billingAddress) {
         this.firstName = firstName;
         this.lastname = lastname;
@@ -21,6 +25,7 @@ public class Customer {
         this.billingAddress = billingAddress;
     }
 
+    //Getters && Setters
     public String getFirstName() {
         return firstName;
     }
@@ -53,6 +58,7 @@ public class Customer {
         this.phoneNumber = phoneNumber;
     }
 
+    //checks for whether the Customer is a rewards member or not. (Boolean)
     public boolean isRewardsMember() {
         return rewardsMember;
     }

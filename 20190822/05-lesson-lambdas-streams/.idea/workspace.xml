@@ -1,7 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1ac88631-ef4e-4d87-8051-355753bab06f" name="Default Changelist" comment="" />
+    <list default="true" id="1ac88631-ef4e-4d87-8051-355753bab06f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_8_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_8_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_8_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../U1-M1-Summative-Yoon-Junghoon/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../U1-M2-Summative-Yoon-Junghoon/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/activities/katas/U1M3L5Katas/src/main/java/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/activities/katas/U1M3L5Katas/src/main/java/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/activities/katas/U1M3L5Katas/target/classes/App$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/activities/katas/U1M3L5Katas/target/classes/App$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/activities/katas/U1M3L5Katas/target/classes/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/activities/katas/U1M3L5Katas/target/classes/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../U1-M2-Summative-Yoon-Junghoon/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../U1-M2-Summative-Yoon-Junghoon/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../U1-M2-Summative-Yoon-Junghoon/U1-M2-Summative-Yoon-Junghoon.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../U1-M2-Summative-Yoon-Junghoon/src/main/java/CalculatorObject/CalculatorObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../U1-M2-Summative-Yoon-Junghoon/src/main/java/CalculatorObject/CalculatorObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../U1-M2-Summative-Yoon-Junghoon/src/main/java/CalculatorObject/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../U1-M2-Summative-Yoon-Junghoon/src/main/java/CalculatorObject/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../U1-M2-Summative-Yoon-Junghoon/src/main/java/ConverterInterface/ConverterApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../U1-M2-Summative-Yoon-Junghoon/src/main/java/ConverterInterface/ConverterApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../U1-M2-Summative-Yoon-Junghoon/src/main/java/ConverterInterface/ConverterIf.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../U1-M2-Summative-Yoon-Junghoon/src/main/java/ConverterInterface/ConverterIf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../U1-M2-Summative-Yoon-Junghoon/src/main/java/ConverterInterface/ConverterSwitch.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../U1-M2-Summative-Yoon-Junghoon/src/main/java/ConverterInterface/ConverterSwitch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../U1-M2-Summative-Yoon-Junghoon/src/main/java/CustomerComposition/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../U1-M2-Summative-Yoon-Junghoon/src/main/java/CustomerComposition/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../U1-M2-Summative-Yoon-Junghoon/src/main/java/CustomerComposition/BillingAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../U1-M2-Summative-Yoon-Junghoon/src/main/java/CustomerComposition/BillingAddress.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../U1-M2-Summative-Yoon-Junghoon/src/main/java/CustomerComposition/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../U1-M2-Summative-Yoon-Junghoon/src/main/java/CustomerComposition/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../U1-M2-Summative-Yoon-Junghoon/src/main/java/CustomerComposition/ShippingAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../U1-M2-Summative-Yoon-Junghoon/src/main/java/CustomerComposition/ShippingAddress.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../U1-M2-Summative-Yoon-Junghoon/src/main/java/IceCreamClassDesign/IceCreamFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../U1-M2-Summative-Yoon-Junghoon/src/main/java/IceCreamClassDesign/IceCreamFactory.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,13 +37,24 @@
   <component name="CodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
   <component name="ProjectId" id="1PjkHDTcFAgaLwkAJJwCDe5XPs0" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/activities/katas/U1M3L5Katas" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -31,6 +68,20 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="App" />
+      <module name="U1M3L5Katas" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.App" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -43,5 +94,18 @@
       <updated>1566394802673</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

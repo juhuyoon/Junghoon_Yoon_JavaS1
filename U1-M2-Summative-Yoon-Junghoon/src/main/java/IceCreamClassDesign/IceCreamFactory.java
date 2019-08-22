@@ -13,6 +13,7 @@ public class IceCreamFactory {
     private int packaging;
     private String deliveryRoutes;
 
+    //Constructor
     public IceCreamFactory(double flour, double ice, double cream, double milk, double sugar, double chocolate, int packaging, String deliveryRoutes) {
         this.flour = flour;
         this.ice = ice;
@@ -41,6 +42,7 @@ public class IceCreamFactory {
         return getDeliveryRoutes();
     }
 
+    //Getters & Setters
     public double getFlour() {
         return flour;
     }

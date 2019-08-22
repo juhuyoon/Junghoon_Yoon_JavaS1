@@ -1,6 +1,7 @@
 package IceCreamClassDesign;
 
 public class IceCreamPOS {
+    //Ice cream items
     private int vanillaIceCream;
     private int chocolateIceCream;
     private int strawberryIceCream;
@@ -12,6 +13,7 @@ public class IceCreamPOS {
     private String menu;
     private  double registrar;
 
+    //Default Constructor
     public IceCreamPOS(int vanillaIceCream, int chocolateIceCream, int strawberryIceCream, int iceCreamCones, int waffleCones, String iceCreamSign, String menu, double registrar) {
         this.vanillaIceCream = vanillaIceCream;
         this.chocolateIceCream = chocolateIceCream;
@@ -23,6 +25,7 @@ public class IceCreamPOS {
         this.registrar = registrar;
     }
 
+    //Methods specific to class
     public void putUpSign() {
         System.out.println("Welcome to !");
     }
@@ -36,6 +39,7 @@ public class IceCreamPOS {
         return count;
     }
 
+    //Getters && Setters
     public int getVanillaIceCream() {
         return vanillaIceCream;
     }

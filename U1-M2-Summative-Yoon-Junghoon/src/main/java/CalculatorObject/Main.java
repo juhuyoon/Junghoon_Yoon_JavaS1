@@ -2,8 +2,10 @@ package CalculatorObject;
 
 public class Main {
     public static void main(String[] args) {
+        //Instantiation of object
         CalculatorObject calc = new CalculatorObject();
 
+        //Usage of methods from that obj.
         calc.addition(1, 1);
         calc.subtraction(23, 52);
         calc.multiplication(34, 2);

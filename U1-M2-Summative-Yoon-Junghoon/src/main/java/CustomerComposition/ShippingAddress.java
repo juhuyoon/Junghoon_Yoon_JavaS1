@@ -1,6 +1,8 @@
 package CustomerComposition;
 
+//Shipping Class
 public class ShippingAddress {
+    //Individual properties
     private String street1;
     private String street2;
     private String city;
@@ -8,11 +10,13 @@ public class ShippingAddress {
     private int zip;
 
 
+    //Override toString for display
     @Override
     public String toString() {
         return street1 + " " + street2 + " " + city + " " + state + "  " + zip;
     }
 
+    //Getters && Setters
     public String getStreet1() {
         return street1;
     }
