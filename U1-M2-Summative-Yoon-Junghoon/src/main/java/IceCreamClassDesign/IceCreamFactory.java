@@ -25,12 +25,14 @@ public class IceCreamFactory {
         this.deliveryRoutes = deliveryRoutes;
     }
 
-    public void mixer() {
 
+
+    public void measureIngredients(double ingredients) {
+        System.out.println("Measuring ingredients!");
     }
 
-    public void measureIngredients() {
-
+    public void mixer(double flour, double ice, double cream, double milk) {
+        System.out.println("Mixing all the ingredients!");
     }
 
     public int packAndCount() {
