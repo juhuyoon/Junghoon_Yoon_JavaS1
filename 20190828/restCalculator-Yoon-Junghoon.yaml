@@ -1,0 +1,76 @@
+openapi: 3.0.0
+info:
+  title: REST Calculator
+  description: A simple app to do simple calculations with endpoints.
+  version: 0.0.1
+servers:
+  - url: 'http://localhost:8080'
+    description: Local dev server
+paths:
+  /add:
+    post:
+      summary: To add two operands together.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Calculator'
+      responses:
+        '200':
+          description: Sum of operand1 and operand2.
+        '422':
+          description: If missing operand or if operands are not both numbers.
+  /mult:
+    post:
+      summary: To multiply two operands together.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Calculator'
+      responses:
+        '200':
+          description: Product of operand1 and operand2.
+        '422':
+          description: If missing operand or if operands are not both numbers.
+  /subtract:
+    post:
+      summary: To subtract two operands together.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Calculator'
+      responses:
+        '200':
+          description: Difference of operand1 and operand2.
+        '422':
+          description: If missing operand or if operands are not both numbers.
+  /divide:
+    post:
+      summary: To divide two operands together.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Calculator'
+      responses:
+        '200':
+          description: Quotient of operand1 and operand2.
+        '422':
+          description: If missing operand or if operands are not both numbers.
+components:
+  schemas:
+    Calculator:
+      properties:
+        operand1:
+          type: integer
+        operand2:
+          type: integer
+      required:
+        - operand1
+        - operand2

@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c0ba014-5bfc-4cf5-84d5-608a3b80a864" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../20190822/05-lesson-lambdas-streams/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../20190822/05-lesson-lambdas-streams/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/IceCreamClassDesign/IceCreamFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/IceCreamClassDesign/IceCreamFactory.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

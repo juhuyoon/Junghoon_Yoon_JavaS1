@@ -1,0 +1,59 @@
+openapi: 3.0.0
+info:
+  title: Weather API
+  description: An API that fetches the weather based on the zipcode.
+  version: 0.0.1
+servers:
+  - url: 'http://localhost:8080'
+    description: Local dev server
+paths:
+  '/temp/{zipcode}':
+    get:
+      summary: Returns the temperature at that zipcode.
+      parameters:
+        - name: zipcode
+          in: path
+          required: true
+          description: The zipcode at the user's input
+          schema:
+            $ref: '#/components/schemas/Conditions'
+      responses:
+        '200':
+          description: JSON Object.
+        '422':
+          description: Did not return back JSON Object.
+  /conditions:
+    get:
+      summary: To multiply two operands together.
+      parameters:
+        - name: zipcode
+          in: path
+          required: true
+          description: The zipcode at the user's input
+          schema:
+            $ref: '#/components/schemas/Conditions'
+      responses:
+        '200':
+          description: JSON Object.
+        '422':
+          description: Did not return back JSON Object.
+components:
+  schemas:
+    Conditions:
+      type: object
+      properties:
+        windSpeed:
+          type: integer
+        windDirection:
+          type: integer
+        skies:
+          type: string
+        precipitation:
+          type: string
+        Temperature:
+          type: object
+          properties:
+            fahrenheit:
+              type: integer
+            celsius:
+              type: integer
