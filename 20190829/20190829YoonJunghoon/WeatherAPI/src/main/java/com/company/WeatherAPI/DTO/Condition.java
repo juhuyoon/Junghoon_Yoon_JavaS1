@@ -1,17 +1,39 @@
 package com.company.WeatherAPI.DTO;
 
-public class Celsius extends Temperature {
+public class Condition extends Temperature {
 
-    private int windSpeed;
+    private Number fahrenheit;
+    private Number celsius;
+    private Number windSpeed;
     private String windDirection;
     private String skies;
     private String precipitation;
 
-    public int getWindSpeed() {
+    @Override
+    public Number getFahrenheit() {
+        return fahrenheit;
+    }
+
+    @Override
+    public void setFahrenheit(Number fahrenheit) {
+        this.fahrenheit = fahrenheit;
+    }
+
+    @Override
+    public Number getCelsius() {
+        return celsius;
+    }
+
+    @Override
+    public void setCelsius(Number celsius) {
+        this.celsius = celsius;
+    }
+
+    public Number getWindSpeed() {
         return windSpeed;
     }
 
-    public void setWindSpeed(int windSpeed) {
+    public void setWindSpeed(Number windSpeed) {
         this.windSpeed = windSpeed;
     }
 

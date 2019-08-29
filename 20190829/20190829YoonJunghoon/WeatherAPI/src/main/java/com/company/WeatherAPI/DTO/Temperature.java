@@ -1,22 +1,22 @@
 package com.company.WeatherAPI.DTO;
 
 public class Temperature {
-    private int fahrenheit;
-    private int celsius;
+    private Number fahrenheit;
+    private Number celsius;
 
-    public int getFahrenheit() {
+    public Number getFahrenheit() {
         return fahrenheit;
     }
 
-    public void setFahrenheit(int fahrenheit) {
+    public void setFahrenheit(Number fahrenheit) {
         this.fahrenheit = fahrenheit;
     }
 
-    public int getCelsius() {
+    public Number getCelsius() {
         return celsius;
     }
 
-    public void setCelsius(int celsius) {
+    public void setCelsius(Number celsius) {
         this.celsius = celsius;
     }
 }
