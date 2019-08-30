@@ -1,0 +1,97 @@
+openapi: 3.0.0
+info:
+  title: City List
+  description: A simple service that allows CRUD operations for a city list system
+  version: 0.0.1
+servers:
+  - url: 'http://localhost:8080'
+    description: Local dev server
+paths:
+  /city:
+    post:
+      summary: Add a city object to the city list
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              # we are referencing the city object definition found at the bottom of the file
+              $ref: '#/components/schemas/City'
+      responses:
+        '201':
+          description: a city object
+          content:
+            application/json:
+              schema:
+                #we are referencing the city object definition found at the bottom of the file
+                $ref: '#/components/schemas/City'
+        '400':
+          description: Invalid request syntax.
+        '422':
+          description: Incomplete City information. Some required fields missing.
+    get:
+      summary: retrieves a list of all city objects
+      responses:
+        '201':
+          description: list of all city objects
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/City'
+                minimum: 1
+        
+  /city/{name}:
+    #GET, DELTE, and PUT are all under this path entry
+    delete:
+      summary: Deletes the entry for the city with the given name
+      parameters: 
+        - name: name
+          in: path
+          required: true
+          description: name of the city you would like to delete
+          schema:
+            type: string
+            minimum: 1
+      responses:
+        '200':
+          description: City successfully deleted
+          
+    get:
+      summary: retrieves the entry for the city with the given name
+      parameters: 
+        - name: name
+          in: path
+          required: true
+          description: name of the city you would like to retrieve
+          schema:
+            type: string
+            minimum: 1
+      responses:
+        '200':
+          description: City object matching given name
+          content:
+            application/json:
+              schema:
+                #we are referencing the city object definition found at the bottom of the file
+                $ref: '#/components/schemas/City'
+components:
+  schemas:
+    City:
+      properties:
+        name:
+          type: string
+        state:
+          type: string
+        population:
+          type: integer
+        isCapital:
+          type: boolean
+      required:
+        - name
+        - state
+        - population
+        - isCapital
+
+    
