@@ -15,7 +15,7 @@ public class CityListController {
     @PostMapping(value = {})
     @ResponseStatus(value = HttpStatus.OK)
     public Map<String, City> postCity(@RequestBody @Valid City city) throws IllegalArgumentException {
-        return services.returnMap(city);
+        return services.postCity(city);
         //return city;
     }
 

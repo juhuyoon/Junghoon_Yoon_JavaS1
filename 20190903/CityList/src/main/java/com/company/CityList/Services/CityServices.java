@@ -11,7 +11,7 @@ public class CityServices {
     Map<String, City> cityMap = new HashMap<>();
 
 
-    public Map<String, City> returnMap(City city) {
+    public Map<String, City> postCity(City city) {
         cityMap.put(city.getName(), city);
 
         return cityMap;
