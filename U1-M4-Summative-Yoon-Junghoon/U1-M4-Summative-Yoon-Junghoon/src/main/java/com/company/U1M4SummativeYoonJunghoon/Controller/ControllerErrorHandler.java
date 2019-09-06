@@ -27,7 +27,6 @@ public class ControllerErrorHandler {
         return responseEntity;
     }
 
-
     @ExceptionHandler(value = {MethodArgumentNotValidException.class})
     @ResponseStatus(HttpStatus.UNPROCESSABLE_ENTITY)
     public ResponseEntity<VndErrors> ControllerValidationError(MethodArgumentNotValidException e, WebRequest request) {

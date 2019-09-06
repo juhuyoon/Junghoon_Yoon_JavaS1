@@ -1,0 +1,14 @@
+CREATE SCHEMA IF NOT EXISTS car_lot;
+CREATE SCHEMA IF NOT EXISTS car_lot_test;
+
+USE car_lot;
+-- USE car_lot_test;
+
+CREATE TABLE IF NOT EXISTS car (
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    make VARCHAR(20) NOT NULL,
+    model VARCHAR(20) NOT NULL,
+    year VARCHAR(4) NOT NULL,
+    color VARCHAR(20) NOT NULL
+    
+);
