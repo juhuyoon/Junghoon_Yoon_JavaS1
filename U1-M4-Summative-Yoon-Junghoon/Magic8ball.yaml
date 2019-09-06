@@ -1,0 +1,36 @@
+openapi: 3.0.0
+info:
+  title: Magic 8 ball
+  description: A simple API for an Magic 8 ball app
+  version: 0.0.1
+servers: 
+  - url: http://localhost:8080
+    description: Local dev server
+  
+paths:
+  /magic:
+    post:
+      summary: Posts a question from the user.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+            #We are referencing the motorcycle object defn found at the bottom of the file
+              $ref: '#/components/schemas/Answer'
+      responses:
+        '200':
+          description: Answer given back 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Answer'
+              
+components:
+  schemas:
+  
+    Answer:
+      type: object
+      properties:
+        Answers:
+          type: string
