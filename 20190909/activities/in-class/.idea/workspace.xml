@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="14020d8e-c2ec-4036-8504-9386585bb66d" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="ProjectId" id="1QT5foWM3bg3Nv7xpeXVSPeExez" />
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.AlbumDaoTest">
+    <configuration name="AlbumDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rec-coll-jdbctemplate-dao (1)" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.reccolldao.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.company.reccolldao.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.company.reccolldao.dao.AlbumDaoTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ArtistDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rec-coll-jdbctemplate-dao (1)" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.reccolldao.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.company.reccolldao.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.company.reccolldao.dao.ArtistDaoTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ArtistDaoTest.addGetDeleteArtist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rec-coll-jdbctemplate-dao (1)" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.reccolldao.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.company.reccolldao.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.company.reccolldao.dao.ArtistDaoTest" />
+      <option name="METHOD_NAME" value="addGetDeleteArtist" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LabelDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rec-coll-jdbctemplate-dao (1)" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.reccolldao.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.company.reccolldao.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.company.reccolldao.dao.LabelDaoTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TrackDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rec-coll-jdbctemplate-dao (1)" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.reccolldao.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.company.reccolldao.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.company.reccolldao.dao.TrackDaoTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.AlbumDaoTest" />
+        <item itemvalue="JUnit.TrackDaoTest" />
+        <item itemvalue="JUnit.LabelDaoTest" />
+        <item itemvalue="JUnit.ArtistDaoTest" />
+        <item itemvalue="JUnit.ArtistDaoTest.addGetDeleteArtist" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="14020d8e-c2ec-4036-8504-9386585bb66d" name="Default Changelist" comment="" />
+      <created>1567781851651</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1567781851651</updated>
+    </task>
+    <servers />
+  </component>
+</project>
