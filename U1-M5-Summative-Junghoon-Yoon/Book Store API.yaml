@@ -1,0 +1,282 @@
+openapi: 3.0.0
+info:
+  title: Book Store API
+  description: >-
+    An API that retrieves and displays Books in accordance with their author and
+    publisher. 
+  version: 0.0.1
+servers:
+  - url: 'http://localhost:8080'
+    description: Local dev server
+paths:
+  /publisher:
+    post:
+      summary: Posts a publisher into the database.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Publisher'
+      responses:
+        '201':
+          description: Created
+    get:
+      summary: Retrieves the entry for the Publisher.
+      responses:
+        '200':
+          description: All Publisher Objects returned from DB.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Publisher'
+    delete:
+      summary: Deletes the entry for the publisher with the given ID.
+      parameters:
+        - name: publisher_id
+          in: path
+          required: true
+          description: ID of the publisher you would like to delete.
+          schema:
+            type: integer
+            format: int64
+            minimum: 1
+      responses:
+        '200':
+          description: Publisher successfully deleted.
+    put:
+      summary: Updated the entry for the Publisher with the given ID.
+      parameters:
+        - name: publisher_id
+          in: path
+          required: true
+          description: ID of the publisher you would like to update.
+          schema:
+            type: integer
+            format: int64
+            minimum: 1
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Publisher'
+      responses:
+        '200':
+          description: Publisher successfully updated.
+        '422':
+          description: Publisher ID on path must match the ID in the Publisher object.
+  /author:
+    post:
+      summary: Posts an author into the database.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Author'
+      responses:
+        '201':
+          description: Created
+    get:
+      summary: Retrieves the entry for the Author.
+      responses:
+        '200':
+          description: All Author Objects returned from DB.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Author'
+    delete:
+      summary: Deletes the entry for the author with the given ID.
+      parameters:
+        - name: author_id
+          in: path
+          required: true
+          description: ID of the author you would like to delete.
+          schema:
+            type: integer
+            format: int64
+            minimum: 1
+      responses:
+        '200':
+          description: Author successfully deleted.
+    put:
+      summary: Updated the entry for the Author with the given ID.
+      parameters:
+        - name: author_id
+          in: path
+          required: true
+          description: ID of the author you would like to update.
+          schema:
+            type: integer
+            format: int64
+            minimum: 1
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Author'
+      responses:
+        '200':
+          description: Author successfully updated.
+        '422':
+          description: Author ID on path must match the ID in the Author object.
+  /book:
+    post:
+      summary: Posts a book into the database.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Book'
+      responses:
+        '201':
+          description: Created
+    get:
+      summary: Retrieves the entry for the book.
+      responses:
+        '200':
+          description: All Book Objects returned from DB.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Book'
+    delete:
+      summary: Deletes the entry for the book with the given ID.
+      parameters:
+        - name: book_id
+          in: path
+          required: true
+          description: ID of the book you would like to delete.
+          schema:
+            type: integer
+            format: int64
+            minimum: 1
+      responses:
+        '200':
+          description: Book successfully deleted.
+    put:
+      summary: Updated the entry for the Book with the given ID.
+      parameters:
+        - name: book_id
+          in: path
+          required: true
+          description: ID of the book you would like to update.
+          schema:
+            type: integer
+            format: int64
+            minimum: 1
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Book'
+      responses:
+        '200':
+          description: Book successfully updated.
+        '422':
+          description: Book ID on path must match the ID in the Book object.
+  '/book/{authorid}':
+    get:
+      description: Returns a book based on authorid
+      parameters:
+        - name: authorid
+          in: path
+          required: true
+          description: The value you would like to have echoed back to you.
+          schema:
+            type: integer
+            format: int64
+            minimum: 1
+            maximum: 10
+      responses:
+        '200':
+          description: The value the you sent to the service.
+          content:
+            application/json:
+              schema:
+                type: integer
+components:
+  schemas:
+    Publisher:
+      properties:
+        publisher_id:
+          type: integer
+        name:
+          type: string
+        street:
+          type: string
+        city:
+          type: string
+        state:
+          type: string
+        postal_code:
+          type: string
+        phone:
+          type: string
+        email:
+          type: string
+      required:
+        - name
+        - street
+        - city
+        - state
+        - postal_code
+        - phone
+        - email
+    Author:
+      properties:
+        author_id:
+          type: integer
+        first_name:
+          type: string
+        last_name:
+          type: string
+        street:
+          type: string
+        city:
+          type: string
+        state:
+          type: string
+        postal_code:
+          type: string
+        phone:
+          type: string
+        email:
+          type: string
+      required:
+        - first_name
+        - last_name
+        - street
+        - city
+        - state
+        - postal_code
+        - phone
+        - email
+    Book:
+      properties:
+        book_id:
+          type: integer
+        isbn:
+          type: string
+        publish_date:
+          type: string
+        author_id:
+          type: integer
+        title:
+          type: string
+        publisher_id:
+          type: integer
+        price:
+          type: integer
+      required:
+        - isbn
+        - publish_date
+        - author_id
+        - title
+        - publisher_id
+        - price
