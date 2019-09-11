@@ -3,6 +3,7 @@ package com.company.JunghoonYoonU1M5Summative.model;
 import java.util.Objects;
 
 public class Publisher {
+    //Declaration of Variables
     private Integer id;
     private String name;
     private String street;
@@ -12,6 +13,7 @@ public class Publisher {
     private String phone;
     private String email;
 
+    //Getters and Setters
     public int getId() {
         return id;
     }

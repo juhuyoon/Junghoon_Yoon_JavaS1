@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.util.Objects;
 
 public class Book {
+    //Declaration of Variables
     private Integer id;
     private String isbn;
     private LocalDate publish_date;
@@ -12,6 +13,7 @@ public class Book {
     private Integer publisher_id;
     private Double price;
 
+    //Getters and Setters
     public int getId() {
         return id;
     }

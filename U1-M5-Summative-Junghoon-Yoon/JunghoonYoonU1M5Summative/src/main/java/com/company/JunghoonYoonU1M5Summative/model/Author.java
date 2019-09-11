@@ -3,6 +3,7 @@ package com.company.JunghoonYoonU1M5Summative.model;
 import java.util.Objects;
 
 public class Author {
+    //Declaration of Variables
     private Integer id;
     private String first_name;
     private String last_name;
@@ -13,6 +14,7 @@ public class Author {
     private String phone;
     private String email;
 
+    //Getters and Setters
     public int getId() {
         return id;
     }
