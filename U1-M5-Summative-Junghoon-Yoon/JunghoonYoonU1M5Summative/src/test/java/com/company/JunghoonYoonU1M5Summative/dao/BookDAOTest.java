@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -84,7 +85,7 @@ public class BookDAOTest {
         book.setAuthor_id(author.getId());
         book.setTitle("Redwall");
         book.setPublisher_id(publisher.getId());
-        book.setPrice(15.50);
+        book.setPrice(new BigDecimal("15.50"));
 
         book = bookDao.addBook(book);
 
@@ -136,7 +137,7 @@ public class BookDAOTest {
         book.setAuthor_id(author.getId());
         book.setTitle("Redwall");
         book.setPublisher_id(publisher.getId());
-        book.setPrice(15.50);
+        book.setPrice(new BigDecimal("15.50"));
 
         book = bookDao.addBook(book);
 
@@ -146,7 +147,7 @@ public class BookDAOTest {
         book.setAuthor_id(author.getId());
         book.setTitle("Camelot");
         book.setPublisher_id(publisher.getId());
-        book.setPrice(20.00);
+        book.setPrice(new BigDecimal("20.00"));
 
         bookDao.addBook(book);
 
@@ -190,7 +191,7 @@ public class BookDAOTest {
         book.setAuthor_id(author.getId());
         book.setTitle("Redwall");
         book.setPublisher_id(publisher.getId());
-        book.setPrice(15.50);
+        book.setPrice(new BigDecimal("15.50"));
 
         book = bookDao.addBook(book);
 
@@ -199,7 +200,7 @@ public class BookDAOTest {
         book.setAuthor_id(author.getId());
         book.setTitle("UPDATEBOOK");
         book.setPublisher_id(publisher.getId());
-        book.setPrice(20.00);
+        book.setPrice(new BigDecimal("20.00"));
 
         bookDao.updateBook(book);
 
@@ -267,7 +268,7 @@ public class BookDAOTest {
         book.setAuthor_id(author.getId());
         book.setTitle("Redwall");
         book.setPublisher_id(publisher.getId());
-        book.setPrice(15.50);
+        book.setPrice(new BigDecimal("15.50"));
 
         book = bookDao.addBook(book);
 
@@ -277,7 +278,7 @@ public class BookDAOTest {
         book.setAuthor_id(author2.getId());
         book.setTitle("Camelot");
         book.setPublisher_id(publisher.getId());
-        book.setPrice(20.00);
+        book.setPrice(new BigDecimal("20.00"));
 
         bookDao.addBook(book);
 
@@ -287,7 +288,7 @@ public class BookDAOTest {
         book.setAuthor_id(author3.getId());
         book.setTitle("Game of Thrones");
         book.setPublisher_id(publisher.getId());
-        book.setPrice(99.99);
+        book.setPrice(new BigDecimal("99.99"));
 
         bookDao.addBook(book);
 

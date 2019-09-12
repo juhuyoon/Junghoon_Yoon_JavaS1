@@ -1,5 +1,6 @@
 package com.company.JunghoonYoonU1M5Summative.model;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.Objects;
 
@@ -11,7 +12,7 @@ public class Book {
     private Integer author_id;
     private String title;
     private Integer publisher_id;
-    private Double price;
+    private BigDecimal price;
 
     //Getters and Setters
     public int getId() {
@@ -63,11 +64,11 @@ public class Book {
         this.publisher_id = publisher_id;
     }
 
-    public double getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(BigDecimal price) {
         this.price = price;
     }
 

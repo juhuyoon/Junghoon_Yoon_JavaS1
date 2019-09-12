@@ -124,7 +124,7 @@ public class BookDaoImpl implements BookDAO {
         book.setAuthor_id(rs.getInt("author_id"));
         book.setTitle(rs.getString("title"));
         book.setPublisher_id(rs.getInt("publisher_id"));
-        book.setPrice(rs.getDouble("price"));
+        book.setPrice(rs.getBigDecimal("price"));
 
         return book;
     }
