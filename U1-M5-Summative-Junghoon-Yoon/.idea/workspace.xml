@@ -1,7 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e322079e-847f-4bf5-9153-1f86006965af" name="Default Changelist" comment="" />
+    <list default="true" id="e322079e-847f-4bf5-9153-1f86006965af" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../JunghoonYoonU1Capstone/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JunghoonYoonU1Capstone/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/DAO/ConsoleDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JunghoonYoonU1Capstone/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/DAO/ConsoleDaoTempImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JunghoonYoonU1Capstone/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/DAO/GameDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JunghoonYoonU1Capstone/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/DAO/GameDaoTempImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JunghoonYoonU1Capstone/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/DAO/InvoiceDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JunghoonYoonU1Capstone/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/DAO/ProcessingFeesDaoTempImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JunghoonYoonU1Capstone/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/DAO/ProcessingFees_Dao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JunghoonYoonU1Capstone/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/DAO/SalesTaxRateDaoTempImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JunghoonYoonU1Capstone/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/DAO/SalesTaxRate_Dao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JunghoonYoonU1Capstone/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/DAO/TShirtDaoTempImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JunghoonYoonU1Capstone/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/DAO/TshirtDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JunghoonYoonU1Capstone/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/DTO/Console.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JunghoonYoonU1Capstone/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/DTO/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JunghoonYoonU1Capstone/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/DTO/Invoice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JunghoonYoonU1Capstone/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/DTO/Processing_Fees.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JunghoonYoonU1Capstone/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/DTO/Sales_Tax_Rate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JunghoonYoonU1Capstone/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/DTO/T_Shirt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JunghoonYoonU1Capstone/JunghoonYoonU1Capstone/src/test/java/com/company/JunghoonYoonU1Capstone/DAO/ConsoleDaoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JunghoonYoonU1Capstone/JunghoonYoonU1Capstone/src/test/java/com/company/JunghoonYoonU1Capstone/DAO/GameDaoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JunghoonYoonU1Capstone/JunghoonYoonU1Capstone/src/test/java/com/company/JunghoonYoonU1Capstone/DAO/ProcessingFees_DaoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JunghoonYoonU1Capstone/JunghoonYoonU1Capstone/src/test/java/com/company/JunghoonYoonU1Capstone/DAO/SalesTaxRate_DaoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JunghoonYoonU1Capstone/JunghoonYoonU1Capstone/src/test/java/com/company/JunghoonYoonU1Capstone/DAO/TshirtDaoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JunghoonYoonU1Capstone/JunghoonYoonU1Capstone/src/test/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JunghoonYoonU1Capstone/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_17.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JunghoonYoonU1Capstone/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_46.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JunghoonYoonU1Capstone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JunghoonYoonU1Capstone/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JunghoonYoonU1Capstone/JunghoonYoonU1Capstone/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JunghoonYoonU1Capstone/JunghoonYoonU1Capstone/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JunghoonYoonU1Capstone/JunghoonYoonU1Capstone/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../JunghoonYoonU1Capstone/JunghoonYoonU1Capstone/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +50,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -28,6 +61,7 @@
     </option>
   </component>
   <component name="ProjectId" id="1Qbd68BIuY0ykFPaSg110mNSzsb" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
@@ -57,7 +91,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.AuthorDAOTest">
+  <component name="RunManager" selected="JUnit.BookDAOTest">
     <configuration name="AuthorDAOTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JunghoonYoonU1M5Summative" />
       <extension name="coverage">
@@ -89,8 +123,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BookDAOTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JunghoonYoonU1M5Summative" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.JunghoonYoonU1M5Summative.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.company.JunghoonYoonU1M5Summative.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.company.JunghoonYoonU1M5Summative.dao.BookDAOTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BookDAOTest" />
         <item itemvalue="JUnit.AuthorDAOTest" />
         <item itemvalue="JUnit.AuthorDAOTest.updateAuthor" />
       </list>
@@ -108,5 +158,16 @@
       <updated>1568043051704</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
