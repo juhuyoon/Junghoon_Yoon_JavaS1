@@ -2,7 +2,6 @@ package com.company.JunghoonYoonU1Capstone.ServiceLayer;
 
 import com.company.JunghoonYoonU1Capstone.DAO.*;
 import com.company.JunghoonYoonU1Capstone.DTO.*;
-import com.company.JunghoonYoonU1Capstone.ViewModel.InvoiceViewModel;
 import com.company.JunghoonYoonU1Capstone.ViewModel.OrderViewModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -31,7 +30,7 @@ public class ServiceLayer {
     }
 
         @Transactional
-        public OrderViewModel saveOrder(OrderViewModel viewModel) {
+        public OrderViewModel addOrder(OrderViewModel viewModel) {
             Invoice invoice = new Invoice();
             invoice.setName(viewModel.getName());
             invoice.setStreet(viewModel.getStreet());
@@ -40,70 +39,117 @@ public class ServiceLayer {
             invoice.setZipcode(viewModel.getZipcode());
             invoice.setItem_type(viewModel.getItem_type());
             invoice.setItem_id(viewModel.getItem_id());
-//            invoice.setUnit_price();
             invoice.setQuantity(viewModel.getQuantity());
-//            invoice.setSubtotal();
-//            invoice.setTax();
-//            invoice.setProcessing_fee();
-//            invoice.setTotal();
 
-            viewModel.setOrder_id(invoice.getInvoice_id());
 
-            switch(viewModel.getItem_type()) {
+//            invoice.setUnit_price(new BigDecimal("15.99"));
+//            invoice.setSubtotal(new BigDecimal("5.99"));
+//            invoice.setTax(new BigDecimal("0.06"));
+//            invoice.setProcessing_fee(new BigDecimal("15.55"));
+//            invoice.setTotal(new BigDecimal("100.00"));
+
+
+            switch(invoice.getItem_type()) {
                 case("Games"): {
-                    gameDao.getGame(viewModel.getItem_id());
+                    //Grab game ID
+                    Game game1 = gameDao.getGame(viewModel.getItem_id());
+                    //Set processing fee by type
                     Processing_Fee pFee = pFeesDao.getProcessingFees("Games");
-                    invoice.setUnit_price(pFee.getFee());
+
+                    //Set Unit Price
+                    invoice.setUnit_price(game1.getPrice());
+
+                    //Subtotal math
                     BigDecimal subTotal = (new BigDecimal(invoice.getQuantity()).multiply(invoice.getUnit_price()));
                     invoice.setSubtotal(subTotal);
 
+                    //Taxes
+                    Sales_Tax_Rate salesTax1 = salesTaxDao.getSalesTaxRate(invoice.getState());
+
+                    invoice.setTax(salesTax1.getRate());
+
+                    //Processing Fee
+                    invoice.setProcessing_fee(pFee.getFee());
+                    if(invoice.getQuantity() > 10) {
+                        BigDecimal moreThanTen = invoice.getProcessing_fee().add(new BigDecimal("15.49"));
+                        invoice.setProcessing_fee(moreThanTen);
+                    }
+
+                    //Total
+                    BigDecimal newTotal = invoice.getSubtotal().add((invoice.getSubtotal().multiply(invoice.getTax()).add(invoice.getProcessing_fee())));
+                    newTotal = newTotal.setScale(2, BigDecimal.ROUND_HALF_EVEN);
+
+                    invoice.setTotal(newTotal);
+                    invoiceDao.addInvoice(invoice);
+                    System.out.println(invoice);
                     break;
                 }
                 case("Consoles"): {
-                    consoleDao.getConsole(viewModel.getItem_id());
+                    //Grab ConsoleID
+                    Console console1 = consoleDao.getConsole(viewModel.getItem_id());
+                    //Grab Processing Fee by Type
                     Processing_Fee pFee = pFeesDao.getProcessingFees("Consoles");
-                    invoice.setUnit_price(pFee.getFee());
+                    //Set Unit Price
+                    invoice.setUnit_price(console1.getPrice());
+
+                    //Subtotal Math
+                    BigDecimal subTotal = (new BigDecimal(invoice.getQuantity()).multiply(invoice.getUnit_price()));
+                    invoice.setSubtotal(subTotal);
+
+                    //Processing Fee
+                    invoice.setProcessing_fee(pFee.getFee());
+                    if(invoice.getQuantity() > 10) {
+                        BigDecimal moreThanTen = invoice.getProcessing_fee().add(new BigDecimal("15.49"));
+                        invoice.setProcessing_fee(moreThanTen);
+                    }
+
+                    //Taxes
+                    Sales_Tax_Rate salesTax1 = salesTaxDao.getSalesTaxRate(invoice.getState());
+                    invoice.setTax(salesTax1.getRate());
+
+                    BigDecimal newTotal = (invoice.getSubtotal().multiply(invoice.getTax())).add(invoice.getProcessing_fee());
+
+                    invoice.setTotal(newTotal);
                     break;
                 }
                 case("T-Shirts"): {
-                    tshirtDao.getTShirt(viewModel.getItem_id());
+                    //Grab Tshirt ID
+                    TShirt tShirt1 = tshirtDao.getTShirt(viewModel.getItem_id());
+                    //Grab Processing Fee By Type
                     Processing_Fee pFee = pFeesDao.getProcessingFees("T-Shirts");
-                    invoice.setUnit_price(pFee.getFee());
+                    //Set Unit Price
+                    invoice.setUnit_price(tShirt1.getPrice());
+
+                    //Subtotal Math
+                    BigDecimal subTotal = (new BigDecimal(invoice.getQuantity()).multiply(invoice.getUnit_price()));
+                    invoice.setSubtotal(subTotal);
+
+                    //Processing Fee
+                    invoice.setProcessing_fee(pFee.getFee());
+                    if(invoice.getQuantity() > 10) {
+                        BigDecimal moreThanTen = invoice.getProcessing_fee().add(new BigDecimal("15.49"));
+                        invoice.setProcessing_fee(moreThanTen);
+                    }
+
+                    //Taxes
+                    Sales_Tax_Rate salesTax1 = salesTaxDao.getSalesTaxRate(invoice.getState());
+                    invoice.setTax(salesTax1.getRate());
+
+                    BigDecimal newTotal = (invoice.getSubtotal().multiply(invoice.getTax())).add(invoice.getProcessing_fee());
+
+                    invoice.setTotal(newTotal);
                     break;
                 }
                 default:
                     System.out.println("Could not find the item type in the database. Please try again.");
                     return null;
             }
-
+            viewModel.setOrder_id(invoice.getInvoice_id());
             return viewModel;
         }
-//
-//    public InvoiceViewModel getOrder(OrderViewModel viewModel) {
-//
-//    }
 
-        //Helper Methods
-
-        //Building up the view model for invoice to show back.
-        private InvoiceViewModel buildInvoiceViewModel(Invoice invoice) {
-            InvoiceViewModel ivm = new InvoiceViewModel();
-            ivm.setName(invoice.getName());
-            ivm.setStreet(invoice.getStreet());
-            ivm.setCity(invoice.getCity());
-            ivm.setState(invoice.getState());
-            ivm.setZipcode(invoice.getZipcode());
-            ivm.setItem_type(invoice.getItem_type());
-            ivm.setUnit_price(invoice.getUnit_price());
-            ivm.setQuantity(invoice.getQuantity());
-            ivm.setSubtotal(invoice.getSubtotal());
-            ivm.setTax(invoice.getTax());
-            ivm.setProcessing_fee(invoice.getProcessing_fee());
-            ivm.setTotal(invoice.getTotal());
-
-            return ivm;
-        }
-
-
-
+    public Invoice getOrder(Integer invoiceId) {
+        Invoice invoice = invoiceDao.getInvoice(invoiceId);
+        return invoice;
+    }
 }

@@ -1,10 +1,39 @@
 package com.company.JunghoonYoonU1Capstone.Controller;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.company.JunghoonYoonU1Capstone.DAO.InvoiceDao;
+import com.company.JunghoonYoonU1Capstone.DTO.Invoice;
+import com.company.JunghoonYoonU1Capstone.ServiceLayer.ServiceLayer;
+import com.company.JunghoonYoonU1Capstone.ViewModel.OrderViewModel;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
+import java.util.List;
 
 @RestController
 @RequestMapping(value ="/Invoice")
 public class InvoiceController {
+    @Autowired
+    private ServiceLayer service;
+    @Autowired
+    private InvoiceDao invoiceDao;
 
+    @PostMapping(value = "")
+    @ResponseStatus(value = HttpStatus.CREATED)
+    public OrderViewModel addOrderViewModel(@RequestBody @Valid OrderViewModel ovm) {
+        return service.addOrder(ovm);
+    }
+
+    @GetMapping(value ="{invoiceId}")
+    @ResponseStatus(value = HttpStatus.OK)
+    public Invoice getInvoice(@PathVariable(name = "invoiceId") Integer invoiceId) {
+        return invoiceDao.getInvoice(invoiceId);
+    }
+
+    @GetMapping(value = "")
+    @ResponseStatus(value = HttpStatus.OK)
+    public List<Invoice> getInvoice() {
+        return invoiceDao.getAllInvoice();
+    }
 }

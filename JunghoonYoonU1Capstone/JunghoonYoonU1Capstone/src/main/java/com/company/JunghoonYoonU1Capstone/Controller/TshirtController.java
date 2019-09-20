@@ -15,33 +15,35 @@ public class TshirtController {
     @Autowired
     private TshirtDao tshirtDao;
 
-    @GetMapping(value = "/{tShirtId}")
+    private TShirt tShirt;
+
+    @GetMapping(value = "/get/{tShirtId}")
     @ResponseStatus(value = HttpStatus.OK)
     public TShirt getTshirt(@PathVariable(name="tShirtId") Integer tShirtId) {
         return tshirtDao.getTShirt(tShirtId);
     }
 
-    @GetMapping("/")
+    @GetMapping("")
     @ResponseStatus(value = HttpStatus.OK)
     public List<TShirt> getAllTShirts() {
         return tshirtDao.getAllTShirts();
     }
 
-    @PostMapping("/")
+    @PostMapping("")
     @ResponseStatus(value = HttpStatus.CREATED)
     public TShirt addTShirt(@RequestBody @Valid TShirt tShirt) {
         tshirtDao.addTShirt(tShirt);
         return tShirt;
     }
 
-    @PutMapping("/")
+    @PutMapping("/update")
     @ResponseStatus(value = HttpStatus.ACCEPTED)
     public String updateTShirt(@RequestBody @Valid TShirt tShirt) {
         tshirtDao.updateTShirt(tShirt);
         return "T Shirt Updated";
     }
 
-    @DeleteMapping("/{tShirtId}")
+    @DeleteMapping("/delete/{tShirtId}")
     @ResponseStatus(value = HttpStatus.OK)
     public String deleteTShirt(@PathVariable(name="tShirtId") Integer tShirtId) {
         tshirtDao.deleteTShirt(tShirtId);

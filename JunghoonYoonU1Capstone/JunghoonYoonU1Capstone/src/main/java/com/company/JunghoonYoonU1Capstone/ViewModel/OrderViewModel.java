@@ -85,24 +85,25 @@ public class OrderViewModel {
         this.quantity = quantity;
     }
 
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         OrderViewModel that = (OrderViewModel) o;
-        return order_id.equals(that.order_id) &&
-                name.equals(that.name) &&
-                street.equals(that.street) &&
-                city.equals(that.city) &&
-                state.equals(that.state) &&
-                zipcode.equals(that.zipcode) &&
-                item_type.equals(that.item_type) &&
-                item_id.equals(that.item_id) &&
-                quantity.equals(that.quantity);
+        return getOrder_id().equals(that.getOrder_id()) &&
+                getName().equals(that.getName()) &&
+                getStreet().equals(that.getStreet()) &&
+                getCity().equals(that.getCity()) &&
+                getState().equals(that.getState()) &&
+                getZipcode().equals(that.getZipcode()) &&
+                getItem_type().equals(that.getItem_type()) &&
+                getItem_id().equals(that.getItem_id()) &&
+                getQuantity().equals(that.getQuantity());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(order_id, name, street, city, state, zipcode, item_type, item_id, quantity);
+        return Objects.hash(getOrder_id(), getName(), getStreet(), getCity(), getState(), getZipcode(), getItem_type(), getItem_id(), getQuantity());
     }
 }

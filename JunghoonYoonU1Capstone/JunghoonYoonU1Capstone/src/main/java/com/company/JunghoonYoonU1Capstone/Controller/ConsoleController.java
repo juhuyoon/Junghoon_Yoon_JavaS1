@@ -14,40 +14,41 @@ import java.util.List;
 public class ConsoleController {
     @Autowired
     private ConsoleDao consoleDao;
+    private Console console;
 
-    @GetMapping("/{consoleId}")
+    @GetMapping("/get/{consoleId}")
     @ResponseStatus(value = HttpStatus.OK)
     public Console getConsole(@PathVariable(name="consoleId") Integer consoleId) {
         return consoleDao.getConsole(consoleId);
     }
 
-    @GetMapping("/")
+    @GetMapping("")
     @ResponseStatus(value = HttpStatus.OK)
     public List<Console> getAllConsoles() {
         return consoleDao.getAllConsoles();
     }
 
-    @PostMapping("/{consoleId}")
+    @PostMapping("")
     @ResponseStatus(value = HttpStatus.CREATED)
     public Console addConsole(@RequestBody @Valid Console console) {
         return consoleDao.addConsole(console);
     }
 
-    @PutMapping("/")
+    @PutMapping("/update")
     @ResponseStatus(value = HttpStatus.ACCEPTED)
-    public String updateConsole(@RequestBody Console console) {
+    public String updateConsole( @RequestBody Console console) {
         consoleDao.updateConsole(console);
         return "Console has been updated!";
     }
 
-    @DeleteMapping("/{consoleId}")
+    @DeleteMapping("/delete/{consoleId}")
     @ResponseStatus(value = HttpStatus.OK)
     public String deleteConsole(@PathVariable(name = "consoleId") Integer consoleId) {
         consoleDao.deleteConsole(consoleId);
         return "Console has been deleted!";
     }
 
-    @GetMapping("/{manufacturer}")
+    @GetMapping("/manufacturer/{manufacturer}")
     @ResponseStatus(value = HttpStatus.OK)
     public List<Console> getConsolesByManufacturer(@PathVariable(name = "manufacturer") String manufacturer){
         return consoleDao.getConsolesByManufacturer(manufacturer);
