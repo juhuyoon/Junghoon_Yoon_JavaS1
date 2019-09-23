@@ -1,5 +1,7 @@
 package com.company.JunghoonYoonU1Capstone.DTO;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
@@ -18,6 +20,8 @@ public class Game {
     @NotEmpty(message = "Supply the studio name")
     private String studio;
     @NotNull(message = "Give the quantity of the product")
+    @Min(value = 1)
+    @Max(value = 11)
     private Integer quantity;
 
     public Integer getGame_id() {

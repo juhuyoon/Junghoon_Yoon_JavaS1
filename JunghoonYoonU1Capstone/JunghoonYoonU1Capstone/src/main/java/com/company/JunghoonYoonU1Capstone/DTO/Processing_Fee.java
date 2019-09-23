@@ -1,5 +1,6 @@
 package com.company.JunghoonYoonU1Capstone.DTO;
 
+import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
@@ -9,6 +10,7 @@ public class Processing_Fee {
     @NotEmpty(message = "Enter the product type")
     private String product_type;
     @NotNull(message = "Enter the fee")
+    @Digits(integer = 5, fraction = 2)
     private BigDecimal fee;
 
     public String getProduct_type() {

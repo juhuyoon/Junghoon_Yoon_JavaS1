@@ -1,5 +1,6 @@
 package com.company.JunghoonYoonU1Capstone.DTO;
 
+import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
@@ -9,6 +10,7 @@ public class Sales_Tax_Rate {
     @NotEmpty(message = "Enter the state")
     private String state;
     @NotNull(message = "Enter the tax rate based on state. ")
+    @Digits(integer = 5, fraction = 2)
     private BigDecimal rate;
 
     public String getState() {

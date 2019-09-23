@@ -3,15 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="c40336fb-612f-41c9-9c74-cd99388e14c3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/Controller/ConsoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/Controller/ConsoleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/Controller/ControllerExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/Controller/ControllerExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/Controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/Controller/GameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/Controller/InvoiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/Controller/InvoiceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/Controller/TshirtController.java" beforeDir="false" afterPath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/Controller/TshirtController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/DAO/InvoiceDaoTempImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/DAO/InvoiceDaoTempImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/ServiceLayer/ServiceLayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/ServiceLayer/ServiceLayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/ViewModel/OrderViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/ViewModel/OrderViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/test/java/com/company/JunghoonYoonU1Capstone/Controller/InvoiceControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/test/java/com/company/JunghoonYoonU1Capstone/Controller/InvoiceControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/DTO/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/DTO/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/DTO/Invoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/DTO/Invoice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/DTO/Processing_Fee.java" beforeDir="false" afterPath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/DTO/Processing_Fee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/DTO/Sales_Tax_Rate.java" beforeDir="false" afterPath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/DTO/Sales_Tax_Rate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/DTO/TShirt.java" beforeDir="false" afterPath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/DTO/TShirt.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,7 +46,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/JunghoonYoonU1Capstone/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -84,18 +80,16 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.InvoiceControllerTest.addOrderViewModel">
-    <configuration name="ConsoleControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.JunghoonYoonU1CapstoneApplication">
+    <configuration name="JunghoonYoonU1CapstoneApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.JunghoonYoonU1Capstone.JunghoonYoonU1CapstoneApplication" />
       <module name="JunghoonYoonU1Capstone" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.company.JunghoonYoonU1Capstone.Controller.*" />
+          <option name="PATTERN" value="com.company.JunghoonYoonU1Capstone.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.company.JunghoonYoonU1Capstone.Controller" />
-      <option name="MAIN_CLASS_NAME" value="com.company.JunghoonYoonU1Capstone.Controller.ConsoleControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -163,11 +157,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.JunghoonYoonU1CapstoneApplication" />
         <item itemvalue="JUnit.InvoiceControllerTest.addOrderViewModel" />
         <item itemvalue="JUnit.InvoiceControllerTest" />
         <item itemvalue="JUnit.TshirtControllerTest" />
         <item itemvalue="JUnit.GameControllerTest" />
-        <item itemvalue="JUnit.ConsoleControllerTest" />
       </list>
     </recent_temporary>
   </component>

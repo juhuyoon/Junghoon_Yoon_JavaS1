@@ -1,5 +1,7 @@
 package com.company.JunghoonYoonU1Capstone.DTO;
 
+import javax.validation.constraints.Digits;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
@@ -14,8 +16,10 @@ public class TShirt {
     @NotEmpty(message = "Enter the description")
     private String description;
     @NotNull(message = "Enter the price")
+    @Digits(integer = 5, fraction =2)
     private BigDecimal price;
     @NotNull(message = "Enter the quantity")
+    @Min(value = 1)
     private Integer quantity;
 
     public Integer getT_shirt_id() {

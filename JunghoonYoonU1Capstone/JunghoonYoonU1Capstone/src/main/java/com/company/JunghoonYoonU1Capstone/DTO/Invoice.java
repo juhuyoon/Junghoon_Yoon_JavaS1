@@ -1,5 +1,7 @@
 package com.company.JunghoonYoonU1Capstone.DTO;
 
+import javax.validation.constraints.Digits;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
@@ -22,16 +24,22 @@ public class Invoice {
     @NotEmpty(message = "Input an item id")
     private Integer item_id;
     @NotEmpty(message = "Input the unit price")
+    @Digits(integer = 5, fraction = 2)
     private BigDecimal unit_price;
     @NotEmpty(message = "Input the quantity of the product")
+    @Min(value = 1)
     private Integer quantity;
     @NotEmpty(message = "Add on the subtotal")
+    @Digits(integer = 5, fraction = 2)
     private BigDecimal subtotal;
     @NotEmpty(message = "Link the tax")
+    @Digits(integer = 5, fraction = 2)
     private BigDecimal tax;
     @NotEmpty(message = "Enter the processing fee")
+    @Digits(integer = 5, fraction = 2)
     private BigDecimal processing_fee;
     @NotEmpty(message = "Get the total amount")
+    @Digits(integer = 5, fraction = 2)
     private BigDecimal total;
 
     public Integer getInvoice_id() {
