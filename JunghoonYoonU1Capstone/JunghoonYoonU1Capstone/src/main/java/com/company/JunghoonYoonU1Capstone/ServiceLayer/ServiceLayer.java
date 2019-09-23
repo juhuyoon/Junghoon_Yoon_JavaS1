@@ -30,6 +30,7 @@ public class ServiceLayer {
         this.invoiceDao = invoiceDao;
     }
 
+        //Adding the order view model to the database
         @Transactional
         public OrderViewModel addOrder(OrderViewModel viewModel) {
             Invoice invoice = new Invoice();
@@ -42,6 +43,7 @@ public class ServiceLayer {
             invoice.setItem_id(viewModel.getItem_id());
             invoice.setQuantity(viewModel.getQuantity());
 
+            //Finding the correct table reference to access from item type.
             switch(invoice.getItem_type()) {
                 case("Games"): {
                     //Grab game ID
@@ -141,6 +143,7 @@ public class ServiceLayer {
             return viewModel;
         }
 
+        //Gets the Invoice to display from the order.
     public Invoice getOrder(Integer invoiceId) {
         Invoice invoice = invoiceDao.getInvoice(invoiceId);
         return invoice;

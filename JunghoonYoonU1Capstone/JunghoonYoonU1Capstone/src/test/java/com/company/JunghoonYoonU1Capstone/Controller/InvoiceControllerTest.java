@@ -58,6 +58,7 @@ public class InvoiceControllerTest {
         ovm.setItem_type("Games");
         ovm.setItem_id(1);
         ovm.setQuantity(10);
+        ovm.setOrder_id(1);
 
         String inputJson = mapper.writeValueAsString(ovm);
 

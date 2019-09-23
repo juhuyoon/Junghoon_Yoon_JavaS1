@@ -19,18 +19,21 @@ public class InvoiceController {
     @Autowired
     private InvoiceDao invoiceDao;
 
+    //Adding an Order View Model
     @PostMapping(value = "")
     @ResponseStatus(value = HttpStatus.CREATED)
     public OrderViewModel addOrderViewModel(@RequestBody @Valid OrderViewModel ovm) {
         return service.addOrder(ovm);
     }
 
+    //Getting back the invoice
     @GetMapping(value ="/get/{invoiceId}")
     @ResponseStatus(value = HttpStatus.OK)
     public Invoice getInvoice(@PathVariable(name = "invoiceId") Integer invoiceId) {
         return invoiceDao.getInvoice(invoiceId);
     }
 
+    //Getting back all the invoices
     @GetMapping(value = "")
     @ResponseStatus(value = HttpStatus.OK)
     public List<Invoice> getAllInvoice() {

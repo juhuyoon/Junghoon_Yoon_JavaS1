@@ -20,6 +20,7 @@ import java.util.List;
 @RequestMapping(produces = "appication/vnd.error+json")
 public class ControllerExceptionHandler {
 
+    //Not Found Exception Handling
     @ExceptionHandler(value = {ControllerNotFoundException.class})
     @ResponseStatus(HttpStatus.NOT_FOUND)
     public ResponseEntity<VndErrors> notFoundException(ControllerNotFoundException e, WebRequest request){
@@ -28,9 +29,9 @@ public class ControllerExceptionHandler {
         return responseEntity;
     }
 
+    //Out of Range Exception Handling
     @ExceptionHandler(value = {IllegalArgumentException.class})
     @ResponseStatus(HttpStatus.NOT_FOUND)
-
     public ResponseEntity<VndErrors> outOfRangeException(IllegalArgumentException e, WebRequest webRequest) {
         VndErrors errors = new VndErrors(webRequest.toString(), e.getMessage());
         ResponseEntity<VndErrors> responseEntity = new ResponseEntity<>(errors, HttpStatus.NOT_FOUND);
@@ -38,6 +39,7 @@ public class ControllerExceptionHandler {
     }
 
 
+    //Method Argument Not Valid Exception Handling
     @ExceptionHandler({MethodArgumentNotValidException.class})
     public ResponseEntity<VndErrors> notEnoughValues(MethodArgumentNotValidException e, WebRequest request) {
 

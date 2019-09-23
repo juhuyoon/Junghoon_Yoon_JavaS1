@@ -36,6 +36,11 @@ public class InvoiceDaoTempImpl implements InvoiceDao{
         this.jdbcTemplate = jdbcTemplate;
     }
 
+    /**
+     * Adds an Invoice to the database
+     * @param invoice
+     * @return
+     */
     @Override
     public Invoice addInvoice(Invoice invoice) {
         jdbcTemplate.update(ADD_INVOICE_SQL,
@@ -58,6 +63,11 @@ public class InvoiceDaoTempImpl implements InvoiceDao{
         return invoice;
     }
 
+    /**
+     * Retrieves an Invoice object from the database
+     * @param invoice_id
+     * @return
+     */
     @Override
     public Invoice getInvoice(Integer invoice_id) {
         try {
@@ -67,11 +77,19 @@ public class InvoiceDaoTempImpl implements InvoiceDao{
         }
     }
 
+    /**
+     * Retrieves all the invoices in the database
+     * @return
+     */
     @Override
     public List<Invoice> getAllInvoice() {
         return jdbcTemplate.query(GET_ALL_INVOICE_SQL, this::mapRowByInvoice);
     }
 
+    /**
+     * Updates the invoice from the database
+     * @param invoice
+     */
     @Override
     public void updateInvoice(Invoice invoice) {
         jdbcTemplate.update(UPDATE_INVOICE_SQL,
@@ -91,6 +109,10 @@ public class InvoiceDaoTempImpl implements InvoiceDao{
                 invoice.getInvoice_id());
     }
 
+    /**
+     * Deletes an invoice from the database
+     * @param invoice_id
+     */
     @Override
     public void deleteInvoice(Integer invoice_id) {
         jdbcTemplate.update(DELETE_INVOICE_SQL, invoice_id);

@@ -16,24 +16,28 @@ public class ConsoleController {
     private ConsoleDao consoleDao;
     private Console console;
 
+    //Getting Console by Id
     @GetMapping("/get/{consoleId}")
     @ResponseStatus(value = HttpStatus.OK)
     public Console getConsole(@PathVariable(name="consoleId") Integer consoleId) {
         return consoleDao.getConsole(consoleId);
     }
 
+    //Getting All Consoles
     @GetMapping("")
     @ResponseStatus(value = HttpStatus.OK)
     public List<Console> getAllConsoles() {
         return consoleDao.getAllConsoles();
     }
 
+    //Posting a Console Object
     @PostMapping("")
     @ResponseStatus(value = HttpStatus.CREATED)
     public Console addConsole(@RequestBody @Valid Console console) {
         return consoleDao.addConsole(console);
     }
 
+    //Updating the Console
     @PutMapping("/update")
     @ResponseStatus(value = HttpStatus.ACCEPTED)
     public String updateConsole( @RequestBody Console console) {
@@ -41,6 +45,7 @@ public class ConsoleController {
         return "Console has been updated!";
     }
 
+    //Deleting a Console by ID
     @DeleteMapping("/delete/{consoleId}")
     @ResponseStatus(value = HttpStatus.OK)
     public String deleteConsole(@PathVariable(name = "consoleId") Integer consoleId) {
@@ -48,6 +53,7 @@ public class ConsoleController {
         return "Console has been deleted!";
     }
 
+    //Getting a console by the manufacturer
     @GetMapping("/manufacturer/{manufacturer}")
     @ResponseStatus(value = HttpStatus.OK)
     public List<Console> getConsolesByManufacturer(@PathVariable(name = "manufacturer") String manufacturer){

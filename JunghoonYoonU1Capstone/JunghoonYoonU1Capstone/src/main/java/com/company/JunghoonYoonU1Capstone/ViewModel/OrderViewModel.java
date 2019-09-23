@@ -2,6 +2,7 @@ package com.company.JunghoonYoonU1Capstone.ViewModel;
 
 import java.util.Objects;
 
+//Order form for the user to use.
 public class OrderViewModel {
     private Integer order_id;
     private String name;
