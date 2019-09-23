@@ -32,7 +32,7 @@ public class Processing_Fee {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Processing_Fee that = (Processing_Fee) o;
-        return product_type.equals(that.product_type) &&
+        return Objects.equals(product_type, that.product_type) &&
                 Objects.equals(fee, that.fee);
     }
 

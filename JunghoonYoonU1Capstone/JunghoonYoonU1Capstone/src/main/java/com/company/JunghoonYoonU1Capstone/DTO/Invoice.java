@@ -151,7 +151,7 @@ public class Invoice {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Invoice invoice = (Invoice) o;
-        return invoice_id.equals(invoice.invoice_id) &&
+        return Objects.equals(invoice_id, invoice.invoice_id) &&
                 name.equals(invoice.name) &&
                 street.equals(invoice.street) &&
                 city.equals(invoice.city) &&

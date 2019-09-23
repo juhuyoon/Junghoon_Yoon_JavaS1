@@ -70,13 +70,13 @@ public class TShirt {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        TShirt t_shirt = (TShirt) o;
-        return t_shirt_id.equals(t_shirt.t_shirt_id) &&
-                size.equals(t_shirt.size) &&
-                color.equals(t_shirt.color) &&
-                description.equals(t_shirt.description) &&
-                price.equals(t_shirt.price) &&
-                quantity.equals(t_shirt.quantity);
+        TShirt tShirt = (TShirt) o;
+        return Objects.equals(t_shirt_id, tShirt.t_shirt_id) &&
+                size.equals(tShirt.size) &&
+                color.equals(tShirt.color) &&
+                description.equals(tShirt.description) &&
+                price.equals(tShirt.price) &&
+                quantity.equals(tShirt.quantity);
     }
 
     @Override

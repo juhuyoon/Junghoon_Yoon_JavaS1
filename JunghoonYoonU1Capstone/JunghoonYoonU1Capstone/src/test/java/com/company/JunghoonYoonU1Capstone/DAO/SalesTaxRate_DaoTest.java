@@ -46,7 +46,6 @@ public class SalesTaxRate_DaoTest {
     public void getSalesTaxRate() {
         sales_tax_rate = salesTaxRate_dao.addSalesTaxRate(sales_tax_rate);
         Sales_Tax_Rate salesTest = salesTaxRate_dao.getSalesTaxRate(sales_tax_rate.getState());
-
         assertEquals(salesTest, sales_tax_rate);
     }
 

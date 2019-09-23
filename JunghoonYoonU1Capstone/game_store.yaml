@@ -9,7 +9,7 @@ servers:
 paths:
   /Game:
     post:
-      summary: Creates a new Customer entry with the given information
+      summary: Creates a new Game entry with the given information
       requestBody:
         required: true
         content:
@@ -26,7 +26,7 @@ paths:
         '400':
           description: Invalid request syntax.
         '422':
-          description: Incomplete customer information. Some required fields missing.
+          description: Incomplete Game information. Some required fields missing.
     get:
       summary: Retrieves a list of Games
       responses:
@@ -38,39 +38,6 @@ paths:
                 type: array
                 items:
                   type: string
-  '/Game/{gameId}':
-    get:
-      summary: Retrieves the entry for the customer with the give ID.
-      parameters:
-        - name: gameId
-          in: path
-          required: true
-          description: ID of the customer to retrieve.
-          schema:
-            type: integer
-            format: int64
-            minimum: 1
-      responses:
-        '200':
-          description: Game object matching given ID.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Game'
-    delete:
-      summary: Deletes the entry for the customer with the given ID.
-      parameters:
-        - name: gameId
-          in: path
-          required: true
-          description: ID of the Game you would like to delete.
-          schema:
-            type: integer
-            format: int64
-            minimum: 1
-      responses:
-        '200':
-          description: Game successfully deleted.
     put:
       summary: Updated the entry for the Game with the given ID.
       parameters:
@@ -93,7 +60,40 @@ paths:
           description: Game successfully updated.
         '422':
           description: Game ID on path mush match the ID in the Game object.
-  '/getGamesByStudio{studio}':
+  '/Game/{gameId}':
+    get:
+      summary: Retrieves the entry for the Game with the given ID.
+      parameters:
+        - name: gameId
+          in: path
+          required: true
+          description: ID of the Game to retrieve.
+          schema:
+            type: integer
+            format: int64
+            minimum: 1
+      responses:
+        '200':
+          description: Game object matching given ID.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Game'
+    delete:
+      summary: Deletes the entry for the Game with the given ID.
+      parameters:
+        - name: gameId
+          in: path
+          required: true
+          description: ID of the Game you would like to delete.
+          schema:
+            type: integer
+            format: int64
+            minimum: 1
+      responses:
+        '200':
+          description: Game successfully deleted.
+  '/studio/{studio}':
     get:
       summary: Retrieves the entry for the games with the studio name.
       parameters:
@@ -110,7 +110,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Game'
-  '/getGamesByRating{esrb_rating}':
+  '/rating/{esrb_rating}':
     get:
       summary: Retrieves the entry of the game by their ESRB rating.
       parameters:
@@ -127,7 +127,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Game'
-  '/getGamesByTitle{title}':
+  '/title/{title}':
     get:
       summary: Retrieves the entry of the game by their title.
       parameters:
@@ -230,7 +230,7 @@ paths:
           description: Console successfully updated.
         '422':
           description: Console ID on path mush match the ID in the Console object.
-  '/getConsoleByManufacturer{manufacturer}':
+  '/manufacturer{manufacturer}':
     get:
       summary: Retrieves the entry of the console by their manufacturer.
       parameters:
@@ -247,7 +247,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Console'
-  /t_Shirt:
+  /tShirt:
     post:
       summary: Creates a new T-shirt entry with the given information
       requestBody:
@@ -278,7 +278,29 @@ paths:
                 type: array
                 items:
                   type: string
-  '/t_Shirt/{tShirtId}':
+    put:
+      summary: Updated the entry for the T-shirt with the given ID.
+      parameters:
+        - name: tShirtId
+          in: path
+          required: true
+          description: ID of the T shirt you would like to update.
+          schema:
+            type: integer
+            format: int64
+            minimum: 1
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/T_shirt'
+      responses:
+        '200':
+          description: T-shirt successfully updated.
+        '422':
+          description: T-shirt ID on path mush match the ID in the Console object.
+  '/tShirt/{tShirtId}':
     get:
       summary: Retrieves the entry for the T-shirt with the given ID.
       parameters:
@@ -311,29 +333,7 @@ paths:
       responses:
         '200':
           description: T-shirt successfully deleted.
-    put:
-      summary: Updated the entry for the T-shirt with the given ID.
-      parameters:
-        - name: tShirtId
-          in: path
-          required: true
-          description: ID of the T shirt you would like to update.
-          schema:
-            type: integer
-            format: int64
-            minimum: 1
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/T_shirt'
-      responses:
-        '200':
-          description: T-shirt successfully updated.
-        '422':
-          description: T-shirt ID on path mush match the ID in the Console object.
-  '/getTshirtByColor{color}':
+  '/color/{color}':
     get:
       summary: Retrieves the entry of the t shirt by their color.
       parameters:
@@ -350,7 +350,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/T_shirt'
-  '/getTshirtBySize{size}':
+  '/size/{size}':
     get:
       summary: Retrieves the entry of the t-shirts by their size.
       parameters:

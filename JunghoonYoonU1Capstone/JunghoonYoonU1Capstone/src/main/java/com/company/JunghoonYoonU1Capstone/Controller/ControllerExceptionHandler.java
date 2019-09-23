@@ -1,5 +1,6 @@
 package com.company.JunghoonYoonU1Capstone.Controller;
 
+import com.company.JunghoonYoonU1Capstone.Exceptions.ControllerNotFoundException;
 import org.springframework.hateoas.VndErrors;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,12 +19,21 @@ import java.util.List;
 @RestControllerAdvice
 @RequestMapping(produces = "appication/vnd.error+json")
 public class ControllerExceptionHandler {
+
+    @ExceptionHandler(value = {ControllerNotFoundException.class})
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    public ResponseEntity<VndErrors> notFoundException(ControllerNotFoundException e, WebRequest request){
+        VndErrors err = new VndErrors(request.toString(), "Not found: " + e.getMessage());
+        ResponseEntity<VndErrors> responseEntity = new ResponseEntity<>(err, HttpStatus.NOT_FOUND);
+        return responseEntity;
+    }
+
     @ExceptionHandler(value = {IllegalArgumentException.class})
-    @ResponseStatus(HttpStatus.UNPROCESSABLE_ENTITY)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
 
     public ResponseEntity<VndErrors> outOfRangeException(IllegalArgumentException e, WebRequest webRequest) {
         VndErrors errors = new VndErrors(webRequest.toString(), e.getMessage());
-        ResponseEntity<VndErrors> responseEntity = new ResponseEntity<>(errors, HttpStatus.UNPROCESSABLE_ENTITY);
+        ResponseEntity<VndErrors> responseEntity = new ResponseEntity<>(errors, HttpStatus.NOT_FOUND);
         return responseEntity;
     }
 
@@ -43,8 +53,7 @@ public class ControllerExceptionHandler {
         }
         VndErrors errors = new VndErrors(vndErrorList);
 
-        return new ResponseEntity<>(errors, HttpStatus.UNPROCESSABLE_ENTITY);
+        return new ResponseEntity<>(errors, HttpStatus.NOT_FOUND);
     }
-
 
 }

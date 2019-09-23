@@ -69,9 +69,9 @@ public class Album {
         return getId() == album.getId() &&
                 getArtistId() == album.getArtistId() &&
                 getLabelId() == album.getLabelId() &&
-                Objects.equals(getTitle(), album.getTitle()) &&
-                Objects.equals(getReleaseDate(), album.getReleaseDate()) &&
-                Objects.equals(getListPrice(), album.getListPrice());
+                getTitle().equals(album.getTitle()) &&
+                getReleaseDate().equals(album.getReleaseDate()) &&
+                getListPrice().equals(album.getListPrice());
     }
 
     @Override

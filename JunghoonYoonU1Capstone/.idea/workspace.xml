@@ -2,16 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c40336fb-612f-41c9-9c74-cd99388e14c3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/test/java/com/company/JunghoonYoonU1Capstone/service/ServiceLayerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/Exceptions/ControllerNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/test/java/com/company/JunghoonYoonU1Capstone/Controller/ConsoleControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/test/java/com/company/JunghoonYoonU1Capstone/Controller/GameControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/test/java/com/company/JunghoonYoonU1Capstone/Controller/InvoiceControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/test/java/com/company/JunghoonYoonU1Capstone/Controller/TshirtControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/test/java/com/company/JunghoonYoonU1Capstone/ServiceLayer/ServiceLayerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20190912/rec-coll-jdbctemplate-dao/src/main/java/com/company/reccolldao/model/Album.java" beforeDir="false" afterPath="$PROJECT_DIR$/../20190912/rec-coll-jdbctemplate-dao/src/main/java/com/company/reccolldao/model/Album.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/Controller/ConsoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/Controller/ConsoleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/Controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/Controller/GameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/Controller/ControllerExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/Controller/ControllerExceptionHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/Controller/InvoiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/Controller/InvoiceController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/Controller/TshirtController.java" beforeDir="false" afterPath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/Controller/TshirtController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/DTO/Console.java" beforeDir="false" afterPath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/DTO/Console.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/DTO/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/DTO/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/DTO/Invoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/DTO/Invoice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/DTO/Processing_Fee.java" beforeDir="false" afterPath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/DTO/Processing_Fee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/DTO/TShirt.java" beforeDir="false" afterPath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/DTO/TShirt.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/ServiceLayer/ServiceLayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/ServiceLayer/ServiceLayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/ServiceLayer/StateHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/ServiceLayer/StateHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/ViewModel/InvoiceViewModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/ViewModel/OrderViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/ViewModel/OrderViewModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/test/java/com/company/JunghoonYoonU1Capstone/DAO/SalesTaxRate_DaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/test/java/com/company/JunghoonYoonU1Capstone/DAO/SalesTaxRate_DaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/test/java/com/company/JunghoonYoonU1Capstone/service/ServiceLayerTest.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,8 +38,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="JUnit4 Test Class" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -58,6 +67,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.company.JunghoonYoonU1Capstone.Controller" />
+      <recent name="com.company.JunghoonYoonU1Capstone.ServiceLayer" />
       <recent name="com.company.JunghoonYoonU1Capstone.DAO" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -82,76 +93,80 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.JunghoonYoonU1CapstoneApplication">
-    <configuration name="JunghoonYoonU1CapstoneApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.JunghoonYoonU1Capstone.JunghoonYoonU1CapstoneApplication" />
+  <component name="RunManager" selected="JUnit.InvoiceControllerTest">
+    <configuration name="ConsoleControllerTest.getConsoleThatDoesNotExistReturns404" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JunghoonYoonU1Capstone" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.company.JunghoonYoonU1Capstone.*" />
+          <option name="PATTERN" value="com.company.JunghoonYoonU1Capstone.Controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="InvoiceDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="JunghoonYoonU1Capstone" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.company.JunghoonYoonU1Capstone.DAO.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.company.JunghoonYoonU1Capstone.DAO" />
-      <option name="MAIN_CLASS_NAME" value="com.company.JunghoonYoonU1Capstone.DAO.InvoiceDaoTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="InvoiceDaoTest.getInvoice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="JunghoonYoonU1Capstone" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.company.JunghoonYoonU1Capstone.DAO.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.company.JunghoonYoonU1Capstone.DAO" />
-      <option name="MAIN_CLASS_NAME" value="com.company.JunghoonYoonU1Capstone.DAO.InvoiceDaoTest" />
-      <option name="METHOD_NAME" value="getInvoice" />
+      <option name="PACKAGE_NAME" value="com.company.JunghoonYoonU1Capstone.Controller" />
+      <option name="MAIN_CLASS_NAME" value="com.company.JunghoonYoonU1Capstone.Controller.ConsoleControllerTest" />
+      <option name="METHOD_NAME" value="getConsoleThatDoesNotExistReturns404" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProcessingFees_DaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GameControllerTest.getGameThatDoesNotExistReturns404" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JunghoonYoonU1Capstone" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.company.JunghoonYoonU1Capstone.DAO.*" />
+          <option name="PATTERN" value="com.company.JunghoonYoonU1Capstone.Controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.company.JunghoonYoonU1Capstone.DAO" />
-      <option name="MAIN_CLASS_NAME" value="com.company.JunghoonYoonU1Capstone.DAO.ProcessingFees_DaoTest" />
+      <option name="PACKAGE_NAME" value="com.company.JunghoonYoonU1Capstone.Controller" />
+      <option name="MAIN_CLASS_NAME" value="com.company.JunghoonYoonU1Capstone.Controller.GameControllerTest" />
+      <option name="METHOD_NAME" value="getGameThatDoesNotExistReturns404" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InvoiceControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JunghoonYoonU1Capstone" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.JunghoonYoonU1Capstone.Controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.company.JunghoonYoonU1Capstone.Controller" />
+      <option name="MAIN_CLASS_NAME" value="com.company.JunghoonYoonU1Capstone.Controller.InvoiceControllerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SalesTaxRate_DaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="InvoiceControllerTest.getInvoiceThatDoesNotExistReturns404" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JunghoonYoonU1Capstone" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.company.JunghoonYoonU1Capstone.DAO.*" />
+          <option name="PATTERN" value="com.company.JunghoonYoonU1Capstone.Controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.company.JunghoonYoonU1Capstone.DAO" />
-      <option name="MAIN_CLASS_NAME" value="com.company.JunghoonYoonU1Capstone.DAO.SalesTaxRate_DaoTest" />
+      <option name="PACKAGE_NAME" value="com.company.JunghoonYoonU1Capstone.Controller" />
+      <option name="MAIN_CLASS_NAME" value="com.company.JunghoonYoonU1Capstone.Controller.InvoiceControllerTest" />
+      <option name="METHOD_NAME" value="getInvoiceThatDoesNotExistReturns404" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TshirtControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JunghoonYoonU1Capstone" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.JunghoonYoonU1Capstone.Controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.company.JunghoonYoonU1Capstone.Controller" />
+      <option name="MAIN_CLASS_NAME" value="com.company.JunghoonYoonU1Capstone.Controller.TshirtControllerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -159,11 +174,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.JunghoonYoonU1CapstoneApplication" />
-        <item itemvalue="JUnit.InvoiceDaoTest" />
-        <item itemvalue="JUnit.InvoiceDaoTest.getInvoice" />
-        <item itemvalue="JUnit.ProcessingFees_DaoTest" />
-        <item itemvalue="JUnit.SalesTaxRate_DaoTest" />
+        <item itemvalue="JUnit.InvoiceControllerTest" />
+        <item itemvalue="JUnit.InvoiceControllerTest.getInvoiceThatDoesNotExistReturns404" />
+        <item itemvalue="JUnit.TshirtControllerTest" />
+        <item itemvalue="JUnit.GameControllerTest.getGameThatDoesNotExistReturns404" />
+        <item itemvalue="JUnit.ConsoleControllerTest.getConsoleThatDoesNotExistReturns404" />
       </list>
     </recent_temporary>
   </component>
@@ -192,5 +207,32 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/JunghoonYoonU1Capstone/src/test/java/com/company/JunghoonYoonU1Capstone/ServiceLayer/ServiceLayerTest.java</url>
+          <line>39</line>
+          <properties class="com.company.JunghoonYoonU1Capstone.ServiceLayer.ServiceLayerTest" method="addGetOrder">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/JunghoonYoonU1Capstone/src/test/java/com/company/JunghoonYoonU1Capstone/Controller/GameControllerTest.java</url>
+          <line>219</line>
+          <properties class="com.company.JunghoonYoonU1Capstone.Controller.GameControllerTest" method="getGamesByTitle">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/ServiceLayer/ServiceLayer.java</url>
+          <line>100</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

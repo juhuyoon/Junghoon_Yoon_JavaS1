@@ -49,4 +49,18 @@ public class TshirtController {
         tshirtDao.deleteTShirt(tShirtId);
         return "T Shirt deleted";
     }
+
+    @GetMapping("/size/{size}")
+    @ResponseStatus(value = HttpStatus.OK)
+    public List<TShirt> getTShirtBySize(@PathVariable(name="size") String size) {
+        return tshirtDao.getTShirtsBySize(size);
+    }
+
+    @GetMapping("/color/{color}")
+    @ResponseStatus(value=HttpStatus.OK)
+    public List<TShirt> getTShirtByColor(@PathVariable(name = "color") String color) {
+        return tshirtDao.getTShirtsByColor(color);
+    }
+
+
 }

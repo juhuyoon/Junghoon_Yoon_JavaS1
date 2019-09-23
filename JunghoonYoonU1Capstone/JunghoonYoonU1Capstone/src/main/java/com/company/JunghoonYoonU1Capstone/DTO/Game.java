@@ -81,7 +81,7 @@ public class Game {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Game game = (Game) o;
-        return game_id.equals(game.game_id) &&
+        return Objects.equals(game_id, game.game_id) &&
                 title.equals(game.title) &&
                 esrb_rating.equals(game.esrb_rating) &&
                 description.equals(game.description) &&

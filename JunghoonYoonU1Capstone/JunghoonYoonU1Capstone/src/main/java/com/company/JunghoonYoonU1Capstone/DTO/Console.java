@@ -81,11 +81,11 @@ public class Console {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Console console = (Console) o;
-        return console_id.equals(console.console_id) &&
+        return Objects.equals(console_id, console.console_id) &&
                 model.equals(console.model) &&
                 manufacturer.equals(console.manufacturer) &&
-                Objects.equals(memory_amount, console.memory_amount) &&
-                Objects.equals(processor, console.processor) &&
+                memory_amount.equals(console.memory_amount) &&
+                processor.equals(console.processor) &&
                 price.equals(console.price) &&
                 quantity.equals(console.quantity);
     }

@@ -25,7 +25,7 @@ public class InvoiceController {
         return service.addOrder(ovm);
     }
 
-    @GetMapping(value ="{invoiceId}")
+    @GetMapping(value ="/get/{invoiceId}")
     @ResponseStatus(value = HttpStatus.OK)
     public Invoice getInvoice(@PathVariable(name = "invoiceId") Integer invoiceId) {
         return invoiceDao.getInvoice(invoiceId);
@@ -33,7 +33,7 @@ public class InvoiceController {
 
     @GetMapping(value = "")
     @ResponseStatus(value = HttpStatus.OK)
-    public List<Invoice> getInvoice() {
+    public List<Invoice> getAllInvoice() {
         return invoiceDao.getAllInvoice();
     }
 }

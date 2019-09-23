@@ -8,25 +8,26 @@ import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 @Component
 public class ServiceLayer {
 
-    private ConsoleDao consoleDao;
     private GameDao gameDao;
+    private ConsoleDao consoleDao;
     private TshirtDao tshirtDao;
-    private InvoiceDao invoiceDao;
     private ProcessingFeesDao pFeesDao;
     private SalesTaxRate_Dao salesTaxDao;
+    private InvoiceDao invoiceDao;
 
     @Autowired
-    public ServiceLayer(ConsoleDao consoleDao, GameDao gameDao, TshirtDao tshirtDao, InvoiceDao invoiceDao, ProcessingFeesDao pFeesDao, SalesTaxRate_Dao salesTaxDao) {
-        this.consoleDao = consoleDao;
+    public ServiceLayer(GameDao gameDao, ConsoleDao consoleDao, TshirtDao tshirtDao, ProcessingFeesDao pFeesDao, SalesTaxRate_Dao salesTaxDao, InvoiceDao invoiceDao) {
         this.gameDao = gameDao;
+        this.consoleDao = consoleDao;
         this.tshirtDao = tshirtDao;
-        this.invoiceDao = invoiceDao;
         this.pFeesDao = pFeesDao;
         this.salesTaxDao = salesTaxDao;
+        this.invoiceDao = invoiceDao;
     }
 
         @Transactional
@@ -40,14 +41,6 @@ public class ServiceLayer {
             invoice.setItem_type(viewModel.getItem_type());
             invoice.setItem_id(viewModel.getItem_id());
             invoice.setQuantity(viewModel.getQuantity());
-
-
-//            invoice.setUnit_price(new BigDecimal("15.99"));
-//            invoice.setSubtotal(new BigDecimal("5.99"));
-//            invoice.setTax(new BigDecimal("0.06"));
-//            invoice.setProcessing_fee(new BigDecimal("15.55"));
-//            invoice.setTotal(new BigDecimal("100.00"));
-
 
             switch(invoice.getItem_type()) {
                 case("Games"): {
@@ -151,5 +144,122 @@ public class ServiceLayer {
     public Invoice getOrder(Integer invoiceId) {
         Invoice invoice = invoiceDao.getInvoice(invoiceId);
         return invoice;
+    }
+
+    // Console API
+    public Console addConsole(Console console) {
+        return consoleDao.addConsole(console);
+    }
+
+    public Console getConsole(Integer console_id){
+        return consoleDao.getConsole(console_id);
+    }
+
+    public List<Console> getAllConsoles() {
+        return consoleDao.getAllConsoles();
+    }
+
+    public void updateConsole(Console console){
+        consoleDao.updateConsole(console);
+    }
+
+    public void deleteConsole(Integer console_id){
+        consoleDao.deleteConsole(console_id);
+    }
+
+    // Game API
+    public Game addGame(Game game) {
+        return gameDao.addGame(game);
+    }
+
+    public Game getGame(Integer game_id){
+        return gameDao.getGame(game_id);
+    }
+
+    public List<Game> getAllGames() {
+        return gameDao.getAllGames();
+    }
+
+    public void updateGame(Game game){
+        gameDao.updateGame(game);
+    }
+
+    public void deleteGame(Integer game_id){
+        gameDao.deleteGame(game_id);
+    }
+
+    // TShirt API
+    public TShirt addTShirt(TShirt tShirt) {
+        return tshirtDao.addTShirt(tShirt);
+    }
+
+    public TShirt getTShirt(Integer tShirt_id){
+        return tshirtDao.getTShirt(tShirt_id);
+    }
+
+    public List<TShirt> getAllTShirts() {
+        return tshirtDao.getAllTShirts();
+    }
+
+    public void updateTShirt(TShirt tShirt){
+        tshirtDao.updateTShirt(tShirt);
+    }
+
+    public void deleteShirt(Integer tShirt_id){
+        tshirtDao.deleteTShirt(tShirt_id);
+    }
+
+    // Processing Fees API
+    public Processing_Fee addPFees(Processing_Fee pFees) {
+        return pFeesDao.addProcessingFees(pFees);
+    }
+
+    public Processing_Fee getPFees(String pType){
+        return pFeesDao.getProcessingFees(pType);
+    }
+
+    public List<Processing_Fee> getAllpFees() {
+        return pFeesDao.getAllProcessingFees();
+    }
+
+    public void updatePFees(Processing_Fee pFee){
+        pFeesDao.updateProcessingFees(pFee);
+    }
+
+    public void deletePFees(String pType){
+        pFeesDao.deleteProcessingFees(pType);
+    }
+
+    // Sales Tax Rate API
+    public Sales_Tax_Rate addSalesTax(Sales_Tax_Rate sTaxes) {
+        return salesTaxDao.addSalesTaxRate(sTaxes);
+    }
+
+    public Sales_Tax_Rate getSalesTax(String state){
+        return salesTaxDao.getSalesTaxRate(state);
+    }
+
+    public List<Sales_Tax_Rate> getAllSalesTax() {
+        return salesTaxDao.getAllSalesTaxRate();
+    }
+
+    public void updateSalesTax(Sales_Tax_Rate sTaxes){
+        salesTaxDao.updateSalesTaxRate(sTaxes);
+    }
+
+    public void deleteSalesTax(String state){
+        salesTaxDao.deleteSalesTaxRate(state);
+    }
+
+    @Override
+    public String toString() {
+        return "ServiceLayer{" +
+                "gameDao=" + gameDao +
+                ", consoleDao=" + consoleDao +
+                ", tshirtDao=" + tshirtDao +
+                ", pFeesDao=" + pFeesDao +
+                ", salesTaxDao=" + salesTaxDao +
+                ", invoiceDao=" + invoiceDao +
+                '}';
     }
 }
