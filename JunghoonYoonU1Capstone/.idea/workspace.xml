@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c40336fb-612f-41c9-9c74-cd99388e14c3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/DTO/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/DTO/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/DTO/Invoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/DTO/Invoice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/DTO/Processing_Fee.java" beforeDir="false" afterPath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/DTO/Processing_Fee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/DTO/Sales_Tax_Rate.java" beforeDir="false" afterPath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/DTO/Sales_Tax_Rate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/DTO/TShirt.java" beforeDir="false" afterPath="$PROJECT_DIR$/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/DTO/TShirt.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -80,7 +75,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.JunghoonYoonU1CapstoneApplication">
+  <component name="RunManager" selected="JUnit.com.company.JunghoonYoonU1Capstone.Controller in JunghoonYoonU1Capstone">
     <configuration name="JunghoonYoonU1CapstoneApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.JunghoonYoonU1Capstone.JunghoonYoonU1CapstoneApplication" />
       <module name="JunghoonYoonU1Capstone" />
@@ -94,22 +89,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GameControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="JunghoonYoonU1CapstoneApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JunghoonYoonU1Capstone" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.company.JunghoonYoonU1Capstone.Controller.*" />
+          <option name="PATTERN" value="com.company.JunghoonYoonU1Capstone.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.company.JunghoonYoonU1Capstone.Controller" />
-      <option name="MAIN_CLASS_NAME" value="com.company.JunghoonYoonU1Capstone.Controller.GameControllerTest" />
+      <option name="PACKAGE_NAME" value="com.company.JunghoonYoonU1Capstone" />
+      <option name="MAIN_CLASS_NAME" value="com.company.JunghoonYoonU1Capstone.JunghoonYoonU1CapstoneApplicationTests" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InvoiceControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="com.company.JunghoonYoonU1Capstone.Controller in JunghoonYoonU1Capstone" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JunghoonYoonU1Capstone" />
       <extension name="coverage">
         <pattern>
@@ -118,50 +113,46 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.company.JunghoonYoonU1Capstone.Controller" />
-      <option name="MAIN_CLASS_NAME" value="com.company.JunghoonYoonU1Capstone.Controller.InvoiceControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InvoiceControllerTest.addOrderViewModel" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="com.company.JunghoonYoonU1Capstone.DAO in JunghoonYoonU1Capstone" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JunghoonYoonU1Capstone" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.company.JunghoonYoonU1Capstone.Controller.*" />
+          <option name="PATTERN" value="com.company.JunghoonYoonU1Capstone.DAO.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.company.JunghoonYoonU1Capstone.Controller" />
-      <option name="MAIN_CLASS_NAME" value="com.company.JunghoonYoonU1Capstone.Controller.InvoiceControllerTest" />
-      <option name="METHOD_NAME" value="addOrderViewModel" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="com.company.JunghoonYoonU1Capstone.DAO" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TshirtControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="com.company.JunghoonYoonU1Capstone.ServiceLayer in JunghoonYoonU1Capstone" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JunghoonYoonU1Capstone" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.company.JunghoonYoonU1Capstone.Controller.*" />
+          <option name="PATTERN" value="com.company.JunghoonYoonU1Capstone.ServiceLayer.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.company.JunghoonYoonU1Capstone.Controller" />
-      <option name="MAIN_CLASS_NAME" value="com.company.JunghoonYoonU1Capstone.Controller.TshirtControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="com.company.JunghoonYoonU1Capstone.ServiceLayer" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.com.company.JunghoonYoonU1Capstone.Controller in JunghoonYoonU1Capstone" />
+        <item itemvalue="JUnit.com.company.JunghoonYoonU1Capstone.ServiceLayer in JunghoonYoonU1Capstone" />
+        <item itemvalue="JUnit.com.company.JunghoonYoonU1Capstone.DAO in JunghoonYoonU1Capstone" />
+        <item itemvalue="JUnit.JunghoonYoonU1CapstoneApplicationTests" />
         <item itemvalue="Application.JunghoonYoonU1CapstoneApplication" />
-        <item itemvalue="JUnit.InvoiceControllerTest.addOrderViewModel" />
-        <item itemvalue="JUnit.InvoiceControllerTest" />
-        <item itemvalue="JUnit.TshirtControllerTest" />
-        <item itemvalue="JUnit.GameControllerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -212,5 +203,16 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/JunghoonYoonU1Capstone$com_company_JunghoonYoonU1Capstone_Controller_in_JunghoonYoonU1Capstone.ic" NAME="com.company.JunghoonYoonU1Capstone.Controller in JunghoonYoonU1Capstone Coverage Results" MODIFIED="1569420017609" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.company.JunghoonYoonU1Capstone.Controller.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/JunghoonYoonU1Capstone$com_company_JunghoonYoonU1Capstone_DAO_in_JunghoonYoonU1Capstone.ic" NAME="com.company.JunghoonYoonU1Capstone.DAO in JunghoonYoonU1Capstone Coverage Results" MODIFIED="1569419973805" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.company.JunghoonYoonU1Capstone.DAO.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/JunghoonYoonU1Capstone$com_company_JunghoonYoonU1Capstone_ServiceLayer_in_JunghoonYoonU1Capstone.ic" NAME="com.company.JunghoonYoonU1Capstone.ServiceLayer in JunghoonYoonU1Capstone Coverage Results" MODIFIED="1569420002755" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.company.JunghoonYoonU1Capstone.ServiceLayer.*</FILTER>
+    </SUITE>
   </component>
 </project>
