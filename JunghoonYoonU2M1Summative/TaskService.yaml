@@ -1,0 +1,100 @@
+openapi: 3.0.0
+info:
+  title: Tasker Service
+  description: A Service that keeps track of tasks.
+  version: 0.0.1
+servers:
+  - url: 'http://localhost:4040'
+    description: Local dev server
+paths:
+  /tasks:
+    post:
+      summary: Creates a Task from the TaskViewModel
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TaskViewModel'
+      responses:
+        '201':
+          description: A Game object created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TaskViewModel'
+        '400':
+          description: Invalid request syntax.
+        '422':
+          description: Incomplete Task information. Some required fields missing.
+    get:
+      summary: Retrieves a list of Tasks
+      responses:
+        '200':
+          description: A JSON array of Tasks
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/TaskViewModel'
+  '/tasks/{id}':
+    get:
+      summary: Retrieves the entry for the Task with the given ID.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID of the task to retrieve
+          schema:
+            type: integer
+            format: int64
+            minimum: 1
+      responses:
+        '200':
+          description: Task object matching the given ID.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TaskViewModel'
+    delete:
+      summary: Deletes the entry for the Task with the given ID.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID of the task to delete
+          schema:
+            type: integer
+            format: int64
+            minimum: 1
+      responses:
+        '200':
+          description: Task object deleted with the given ID.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TaskViewModel'
+components:
+  schemas:
+    TaskViewModel:
+      properties:
+        id:
+          type: integer
+        description:
+          type: string
+        createDate:
+          type: string
+        dueDate:
+          type: string
+        category:
+          type: string
+        advertisement:
+          type: string
+      required:
+        - id
+        - description
+        - createDate
+        - dueDate
+        - category
+        - advertisement

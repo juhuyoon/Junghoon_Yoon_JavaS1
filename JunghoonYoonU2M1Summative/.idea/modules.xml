@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/JunghoonYoonU2M1Summative.iml" filepath="$PROJECT_DIR$/.idea/JunghoonYoonU2M1Summative.iml" />
+      <module fileurl="file://$PROJECT_DIR$/adserver-service/adserver-service.iml" filepath="$PROJECT_DIR$/adserver-service/adserver-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/summative-config-server/summative-config-server.iml" filepath="$PROJECT_DIR$/summative-config-server/summative-config-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/summative-eureka-service-registry/summative-eureka-service-registry.iml" filepath="$PROJECT_DIR$/summative-eureka-service-registry/summative-eureka-service-registry.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tasker-service/tasker-service.iml" filepath="$PROJECT_DIR$/tasker-service/tasker-service.iml" />
+    </modules>
+  </component>
+</project>
