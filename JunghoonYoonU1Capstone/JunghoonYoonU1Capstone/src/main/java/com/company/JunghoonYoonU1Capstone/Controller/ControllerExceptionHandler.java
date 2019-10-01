@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestControllerAdvice
-@RequestMapping(produces = "appication/vnd.error+json")
+@RequestMapping(produces = "application/vnd.error+json")
 public class ControllerExceptionHandler {
 
     //Not Found Exception Handling
