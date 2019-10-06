@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1d9c4ffa-bfb9-4312-bd14-a05c3b8d0a3c" name="Default Changelist" comment="" />
+    <list default="true" id="1d9c4ffa-bfb9-4312-bd14-a05c3b8d0a3c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tasker-service/src/test/java/com/trilogyed/tasker/service/TaskerServiceLayerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20191002/U1M6GroupProject" beforeDir="false" afterPath="$PROJECT_DIR$/../20191002/U1M6GroupProject" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JunghoonYoonU1Capstone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JunghoonYoonU1Capstone/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adserver-service/src/main/java/com/trilogyed/adserver/controller/AdserverController.java" beforeDir="false" afterPath="$PROJECT_DIR$/adserver-service/src/main/java/com/trilogyed/adserver/controller/AdserverController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasker-service/src/main/java/com/trilogyed/tasker/Exceptions/ControllerNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/tasker-service/src/main/java/com/trilogyed/tasker/Exceptions/ControllerNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasker-service/src/main/java/com/trilogyed/tasker/TaskerServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/tasker-service/src/main/java/com/trilogyed/tasker/TaskerServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasker-service/src/main/java/com/trilogyed/tasker/controller/TaskerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/tasker-service/src/main/java/com/trilogyed/tasker/controller/TaskerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasker-service/src/main/java/com/trilogyed/tasker/dao/TaskerDaoJdbcTemplateImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/tasker-service/src/main/java/com/trilogyed/tasker/dao/TaskerDaoJdbcTemplateImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasker-service/src/main/java/com/trilogyed/tasker/model/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/tasker-service/src/main/java/com/trilogyed/tasker/model/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasker-service/src/main/java/com/trilogyed/tasker/model/TaskViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/tasker-service/src/main/java/com/trilogyed/tasker/model/TaskViewModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasker-service/src/main/java/com/trilogyed/tasker/service/TaskerServiceLayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/tasker-service/src/main/java/com/trilogyed/tasker/service/TaskerServiceLayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasker-service/src/main/java/com/trilogyed/tasker/util/feign/AdServerClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/tasker-service/src/main/java/com/trilogyed/tasker/util/feign/AdServerClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasker-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/tasker-service/src/main/resources/application.properties" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,14 +27,20 @@
   <component name="CodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="JunghoonYoonU2M1Summative" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
-        <option value="JUnit4 Test Class" />
         <option value="Interface" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -28,17 +50,20 @@
     </option>
   </component>
   <component name="ProjectId" id="1RZKLaqg9I10HnhDQeExVel43wl" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.trilogyed.tasker.service" />
       <recent name="com.trilogyed.tasker.controller" />
       <recent name="com.trilogyed.tasker.dao" />
     </key>
@@ -58,70 +83,81 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.TaskerServiceApplication">
-    <configuration name="AdserverServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.trilogyed.adserver.AdserverServiceApplication" />
-      <module name="adserver-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.trilogyed.adserver.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SummativeConfigServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.trilogyed.summativeconfigserver.SummativeConfigServerApplication" />
-      <module name="summative-config-server" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.trilogyed.summativeconfigserver.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SummativeEurekaServiceRegistryApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.trilogyed.summativeeurekaserviceregistry.SummativeEurekaServiceRegistryApplication" />
-      <module name="summative-eureka-service-registry" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.trilogyed.summativeeurekaserviceregistry.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TaskerServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.trilogyed.tasker.TaskerServiceApplication" />
+  <component name="RunManager" selected="JUnit.TaskerServiceLayerTest.updateTask">
+    <configuration name="TaskerServiceLayerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tasker-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.trilogyed.tasker.*" />
+          <option name="PATTERN" value="com.trilogyed.tasker.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.trilogyed.tasker.service" />
+      <option name="MAIN_CLASS_NAME" value="com.trilogyed.tasker.service.TaskerServiceLayerTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TaskerDaoTest.getAllTasks" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TaskerServiceLayerTest.deleteTask" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tasker-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.trilogyed.tasker.dao.*" />
+          <option name="PATTERN" value="com.trilogyed.tasker.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.trilogyed.tasker.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.trilogyed.tasker.dao.TaskerDaoTest" />
-      <option name="METHOD_NAME" value="getAllTasks" />
+      <option name="PACKAGE_NAME" value="com.trilogyed.tasker.service" />
+      <option name="MAIN_CLASS_NAME" value="com.trilogyed.tasker.service.TaskerServiceLayerTest" />
+      <option name="METHOD_NAME" value="deleteTask" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TaskerServiceLayerTest.fetchAllTasks" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tasker-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.trilogyed.tasker.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.trilogyed.tasker.service" />
+      <option name="MAIN_CLASS_NAME" value="com.trilogyed.tasker.service.TaskerServiceLayerTest" />
+      <option name="METHOD_NAME" value="fetchAllTasks" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TaskerServiceLayerTest.fetchTasksByCategory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tasker-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.trilogyed.tasker.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.trilogyed.tasker.service" />
+      <option name="MAIN_CLASS_NAME" value="com.trilogyed.tasker.service.TaskerServiceLayerTest" />
+      <option name="METHOD_NAME" value="fetchTasksByCategory" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TaskerServiceLayerTest.updateTask" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tasker-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.trilogyed.tasker.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.trilogyed.tasker.service" />
+      <option name="MAIN_CLASS_NAME" value="com.trilogyed.tasker.service.TaskerServiceLayerTest" />
+      <option name="METHOD_NAME" value="updateTask" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -129,11 +165,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TaskerServiceApplication" />
-        <item itemvalue="Application.AdserverServiceApplication" />
-        <item itemvalue="Application.SummativeEurekaServiceRegistryApplication" />
-        <item itemvalue="Application.SummativeConfigServerApplication" />
-        <item itemvalue="JUnit.TaskerDaoTest.getAllTasks" />
+        <item itemvalue="JUnit.TaskerServiceLayerTest.updateTask" />
+        <item itemvalue="JUnit.TaskerServiceLayerTest" />
+        <item itemvalue="JUnit.TaskerServiceLayerTest.deleteTask" />
+        <item itemvalue="JUnit.TaskerServiceLayerTest.fetchTasksByCategory" />
+        <item itemvalue="JUnit.TaskerServiceLayerTest.fetchAllTasks" />
       </list>
     </recent_temporary>
   </component>
@@ -149,5 +185,18 @@
       <updated>1569869122308</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

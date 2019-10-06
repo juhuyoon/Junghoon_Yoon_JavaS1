@@ -6,13 +6,13 @@ import java.util.Objects;
 
 public class Task {
     private int id;
-    @NotEmpty(message = "Supply a description")
+    @NotEmpty(message = "Please provide a value")
     private String description;
-    @NotEmpty(message = "Enter a create date")
+    @NotEmpty(message = "Please provide a value")
     private LocalDate createDate;
-    @NotEmpty(message = "Enter a due date")
+    @NotEmpty(message = "Please provide a value")
     private LocalDate dueDate;
-    @NotEmpty(message = "Enter a category")
+    @NotEmpty(message = "Please provide a value")
     private String category;
 
     public int getId() {
@@ -70,5 +70,16 @@ public class Task {
     @Override
     public int hashCode() {
         return Objects.hash(id, description, createDate, dueDate, category);
+    }
+
+    @Override
+    public String toString() {
+        return "Task{" +
+                "id=" + id +
+                ", description='" + description + '\'' +
+                ", createDate=" + createDate +
+                ", dueDate=" + dueDate +
+                ", category='" + category + '\'' +
+                '}';
     }
 }

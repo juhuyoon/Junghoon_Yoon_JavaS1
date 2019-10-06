@@ -16,6 +16,18 @@ public class TaskViewModel {
     private String category;
     private String advertisement;
 
+    public TaskViewModel() {
+    }
+
+    public TaskViewModel(int id, @NotEmpty(message = "Give a description") String description, @NotEmpty(message = "Give a create date") LocalDate createDate, @NotEmpty(message = "Give a due date") LocalDate dueDate, @NotEmpty(message = "Give a category") String category, String advertisement) {
+        this.id = id;
+        this.description = description;
+        this.createDate = createDate;
+        this.dueDate = dueDate;
+        this.category = category;
+        this.advertisement = advertisement;
+    }
+
     public int getId() {
         return id;
     }
@@ -74,11 +86,23 @@ public class TaskViewModel {
                 createDate.equals(that.createDate) &&
                 dueDate.equals(that.dueDate) &&
                 category.equals(that.category) &&
-                Objects.equals(advertisement, that.advertisement);
+                advertisement.equals(that.advertisement);
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(id, description, createDate, dueDate, category, advertisement);
+    }
+
+    @Override
+    public String toString() {
+        return "TaskViewModel{" +
+                "id=" + id +
+                ", description='" + description + '\'' +
+                ", createDate=" + createDate +
+                ", dueDate=" + dueDate +
+                ", category='" + category + '\'' +
+                ", advertisement='" + advertisement + '\'' +
+                '}';
     }
 }

@@ -14,18 +14,19 @@ import java.util.List;
 @Repository
 public class TaskerDaoJdbcTemplateImpl implements TaskerDao {
 
-    public static final String INSERT_TASK =
-            "insert into task (task_description, create_date, due_date, category) values (?, ?, ?, ?)";
-    public static final String SELECT_TASK_BY_ID =
-            "select * from task where task_id = ?";
-    public static final String SELECT_ALL_TASKS =
-            "select * from task";
-    public static final String SELECT_TASKS_BY_CATEGORY =
-            "select * from task where category = ?";
-    public static final String UPDATE_TASK =
-            "update task set task_description = ?, create_date = ?, due_date = ?, category = ? where task_id = ?";
-    public static final String DELETE_TASK =
-            "delete from task WHERE task_id = ?";
+    //Prepared Statements
+    private static final String INSERT_TASK_SQL =
+            "INSERT INTO task(task_description, create_date, due_date, category) VALUES (?, ?, ?, ?)";
+    private static final String SELECT_TASK_BY_ID =
+            "SELECT * FROM task WHERE task_id = ?";
+    private static final String SELECT_ALL_TASKS =
+            "SELECT * FROM task";
+    private static final String SELECT_TASKS_BY_CATEGORY =
+            "SELECT * FROM task WHERE category = ?";
+    private static final String UPDATE_TASK =
+            "UPDATE task SET task_description = ?, create_date = ?, due_date = ?, category = ? where task_id = ?";
+    private static final String DELETE_TASK =
+            "DELETE FROM task WHERE task_id = ?";
 
 
     private JdbcTemplate jdbcTemplate;
@@ -43,7 +44,7 @@ public class TaskerDaoJdbcTemplateImpl implements TaskerDao {
     @Override
     @Transactional
     public Task createTask(Task task) {
-        jdbcTemplate.update(INSERT_TASK,
+        jdbcTemplate.update(INSERT_TASK_SQL,
                 task.getDescription(),
                 task.getCreateDate(),
                 task.getDueDate(),
@@ -112,7 +113,7 @@ public class TaskerDaoJdbcTemplateImpl implements TaskerDao {
         jdbcTemplate.update(DELETE_TASK, id);
     }
 
-    private Task mapTaskToRow(ResultSet rs, int rowNumber) throws SQLException {
+    public Task mapTaskToRow(ResultSet rs, int rowNumber) throws SQLException {
         Task task = new Task();
         task.setId(rs.getInt("task_id"));
         task.setDescription(rs.getString("task_description"));
