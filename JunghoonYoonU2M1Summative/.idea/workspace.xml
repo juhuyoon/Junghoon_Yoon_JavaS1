@@ -2,21 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d9c4ffa-bfb9-4312-bd14-a05c3b8d0a3c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tasker-service/src/test/java/com/trilogyed/tasker/service/TaskerServiceLayerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../20191002/U1M6GroupProject" beforeDir="false" afterPath="$PROJECT_DIR$/../20191002/U1M6GroupProject" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JunghoonYoonU1Capstone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JunghoonYoonU1Capstone/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JunghoonYoonU1Capstone/JunghoonYoonU1Capstone/src/test/java/com/company/JunghoonYoonU1Capstone/ServiceLayer/ServiceLayerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JunghoonYoonU1Capstone/JunghoonYoonU1Capstone/src/test/java/com/company/JunghoonYoonU1Capstone/ServiceLayer/ServiceLayerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adserver-service/src/main/java/com/trilogyed/adserver/controller/AdserverController.java" beforeDir="false" afterPath="$PROJECT_DIR$/adserver-service/src/main/java/com/trilogyed/adserver/controller/AdserverController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasker-service/src/main/java/com/trilogyed/tasker/Exceptions/ControllerNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/tasker-service/src/main/java/com/trilogyed/tasker/Exceptions/ControllerNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasker-service/src/main/java/com/trilogyed/tasker/TaskerServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/tasker-service/src/main/java/com/trilogyed/tasker/TaskerServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasker-service/src/main/java/com/trilogyed/tasker/controller/TaskerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/tasker-service/src/main/java/com/trilogyed/tasker/controller/TaskerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasker-service/src/main/java/com/trilogyed/tasker/dao/TaskerDaoJdbcTemplateImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/tasker-service/src/main/java/com/trilogyed/tasker/dao/TaskerDaoJdbcTemplateImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasker-service/src/main/java/com/trilogyed/tasker/model/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/tasker-service/src/main/java/com/trilogyed/tasker/model/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasker-service/src/main/java/com/trilogyed/tasker/model/TaskViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/tasker-service/src/main/java/com/trilogyed/tasker/model/TaskViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasker-service/src/main/java/com/trilogyed/tasker/service/TaskerServiceLayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/tasker-service/src/main/java/com/trilogyed/tasker/service/TaskerServiceLayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasker-service/src/main/java/com/trilogyed/tasker/util/feign/AdServerClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/tasker-service/src/main/java/com/trilogyed/tasker/util/feign/AdServerClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasker-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/tasker-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasker-service/src/test/java/com/trilogyed/tasker/service/TaskerServiceLayerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tasker-service/src/test/java/com/trilogyed/tasker/service/TaskerServiceLayerTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -83,7 +73,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TaskerServiceLayerTest.updateTask">
+  <component name="RunManager" selected="JUnit.TaskerServiceLayerTest">
     <configuration name="TaskerServiceLayerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tasker-service" />
       <extension name="coverage">
@@ -165,8 +155,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TaskerServiceLayerTest.updateTask" />
         <item itemvalue="JUnit.TaskerServiceLayerTest" />
+        <item itemvalue="JUnit.TaskerServiceLayerTest.updateTask" />
         <item itemvalue="JUnit.TaskerServiceLayerTest.deleteTask" />
         <item itemvalue="JUnit.TaskerServiceLayerTest.fetchTasksByCategory" />
         <item itemvalue="JUnit.TaskerServiceLayerTest.fetchAllTasks" />

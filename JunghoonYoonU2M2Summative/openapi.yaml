@@ -1,0 +1,97 @@
+openapi: 3.0.0
+info:
+  title: STwitter Service
+  description: A Service that keeps track of STwitter pulling from posts and comments.
+  version: 0.0.1
+servers:
+  - url: 'http://localhost:4040'
+    description: Local dev server
+paths:
+  /posts:
+    post:
+      summary: Creates a Post from the PostViewModel
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostViewModel'
+      responses:
+        '201':
+          description: A Post object created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostViewModel'
+        '400':
+          description: Invalid request syntax.
+        '422':
+          description: Incomplete Post information. Some required fields missing.
+  '/posts/{id}':
+    get:
+      summary: Retrieves the entry for the Post with the given ID.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID of the post to retrieve
+          schema:
+            type: integer
+            format: int64
+            minimum: 1
+      responses:
+        '200':
+          description: Post object matching the given ID.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostViewModel'
+  '/posts/user/{poster_name}':
+    get:
+      summary: Retrieves a list of posts for the poster name
+      parameters:
+        - name: poster_name
+          in: path
+          required: true
+          description: name of the poster
+          schema:
+            type: string
+            format: string
+            minimum: 1
+      responses:
+        '200':
+          description: List of Posts based on the poster name
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostViewModel'
+components:
+  schemas:
+    PostViewModel:
+      properties:
+        postId:
+          type: integer
+        postDate:
+          type: string
+        posterName:
+          type: string
+        comments:
+          type: string
+        commentId:
+          type: integer
+        commenterName:
+          type: string
+        commentDate:
+          type: string
+        commentContent:
+          type: string
+      required:
+        - postId
+        - postDate
+        - posterName
+        - comments
+        - category
+        - commentId
+        - commenterName
+        - commentDate
+        - commentContent

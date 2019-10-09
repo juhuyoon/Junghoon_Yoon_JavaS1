@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/JunghoonYoonU2M2Summative.iml" filepath="$PROJECT_DIR$/.idea/JunghoonYoonU2M2Summative.iml" />
+      <module fileurl="file://$PROJECT_DIR$/comment-queue-consumer/comment-queue-consumer.iml" filepath="$PROJECT_DIR$/comment-queue-consumer/comment-queue-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/comment-service/comment-service.iml" filepath="$PROJECT_DIR$/comment-service/comment-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/post-service/post-service.iml" filepath="$PROJECT_DIR$/post-service/post-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/stwitter-service/stwitter-service.iml" filepath="$PROJECT_DIR$/stwitter-service/stwitter-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/summative2-config-server/summative2-config-server.iml" filepath="$PROJECT_DIR$/summative2-config-server/summative2-config-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/summative2-eureka-server/summative2-eureka-server.iml" filepath="$PROJECT_DIR$/summative2-eureka-server/summative2-eureka-server.iml" />
+    </modules>
+  </component>
+</project>

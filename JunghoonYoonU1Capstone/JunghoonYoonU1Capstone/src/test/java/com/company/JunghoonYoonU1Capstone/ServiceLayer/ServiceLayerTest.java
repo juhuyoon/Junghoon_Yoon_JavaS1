@@ -6,7 +6,11 @@ import com.company.JunghoonYoonU1Capstone.ViewModel.OrderViewModel;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.MockitoJUnitRunner;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -15,15 +19,29 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.*;
 
+@RunWith(MockitoJUnitRunner.class)
 public class ServiceLayerTest {
 
+    //Mock is for unit tests From Mockito library, same as doing the gameDao = mock(gameDao.class)
+    //MockBeans is for integration tests (it actually creates a bean)
+        //Part of Spring, and mockBean creates a mock instance in the ApplicationContext and then it will be injected
+        //into the instance.
+
+    @InjectMocks
     private ServiceLayer service;
+    @Mock
     private GameDao gameDao;
+    @Mock
     private ConsoleDao consoleDao;
+    @Mock
     private TshirtDao tshirtDao;
+    @Mock
     private InvoiceDao invoiceDao;
+    @Mock
     private ProcessingFeesDao pFeesDao;
+    @Mock
     private SalesTaxRate_Dao salesTaxDao;
+
     @Before
     public void setUp() throws Exception {
         setUpGameDaoMock();
@@ -33,7 +51,8 @@ public class ServiceLayerTest {
         setUpSalesTaxMock();
         setUpInvoiceMock();
 
-        service = new ServiceLayer(gameDao, consoleDao, tshirtDao, pFeesDao, salesTaxDao, invoiceDao);
+        //This is filled with the InjectMocks Annotation
+//        service = new ServiceLayer(gameDao, consoleDao, tshirtDao, pFeesDao, salesTaxDao, invoiceDao);
     }
 
     @Test
@@ -282,7 +301,7 @@ public class ServiceLayerTest {
 
     //Helper Methods
     private void setUpGameDaoMock() {
-        gameDao = mock(GameDaoTempImpl.class);
+       // gameDao = mock(GameDaoTempImpl.class);
         Game game = new Game();
         game.setGame_id(1);
         game.setTitle("Starcraft");
@@ -306,13 +325,13 @@ public class ServiceLayerTest {
         doReturn(game).when(gameDao).addGame(game2);
         doReturn(game).when(gameDao).getGame(1);
         doReturn(gList).when(gameDao).getAllGames();
-        doReturn(gList).when(gameDao).getGamesByTitle("Starcraft");
-        doReturn(gList).when(gameDao).getGamesByRating("T");
-        doReturn(gList).when(gameDao).getGamesByStudio("Blizzard");
+//        doReturn(gList).when(gameDao).getGamesByTitle("Starcraft");
+//        doReturn(gList).when(gameDao).getGamesByRating("T");
+//        doReturn(gList).when(gameDao).getGamesByStudio("Blizzard");
     }
 
     private void setUpConsoleMock() {
-        consoleDao = mock(ConsoleDaoTempImpl.class);
+        //consoleDao = mock(ConsoleDaoTempImpl.class);
         Console console = new Console();
         console.setConsole_id(1);
         console.setModel("XBox");
@@ -336,11 +355,11 @@ public class ServiceLayerTest {
         doReturn(console).when(consoleDao).addConsole(console2);
         doReturn(console).when(consoleDao).getConsole(1);
         doReturn(cList).when(consoleDao).getAllConsoles();
-        doReturn(cList).when(consoleDao).getConsolesByManufacturer("Windows");
+       // doReturn(cList).when(consoleDao).getConsolesByManufacturer("Windows");
     }
 
     private void setUpTShirtMock() {
-        tshirtDao = mock(TShirtDaoTempImpl.class);
+        //tshirtDao = mock(TShirtDaoTempImpl.class);
         TShirt tShirt = new TShirt();
         tShirt.setT_shirt_id(1);
         tShirt.setSize("M");
@@ -362,12 +381,12 @@ public class ServiceLayerTest {
         doReturn(tShirt).when(tshirtDao).addTShirt(tShirt2);
         doReturn(tShirt).when(tshirtDao).getTShirt(1);
         doReturn(tList).when(tshirtDao).getAllTShirts();
-        doReturn(tList).when(tshirtDao).getTShirtsBySize("M");
-        doReturn(tList).when(tshirtDao).getTShirtsByColor("Orange");
+//        doReturn(tList).when(tshirtDao).getTShirtsBySize("M");
+//        doReturn(tList).when(tshirtDao).getTShirtsByColor("Orange");
     }
 
     private void setUpSalesTaxMock() {
-        salesTaxDao = mock(SalesTaxRateDaoTempImpl.class);
+        //salesTaxDao = mock(SalesTaxRateDaoTempImpl.class);
         Sales_Tax_Rate salesTax = new Sales_Tax_Rate();
         salesTax.setState("CA");
         salesTax.setRate(new BigDecimal("0.07"));
@@ -385,7 +404,7 @@ public class ServiceLayerTest {
     }
 
     private void setUpPFeesMock() {
-        pFeesDao = mock(ProcessingFeesDaoTempImpl.class);
+       //pFeesDao = mock(ProcessingFeesDaoTempImpl.class);
         Processing_Fee pFee = new Processing_Fee();
         pFee.setProduct_type("Games");
         pFee.setFee(new BigDecimal("1.49"));
@@ -403,7 +422,7 @@ public class ServiceLayerTest {
     }
 
     private void setUpInvoiceMock() {
-        invoiceDao = mock(InvoiceDaoTempImpl.class);
+        //invoiceDao = mock(InvoiceDaoTempImpl.class);
         Invoice invoice = new Invoice();
         invoice.setInvoice_id(1);
         invoice.setName("Jung");
@@ -438,13 +457,13 @@ public class ServiceLayerTest {
         List<Invoice> iList = new ArrayList<>();
         iList.add(invoice);
 
-        doReturn(invoice).when(invoiceDao).addInvoice(invoice2);
+        //doReturn(invoice).when(invoiceDao).addInvoice(invoice2);
         doReturn(invoice).when(invoiceDao).getInvoice(1);
-        doReturn(iList).when(invoiceDao).getAllInvoice();
+        //doReturn(iList).when(invoiceDao).getAllInvoice();
     }
 
     private void setUpOVMMock() {
-        invoiceDao = mock(InvoiceDaoTempImpl.class);
+        //invoiceDao = mock(InvoiceDaoTempImpl.class);
         OrderViewModel ovm = new OrderViewModel();
         ovm.setOrder_id(1);
         ovm.setName("Jung");
