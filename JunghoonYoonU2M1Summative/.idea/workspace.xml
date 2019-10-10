@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d9c4ffa-bfb9-4312-bd14-a05c3b8d0a3c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../20191002/U1M6GroupProject" beforeDir="false" afterPath="$PROJECT_DIR$/../20191002/U1M6GroupProject" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JunghoonYoonU1Capstone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JunghoonYoonU1Capstone/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JunghoonYoonU1Capstone/JunghoonYoonU1Capstone/src/test/java/com/company/JunghoonYoonU1Capstone/ServiceLayer/ServiceLayerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JunghoonYoonU1Capstone/JunghoonYoonU1Capstone/src/test/java/com/company/JunghoonYoonU1Capstone/ServiceLayer/ServiceLayerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasker-service/src/test/java/com/trilogyed/tasker/service/TaskerServiceLayerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tasker-service/src/test/java/com/trilogyed/tasker/service/TaskerServiceLayerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JunghoonYoonU2M2Summative/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JunghoonYoonU2M2Summative/comment-queue-consumer/src/main/java/com/trilogyed/commentqueueconsumer/MessageListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JunghoonYoonU2M2Summative/comment-queue-consumer/src/main/java/com/trilogyed/commentqueueconsumer/util/messages/Comment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JunghoonYoonU2M2Summative/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JunghoonYoonU2M2Summative/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JunghoonYoonU2M2Summative/comment-queue-consumer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JunghoonYoonU2M2Summative/comment-queue-consumer/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JunghoonYoonU2M2Summative/comment-queue-consumer/src/main/java/com/trilogyed/commentqueueconsumer/CommentQueueConsumerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JunghoonYoonU2M2Summative/comment-queue-consumer/src/main/java/com/trilogyed/commentqueueconsumer/CommentQueueConsumerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JunghoonYoonU2M2Summative/comment-queue-consumer/src/main/resources/bootstrap.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../JunghoonYoonU2M2Summative/comment-queue-consumer/src/main/resources/bootstrap.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JunghoonYoonU2M2Summative/stwitter-service/src/main/java/com/trilogyed/stwitter/util/feign/CommentServerClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JunghoonYoonU2M2Summative/stwitter-service/src/main/java/com/trilogyed/stwitter/util/feign/CommentServerClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JunghoonYoonU2M2Summative/stwitter-service/src/main/java/com/trilogyed/stwitter/util/feign/PostServerClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JunghoonYoonU2M2Summative/stwitter-service/src/main/java/com/trilogyed/stwitter/util/feign/PostServerClient.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
