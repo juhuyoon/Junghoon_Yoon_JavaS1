@@ -6,6 +6,7 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerializer;
 
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import java.time.LocalDate;
 import java.util.Objects;
@@ -18,9 +19,9 @@ public class Post {
     @JsonDeserialize(using = LocalDateDeserializer.class)
     @JsonSerialize(using = LocalDateSerializer.class)
     private LocalDate postDate;
-    @NotEmpty(message = "Please provide a value")
+    @NotBlank(message = "Please provide a value")
     private String posterName;
-    @NotEmpty(message = "Please provide a value")
+    @NotBlank(message = "Please provide a value")
     private String post;
 
     public int getPostID() {

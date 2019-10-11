@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/20191014.iml" filepath="$PROJECT_DIR$/.idea/20191014.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DayConverter/DayConverter.iml" filepath="$PROJECT_DIR$/DayConverter/DayConverter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HelloWebServices/HelloWebServices.iml" filepath="$PROJECT_DIR$/HelloWebServices/HelloWebServices.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MonthConverter/MonthConverter.iml" filepath="$PROJECT_DIR$/MonthConverter/MonthConverter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RESTCalculator/RESTCalculator.iml" filepath="$PROJECT_DIR$/RESTCalculator/RESTCalculator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WeatherAPI/WeatherAPI.iml" filepath="$PROJECT_DIR$/WeatherAPI/WeatherAPI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/authorization-service/authorization-service.iml" filepath="$PROJECT_DIR$/authorization-service/authorization-service.iml" />
+    </modules>
+  </component>
+</project>
