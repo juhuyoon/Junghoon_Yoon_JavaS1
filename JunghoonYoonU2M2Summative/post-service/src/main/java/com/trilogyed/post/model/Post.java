@@ -11,7 +11,6 @@ import java.time.LocalDate;
 import java.util.Objects;
 
 public class Post {
-
     private int postID;
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
     @JsonDeserialize(using = LocalDateDeserializer.class)
@@ -21,6 +20,16 @@ public class Post {
     private String posterName;
     @NotBlank(message = "Please provide a value")
     private String post;
+
+    public Post() {
+    }
+
+    public Post(int postID, LocalDate postDate, @NotBlank(message = "Please provide a value") String posterName, @NotBlank(message = "Please provide a value") String post) {
+        this.postID = postID;
+        this.postDate = postDate;
+        this.posterName = posterName;
+        this.post = post;
+    }
 
     public int getPostID() {
         return postID;
@@ -70,5 +79,13 @@ public class Post {
         return Objects.hash(postID, postDate, posterName, post);
     }
 
-
+    @Override
+    public String toString() {
+        return "Post{" +
+                "postID=" + postID +
+                ", postDate=" + postDate +
+                ", posterName='" + posterName + '\'' +
+                ", post='" + post + '\'' +
+                '}';
+    }
 }

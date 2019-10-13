@@ -3,7 +3,6 @@ package com.trilogyed.post.controller;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.trilogyed.post.DAO.PostDao;
-import com.trilogyed.post.model.Post;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

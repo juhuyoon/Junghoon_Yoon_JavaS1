@@ -11,7 +11,6 @@ import java.time.LocalDate;
 import java.util.Objects;
 
 public class Comment {
-
     private int commentId;
     @NotBlank(message = "Post ID is missing")
     private int postId;
@@ -91,5 +90,16 @@ public class Comment {
     @Override
     public int hashCode() {
         return Objects.hash(commentId, postId, createDate, commenterName, comment);
+    }
+
+    @Override
+    public String toString() {
+        return "Comment{" +
+                "commentId=" + commentId +
+                ", postId=" + postId +
+                ", createDate=" + createDate +
+                ", commenterName='" + commenterName + '\'' +
+                ", comment='" + comment + '\'' +
+                '}';
     }
 }

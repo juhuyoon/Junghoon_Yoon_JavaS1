@@ -1,6 +1,6 @@
 package com.trilogyed.stwitter.servicelayer;
 
-import com.trilogyed.stwitter.ViewModel.PostViewModel;
+import com.trilogyed.stwitter.viewmodel.PostViewModel;
 import com.trilogyed.stwitter.model.Post;
 import com.trilogyed.stwitter.util.feign.CommentServerClient;
 import com.trilogyed.stwitter.util.feign.PostServerClient;
@@ -15,6 +15,7 @@ import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
@@ -71,7 +72,6 @@ public class ServiceLayerTest {
         expected.setPosterName("Jung");
         expected.setPost("SOME POST");
 
-        PostViewModel fromService = service.getPost(expected.getPostId());
 
         List<PostViewModel> pvmList = service.getAllPostsByPoster(pvm.getPosterName());
 
@@ -107,7 +107,10 @@ public class ServiceLayerTest {
         expected.setCommentDate(LocalDate.of(2015,5,15));
         expected.setComment_content("SOME COMMENT");
 
-        doReturn(expected).when(commentClient).getComment(expected.getCommentId());
+        List<Comment> cList = new ArrayList<>();
+        cList.add(expected);
+
+        doReturn(cList).when(commentClient).getComment(expected.getCommentId());
 
     }
 
@@ -118,7 +121,11 @@ public class ServiceLayerTest {
         expected.setPosterName("Jung");
         expected.setPost("SOME POST");
 
+        List<Post> pList = new ArrayList<>();
+        pList.add(expected);
+
         doReturn(expected).when(postClient).getPost(expected.getPostId());
+        doReturn(pList).when(postClient).getPostsByPosterName("Jung");
     }
 
 

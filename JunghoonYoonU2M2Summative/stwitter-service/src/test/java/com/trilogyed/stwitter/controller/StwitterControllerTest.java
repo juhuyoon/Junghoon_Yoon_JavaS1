@@ -1,7 +1,7 @@
 package com.trilogyed.stwitter.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.trilogyed.stwitter.ViewModel.PostViewModel;
+import com.trilogyed.stwitter.viewmodel.PostViewModel;
 import com.trilogyed.stwitter.servicelayer.ServiceLayer;
 import com.trilogyed.stwitter.util.messages.Comment;
 import org.junit.Test;
@@ -11,7 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
@@ -19,17 +19,15 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.*;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-@RunWith(SpringJUnit4ClassRunner.class)
+@RunWith(SpringRunner.class)
 @WebMvcTest(StwitterController.class)
 public class StwitterControllerTest {
-
     @Autowired
     private MockMvc mockMvc;
 
@@ -105,7 +103,6 @@ public class StwitterControllerTest {
 
     @Test
     public void getAllPostsByPoster() {
-
     }
 
     @Test

@@ -1,7 +1,6 @@
 package com.trilogyed.commentqueueconsumer;
 
 import com.trilogyed.commentqueueconsumer.util.feign.CommentServiceClient;
-import com.trilogyed.commentqueueconsumer.util.messages.Comment;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

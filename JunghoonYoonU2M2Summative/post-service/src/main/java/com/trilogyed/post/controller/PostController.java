@@ -4,6 +4,10 @@ import com.trilogyed.post.DAO.PostDao;
 import com.trilogyed.post.model.Post;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.cache.annotation.CacheConfig;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -14,17 +18,20 @@ import java.util.List;
 @RestController
 @RefreshScope
 @RequestMapping("/posts")
+@CacheConfig(cacheNames = {"posts"})
 public class PostController {
     @Qualifier("postDao")
     @Autowired
     PostDao postDao;
 
+    @CachePut(key = "#result.getPostId()")
     @PostMapping("")
     @ResponseStatus(HttpStatus.CREATED)
     public Post createPost(@RequestBody Post post) {
         return postDao.addPost(post);
     }
 
+    @Cacheable
     @GetMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
     public Post getPost(@PathVariable("id") int id) {
@@ -42,6 +49,7 @@ public class PostController {
         return postDao.getAllPosts();
     }
 
+    @CacheEvict(key = "#post.getPostId()")
     @PutMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
     public void updatePost(@RequestBody Post post, @PathVariable("id") int id) {
@@ -49,6 +57,7 @@ public class PostController {
         postDao.updatePost(post);
     }
 
+    @CacheEvict
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
     public void deletePost(@PathVariable("id") int id) {

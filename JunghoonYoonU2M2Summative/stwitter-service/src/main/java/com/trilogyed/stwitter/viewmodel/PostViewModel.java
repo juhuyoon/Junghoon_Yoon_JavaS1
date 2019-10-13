@@ -1,5 +1,10 @@
-package com.trilogyed.stwitter.ViewModel;
+package com.trilogyed.stwitter.viewmodel;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer;
+import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerializer;
 import com.trilogyed.stwitter.util.messages.Comment;
 
 import javax.validation.constraints.NotBlank;
@@ -9,6 +14,9 @@ import java.util.Objects;
 
 public class PostViewModel {
     private int postId;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
+    @JsonDeserialize(using = LocalDateDeserializer.class)
+    @JsonSerialize(using = LocalDateSerializer.class)
     private LocalDate postDate;
     @NotBlank(message = "Please input a valid name")
     private String posterName;
@@ -86,5 +94,16 @@ public class PostViewModel {
     @Override
     public int hashCode() {
         return Objects.hash(postId, postDate, posterName, post, comments);
+    }
+
+    @Override
+    public String toString() {
+        return "PostViewModel{" +
+                "postId=" + postId +
+                ", postDate=" + postDate +
+                ", posterName='" + posterName + '\'' +
+                ", post='" + post + '\'' +
+                ", comments=" + comments +
+                '}';
     }
 }

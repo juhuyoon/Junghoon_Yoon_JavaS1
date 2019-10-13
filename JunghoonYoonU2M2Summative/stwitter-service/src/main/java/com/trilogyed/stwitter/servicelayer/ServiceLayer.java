@@ -1,6 +1,6 @@
 package com.trilogyed.stwitter.servicelayer;
 
-import com.trilogyed.stwitter.ViewModel.PostViewModel;
+import com.trilogyed.stwitter.viewmodel.PostViewModel;
 import com.trilogyed.stwitter.model.Post;
 import com.trilogyed.stwitter.util.feign.CommentServerClient;
 import com.trilogyed.stwitter.util.feign.PostServerClient;

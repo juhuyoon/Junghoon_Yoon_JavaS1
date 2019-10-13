@@ -4,6 +4,10 @@ import com.trilogyed.comment.DAO.CommentDao;
 import com.trilogyed.comment.model.Comment;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.cache.annotation.CacheConfig;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -13,16 +17,18 @@ import java.util.List;
 @RestController
 @RefreshScope
 @RequestMapping("/comments")
+@CacheConfig(cacheNames = {"comments"})
 public class CommentController {
     @Qualifier("commentDao")
     @Autowired
-    CommentDao commentDao;
+     CommentDao commentDao;
 
     /**
      * Creating the Comment object and storing to the Database
      * @param comment
      * @return
      */
+    @CachePut(key = "#result.getCommentId()")
     @PostMapping("")
     @ResponseStatus(HttpStatus.CREATED)
     public Comment createComment(@RequestBody Comment comment) {
@@ -34,6 +40,7 @@ public class CommentController {
      * @param id
      * @return
      */
+    @Cacheable
     @GetMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
     public Comment getComment(@PathVariable("id") int id) {
@@ -70,6 +77,7 @@ public class CommentController {
      * @param comment
      * @param id
      */
+    @CacheEvict(key = "#comment.getCommentId()")
     @PutMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
     public void updateComment(@RequestBody Comment comment, @PathVariable("id") int id) {
@@ -81,6 +89,7 @@ public class CommentController {
      * Deletes the comment by the ID in the database.
      * @param id
      */
+    @CacheEvict
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
     public void deleteComment(@PathVariable("id") int id) {
