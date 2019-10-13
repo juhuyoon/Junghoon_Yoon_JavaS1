@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -30,6 +31,9 @@ public class CommentDaoTempImpl implements CommentDao {
     private static final String DELETE_COMMENT_SQL =
             "DELETE FROM comment where comment_id = ?";
 
+    private static final String SELECT_COMMENT_BY_POST_SQL =
+            "SELECT * FROM comment WHERE post_id = ?";
+
     @Autowired
     public CommentDaoTempImpl(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
@@ -41,6 +45,7 @@ public class CommentDaoTempImpl implements CommentDao {
      * @return
      */
     @Override
+    @Transactional
     public Comment addComment(Comment comment) {
         jdbcTemplate.update(ADD_COMMENT_SQL,
                 comment.getPostId(),
@@ -70,6 +75,15 @@ public class CommentDaoTempImpl implements CommentDao {
     public Comment getComment(int commentId) {
         try {
             return jdbcTemplate.queryForObject(SELECT_COMMENT_SQL, this::mapRowToComment, commentId);
+        } catch (EmptyResultDataAccessException e) {
+            return null;
+        }
+    }
+
+    @Override
+    public List<Comment> getCommentsByPostId(int postId) {
+        try {
+            return jdbcTemplate.query(SELECT_COMMENT_BY_POST_SQL, this::mapRowToComment, postId);
         } catch (EmptyResultDataAccessException e) {
             return null;
         }

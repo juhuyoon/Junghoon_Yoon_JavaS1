@@ -13,6 +13,7 @@ import org.springframework.context.annotation.Bean;
 @SpringBootApplication
 @EnableFeignClients
 
+//Setting the Queue Consumer
 public class CommentQueueConsumerApplication {
 
 	public static final String TOPIC_EXCHANGE_NAME = "comment-exchange";

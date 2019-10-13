@@ -22,6 +22,9 @@ public class PostDaoTempImpl implements PostDao {
     private static final String SELECT_POST_SQL =
             "SELECT * FROM post WHERE post_id = ?";
 
+    private static final String SELECT_POST_BY_NAME_SQL =
+            "SELECT * FROM post WHERE poster_name = ?";
+
     private static final String SELECT_ALL_POSTS_SQL =
             "SELECT * FROM post";
 
@@ -79,6 +82,15 @@ public class PostDaoTempImpl implements PostDao {
         } catch (EmptyResultDataAccessException e) {
             return null;
         }
+    }
+
+    /**
+     * Getting All Posts fromt he database based on the poster name.
+     * @param posterName
+     * @return
+     */
+    public List<Post> getPostsByPosterName(String posterName){
+        return jdbcTemplate.query(SELECT_POST_BY_NAME_SQL, this::mapRowToPost, posterName);
     }
 
     /**

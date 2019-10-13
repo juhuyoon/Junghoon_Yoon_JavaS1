@@ -2,6 +2,7 @@ package com.trilogyed.stwitter.ViewModel;
 
 import com.trilogyed.stwitter.util.messages.Comment;
 
+import javax.validation.constraints.NotBlank;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Objects;
@@ -9,13 +10,18 @@ import java.util.Objects;
 public class PostViewModel {
     private int postId;
     private LocalDate postDate;
+    @NotBlank(message = "Please input a valid name")
     private String posterName;
+    @NotBlank(message = "Please input a valid name")
     private String post;
+    @NotBlank(message = "Please ask for a list of comments")
     private List<Comment> comments;
 
+    //Default Constructor
     public PostViewModel() {
     }
 
+    // Constructor
     public PostViewModel(int postId, LocalDate postDate, String posterName, String post, List<Comment> comments) {
         this.postId = postId;
         this.postDate = postDate;
@@ -24,6 +30,7 @@ public class PostViewModel {
         this.comments = comments;
     }
 
+    //Getters & Setters
     public int getPostId() {
         return postId;
     }

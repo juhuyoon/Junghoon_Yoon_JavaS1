@@ -18,12 +18,22 @@ public class CommentController {
     @Autowired
     CommentDao commentDao;
 
+    /**
+     * Creating the Comment object and storing to the Database
+     * @param comment
+     * @return
+     */
     @PostMapping("")
     @ResponseStatus(HttpStatus.CREATED)
     public Comment createComment(@RequestBody Comment comment) {
         return commentDao.addComment(comment);
     }
 
+    /**
+     * Retrieving a Comment from the Database
+     * @param id
+     * @return
+     */
     @GetMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
     public Comment getComment(@PathVariable("id") int id) {
@@ -35,12 +45,31 @@ public class CommentController {
         }
     }
 
+    /**
+     * Gets the Comment from the database by the post id
+     * @param post_id
+     * @return
+     */
+    @GetMapping("post/{post_id}")
+    public List<Comment> getCommentsByPostId(@PathVariable int post_id) {
+        return commentDao.getCommentsByPostId(post_id);
+    }
+
+    /**
+     * Retrieves all the comments from the database.
+     * @return
+     */
     @GetMapping("")
     @ResponseStatus(HttpStatus.OK)
     public List<Comment> getAllComments() {
         return commentDao.getAllComments();
     }
 
+    /**
+     * Updates the comment based on the ID from the database
+     * @param comment
+     * @param id
+     */
     @PutMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
     public void updateComment(@RequestBody Comment comment, @PathVariable("id") int id) {
@@ -48,9 +77,14 @@ public class CommentController {
         commentDao.updateComment(comment);
     }
 
+    /**
+     * Deletes the comment by the ID in the database.
+     * @param id
+     */
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
     public void deleteComment(@PathVariable("id") int id) {
         commentDao.deleteComment(id);
     }
+
 }

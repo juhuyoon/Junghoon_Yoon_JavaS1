@@ -1,4 +1,4 @@
-package com.trilogyed.post.model;
+package com.trilogyed.stwitter.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
@@ -10,24 +10,25 @@ import javax.validation.constraints.NotBlank;
 import java.time.LocalDate;
 import java.util.Objects;
 
+//Post Model for the View and Post
 public class Post {
 
-    private int postID;
+    private int postId;
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
     @JsonDeserialize(using = LocalDateDeserializer.class)
     @JsonSerialize(using = LocalDateSerializer.class)
     private LocalDate postDate;
-    @NotBlank(message = "Please provide a value")
+    @NotBlank(message = "put in a poster name")
     private String posterName;
-    @NotBlank(message = "Please provide a value")
+    @NotBlank(message = "Put in a post")
     private String post;
 
-    public int getPostID() {
-        return postID;
+    public int getPostId() {
+        return postId;
     }
 
-    public void setPostID(int postID) {
-        this.postID = postID;
+    public void setPostId(int postId) {
+        this.postId = postId;
     }
 
     public LocalDate getPostDate() {
@@ -59,7 +60,7 @@ public class Post {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Post post1 = (Post) o;
-        return postID == post1.postID &&
+        return postId == post1.postId &&
                 postDate.equals(post1.postDate) &&
                 posterName.equals(post1.posterName) &&
                 post.equals(post1.post);
@@ -67,7 +68,7 @@ public class Post {
 
     @Override
     public int hashCode() {
-        return Objects.hash(postID, postDate, posterName, post);
+        return Objects.hash(postId, postDate, posterName, post);
     }
 
 

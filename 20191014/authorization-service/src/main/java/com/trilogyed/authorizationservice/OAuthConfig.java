@@ -26,19 +26,17 @@ public class OAuthConfig  extends AuthorizationServerConfigurerAdapter {
                 .withClient("html5")
                 .authorizedGrantTypes("password")
                 .scopes("ROLE_LVL1", "ROLE_LVL2")
-                .secret("$2a$10$fgmCFkI4bjLLkb/Nr8gQaOP9Mnja2gZTPxqQLPFQ5E8j8I5VdwfVO");
+                .secret("$2a$10$fgmCFkI4bjLLkb/Nr8gQaOP9Mnja2gZTPxqQLPFQ5E8j8I5VdwfVO").and()
 
-//        clients.inMemory()
-//                .withClient("Android")
-//                .authorizedGrantTypes("password")
-//                .scopes("ROLE_LVL1", "ROLE_LVL2", "ROLE_ADMIN")
-//                .secret("$2a$10$Cl/VImPvkmKWuL/CDYnhTuTW7UAJPAPM/ORpy.mG0.V4iU9GFSJwu");
-//
-//        clients.inMemory()
-//                .withClient("iPhone")
-//                .authorizedGrantTypes("password")
-//                .scopes("ROLE_LVL1", "ROLE_LVL2", "ROLE_ADMIN")
-//                .secret("$2a$10$vLO.MpSdUHlBB3BTSpos9edK9kg.G2hsm5Jffo4lwCBGTGxsYAbSa");
+                .withClient("Android")
+                .authorizedGrantTypes("password")
+                .scopes("ROLE_LVL1", "ROLE_LVL2", "ROLE_ADMIN")
+                .secret("$2a$10$Cl/VImPvkmKWuL/CDYnhTuTW7UAJPAPM/ORpy.mG0.V4iU9GFSJwu").and()
+
+                .withClient("iPhone")
+                .authorizedGrantTypes("password")
+                .scopes("ROLE_LVL1", "ROLE_LVL2", "ROLE_ADMIN")
+                .secret("$2a$10$vLO.MpSdUHlBB3BTSpos9edK9kg.G2hsm5Jffo4lwCBGTGxsYAbSa");
     }
     @Override
     public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {

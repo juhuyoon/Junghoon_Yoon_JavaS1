@@ -54,4 +54,14 @@ public class PostController {
     public void deletePost(@PathVariable("id") int id) {
         postDao.deletePost(id);
     }
+
+    @GetMapping(value = "/{poster_name}")
+    @ResponseStatus(HttpStatus.OK)
+    public List<Post> getPostsByPosterName(@PathVariable String posterName) {
+        List<Post> postList = postDao.getPostsByPosterName(posterName);
+        if (postList == null) {
+            throw new IllegalArgumentException("Post does not exist for name " + posterName);
+        }
+        return postList;
+    }
 }
