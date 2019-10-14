@@ -2,32 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="79313dbc-8d69-4ed0-9f2c-9adebe654cbf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_9_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stwitter-service/src/main/java/com/trilogyed/stwitter/viewmodel/PostViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JunghoonYoonU2M1Summative/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JunghoonYoonU2M1Summative/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_7.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comment-queue-consumer/src/main/java/com/trilogyed/commentqueueconsumer/MessageListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/comment-queue-consumer/src/main/java/com/trilogyed/commentqueueconsumer/MessageListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comment-queue-consumer/src/main/java/com/trilogyed/commentqueueconsumer/util/messages/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/comment-queue-consumer/src/main/java/com/trilogyed/commentqueueconsumer/util/messages/Comment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comment-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/comment-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comment-service/src/main/java/com/trilogyed/comment/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/comment-service/src/main/java/com/trilogyed/comment/controller/CommentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comment-service/src/main/java/com/trilogyed/comment/model/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/comment-service/src/main/java/com/trilogyed/comment/model/Comment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/post-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-service/src/main/java/com/trilogyed/post/DAO/PostDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-service/src/main/java/com/trilogyed/post/DAO/PostDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-service/src/main/java/com/trilogyed/post/DAO/PostDaoTempImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-service/src/main/java/com/trilogyed/post/DAO/PostDaoTempImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-service/src/main/java/com/trilogyed/post/PostServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-service/src/main/java/com/trilogyed/post/PostServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-service/src/main/java/com/trilogyed/post/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-service/src/main/java/com/trilogyed/post/controller/PostController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-service/src/main/java/com/trilogyed/post/model/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-service/src/main/java/com/trilogyed/post/model/Post.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-service/src/test/java/com/trilogyed/post/DAO/PostDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-service/src/test/java/com/trilogyed/post/DAO/PostDaoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-service/src/test/java/com/trilogyed/post/controller/PostControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-service/src/test/java/com/trilogyed/post/controller/PostControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stwitter-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/stwitter-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stwitter-service/src/main/java/com/trilogyed/stwitter/ViewModel/PostViewModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/stwitter-service/src/main/java/com/trilogyed/stwitter/controller/StwitterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/stwitter-service/src/main/java/com/trilogyed/stwitter/controller/StwitterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stwitter-service/src/main/java/com/trilogyed/stwitter/model/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/stwitter-service/src/main/java/com/trilogyed/stwitter/model/Post.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stwitter-service/src/main/java/com/trilogyed/stwitter/servicelayer/ServiceLayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/stwitter-service/src/main/java/com/trilogyed/stwitter/servicelayer/ServiceLayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stwitter-service/src/test/java/com/trilogyed/stwitter/controller/StwitterControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/stwitter-service/src/test/java/com/trilogyed/stwitter/controller/StwitterControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stwitter-service/src/test/java/com/trilogyed/stwitter/servicelayer/ServiceLayerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/stwitter-service/src/test/java/com/trilogyed/stwitter/servicelayer/ServiceLayerTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
