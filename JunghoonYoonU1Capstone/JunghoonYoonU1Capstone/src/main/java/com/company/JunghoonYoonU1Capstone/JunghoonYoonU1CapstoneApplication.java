@@ -4,37 +4,50 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @SpringBootApplication
 public class JunghoonYoonU1CapstoneApplication {
 
-	public static void main(String[] args) throws IOException {
-		SpringApplication.run(JunghoonYoonU1CapstoneApplication.class, args);
-//		HashMap<String, String> statesCode = new HashMap<>();
-//		String filePath = "states.rtf";
-//		try {
-//			String line;
-//			BufferedReader reader = new BufferedReader(new FileReader(filePath));
-//			while((line = reader.readLine()) != null) {
-//				int spaceIndex = line.indexOf(":");
-//				line = line.substring(0, spaceIndex);
-//				String[] parts = line.split("-", 2);
-//				if(parts.length >= 2) {
-//					String key = parts[0];
-//					String value = parts[1];
-//					statesCode.put(key, value);
-//				} else {
-//					System.out.println("Ignoring line: " + line);
-//				}
-//			}
+	public List<Integer> averageList(List<List<Integer>> list){
+//		List<Integer> newlist = new ArrayList<>();
+//		double sum = 0;
+//		for (List<Integer> newList : list) {
+//			int average = list.size();
+//			newList.addAll();
 //
-//		for(String key: statesCode.keySet()) {
-//			System.out.println(key + ":" + statesCode.get(key));
-//			reader.close();
+//
 //		}
-//		} catch (FileNotFoundException e) {
-//			System.out.println(e);
-//		}
+//		double average = sum / list.size();
+				List<Integer> aList = new ArrayList<>();
+		for(int i = 0; i < list.size(); i++) {
+			int averageNumber = list.size();
+			for(int j = 0; j < i; j++) {
+				int sum = 0;
+				sum += (j / averageNumber);
+				aList.add((sum));
+
+			}
+		}
+		return aList;
 	}
 
+
+
+
+//		for(int i = 0; i < list.size(); i++) {
+//			for(int j = 0; j < i; j++) {
+//				int average = 5;
+//				average += (j/list.size());
+//				averageList.add(average);
+//			}
+//		}
+//		return averageList;
+
+
+	public static void main(String[] args) throws IOException {
+		SpringApplication.run(JunghoonYoonU1CapstoneApplication.class, args);
+	}
 }

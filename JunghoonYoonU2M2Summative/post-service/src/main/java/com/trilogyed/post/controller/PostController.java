@@ -4,10 +4,6 @@ import com.trilogyed.post.DAO.PostDao;
 import com.trilogyed.post.model.Post;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.cache.annotation.CacheConfig;
-import org.springframework.cache.annotation.CacheEvict;
-import org.springframework.cache.annotation.CachePut;
-import org.springframework.cache.annotation.Cacheable;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -17,22 +13,21 @@ import java.util.List;
 //ALL POST CONTROLLERS
 @RestController
 @RefreshScope
-@RequestMapping("/posts")
-@CacheConfig(cacheNames = {"posts"})
+//@CacheConfig(cacheNames = {"posts"})
 public class PostController {
     @Qualifier("postDao")
     @Autowired
     PostDao postDao;
 
-    @CachePut(key = "#result.getPostId()")
-    @PostMapping("")
+    //@CachePut(key = "#result.getPostId()")
+    @PostMapping("/posts")
     @ResponseStatus(HttpStatus.CREATED)
     public Post createPost(@RequestBody Post post) {
         return postDao.addPost(post);
     }
 
-    @Cacheable
-    @GetMapping("/{id}")
+    //@Cacheable
+    @GetMapping("/posts/{id}")
     @ResponseStatus(HttpStatus.OK)
     public Post getPost(@PathVariable("id") int id) {
         Post returnPost = postDao.getPost(id);
@@ -43,30 +38,30 @@ public class PostController {
         }
     }
 
-    @GetMapping("")
+    @GetMapping("/posts/")
     @ResponseStatus(HttpStatus.OK)
     public List<Post> getAllPosts() {
         return postDao.getAllPosts();
     }
 
-    @CacheEvict(key = "#post.getPostId()")
-    @PutMapping("/{id}")
+    //@CacheEvict(key = "#post.getPostId()")
+    @PutMapping("posts/{id}")
     @ResponseStatus(HttpStatus.OK)
     public void updatePost(@RequestBody Post post, @PathVariable("id") int id) {
         post.setPostID(id);
         postDao.updatePost(post);
     }
 
-    @CacheEvict
-    @DeleteMapping("/{id}")
+    //@CacheEvict
+    @DeleteMapping("posts/{id}")
     @ResponseStatus(HttpStatus.OK)
     public void deletePost(@PathVariable("id") int id) {
         postDao.deletePost(id);
     }
 
-    @GetMapping(value = "/{poster_name}")
+    @GetMapping(value = "posts/{poster_name}")
     @ResponseStatus(HttpStatus.OK)
-    public List<Post> getPostsByPosterName(@PathVariable String posterName) {
+    public List<Post> getPostsByPosterName(@PathVariable("poster_name") String posterName) {
         List<Post> postList = postDao.getPostsByPosterName(posterName);
         if (postList == null) {
             throw new IllegalArgumentException("Post does not exist for name " + posterName);

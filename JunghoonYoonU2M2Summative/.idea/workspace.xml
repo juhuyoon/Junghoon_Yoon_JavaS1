@@ -2,7 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="79313dbc-8d69-4ed0-9f2c-9adebe654cbf" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../20191015/REST-Consumer/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../20191015/REST-Consumer/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../20191015/REST-Consumer/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../20191015/REST-Consumer/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../20191015/REST-Consumer/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../20191015/REST-Consumer/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../20191015/REST-Consumer/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../20191015/REST-Consumer/src/main/java/com/company/REST/Consumer/GreetingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../20191015/REST-Consumer/src/main/java/com/company/REST/Consumer/RestConsumerApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../20191015/REST-Consumer/src/main/java/com/company/REST/Consumer/controller/GreetingController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../20191015/REST-Consumer/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../20191015/REST-Consumer/src/main/resources/templates/greeting-view.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../20191015/REST-Consumer/src/test/java/com/company/REST/Consumer/RestConsumerApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../20191015/REST-Producer/src/main/java/com/company/REST/Producer/GreetingController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../20191015/REST-Producer/src/main/java/com/company/REST/Producer/controller/GreetingControllerImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JunghoonYoonU1Capstone/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/DAO/ItemDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JunghoonYoonU1Capstone/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/DTO/InvoiceItemLine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JunghoonYoonU1Capstone/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/DTO/Item.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JunghoonYoonU1Capstone/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/DTO/PurchaseOrder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JunghoonYoonU1Capstone/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/DTO/sumMultiples.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JunghoonYoonU1Capstone/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/ServiceLayer/QServiceLayer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TESTRUN/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TESTRUN/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TESTRUN/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TESTRUN/TESTRUN.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TESTRUN/src/main/java/Calculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TESTRUN/src/main/java/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TESTRUN/src/test/java/CalculatorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TESTRUN/target/classes/Calculator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TESTRUN/target/test-classes/CalculatorTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JunghoonYoonU1Capstone/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/JunghoonYoonU1CapstoneApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JunghoonYoonU1Capstone/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/JunghoonYoonU1CapstoneApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JunghoonYoonU2M1Summative/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JunghoonYoonU2M1Summative/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comment-queue-consumer/src/main/java/com/trilogyed/commentqueueconsumer/MessageListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/comment-queue-consumer/src/main/java/com/trilogyed/commentqueueconsumer/MessageListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post-service/src/main/java/com/trilogyed/post/DAO/PostDaoTempImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-service/src/main/java/com/trilogyed/post/DAO/PostDaoTempImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post-service/src/main/java/com/trilogyed/post/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-service/src/main/java/com/trilogyed/post/controller/PostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stwitter-service/src/main/java/com/trilogyed/stwitter/controller/StwitterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/stwitter-service/src/main/java/com/trilogyed/stwitter/controller/StwitterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stwitter-service/src/main/java/com/trilogyed/stwitter/util/feign/CommentServerClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/stwitter-service/src/main/java/com/trilogyed/stwitter/util/feign/CommentServerClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stwitter-service/src/main/java/com/trilogyed/stwitter/util/feign/PostServerClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/stwitter-service/src/main/java/com/trilogyed/stwitter/util/feign/PostServerClient.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,7 +82,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/comment-service" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../GT-ATL-E-CJS1-FT-08-2019-E-C-COG/02-unit/01-module-12-factor-cloud-native" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -74,71 +112,48 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ServiceLayerTest">
-    <configuration name="ServiceLayerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="stwitter-service" />
+  <component name="RunManager" selected="Application.CommentQueueConsumerApplication">
+    <configuration name="CommentQueueConsumerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.trilogyed.commentqueueconsumer.CommentQueueConsumerApplication" />
+      <module name="comment-queue-consumer" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.trilogyed.stwitter.servicelayer.*" />
+          <option name="PATTERN" value="com.trilogyed.commentqueueconsumer.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.trilogyed.stwitter.servicelayer" />
-      <option name="MAIN_CLASS_NAME" value="com.trilogyed.stwitter.servicelayer.ServiceLayerTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServiceLayerTest.getAllPostsByPoster" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="stwitter-service" />
+    <configuration name="CommentServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.trilogyed.comment.CommentServiceApplication" />
+      <module name="comment-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.trilogyed.stwitter.servicelayer.*" />
+          <option name="PATTERN" value="com.trilogyed.comment.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.trilogyed.stwitter.servicelayer" />
-      <option name="MAIN_CLASS_NAME" value="com.trilogyed.stwitter.servicelayer.ServiceLayerTest" />
-      <option name="METHOD_NAME" value="getAllPostsByPoster" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StwitterControllerTest.createPost" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="stwitter-service" />
+    <configuration name="PostServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.trilogyed.post.PostServiceApplication" />
+      <module name="post-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.trilogyed.stwitter.controller.*" />
+          <option name="PATTERN" value="com.trilogyed.post.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.trilogyed.stwitter.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.trilogyed.stwitter.controller.StwitterControllerTest" />
-      <option name="METHOD_NAME" value="createPost" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StwitterControllerTest.getPost" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="stwitter-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.trilogyed.stwitter.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.trilogyed.stwitter.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.trilogyed.stwitter.controller.StwitterControllerTest" />
-      <option name="METHOD_NAME" value="getPost" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="StwitterServiceApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StwitterServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.trilogyed.stwitter.StwitterServiceApplication" />
       <module name="stwitter-service" />
       <extension name="coverage">
         <pattern>
@@ -146,20 +161,30 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.trilogyed.stwitter" />
-      <option name="MAIN_CLASS_NAME" value="com.trilogyed.stwitter.StwitterServiceApplicationTests" />
-      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Summative2EurekaServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.trilogyed.summative2eurekaserver.Summative2EurekaServerApplication" />
+      <module name="summative2-eureka-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.trilogyed.summative2eurekaserver.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ServiceLayerTest" />
-        <item itemvalue="JUnit.StwitterControllerTest.getPost" />
-        <item itemvalue="JUnit.StwitterControllerTest.createPost" />
-        <item itemvalue="JUnit.ServiceLayerTest.getAllPostsByPoster" />
-        <item itemvalue="JUnit.StwitterServiceApplicationTests" />
+        <item itemvalue="Application.CommentQueueConsumerApplication" />
+        <item itemvalue="Application.CommentServiceApplication" />
+        <item itemvalue="Application.PostServiceApplication" />
+        <item itemvalue="Application.StwitterServiceApplication" />
+        <item itemvalue="Application.Summative2EurekaServerApplication" />
       </list>
     </recent_temporary>
   </component>

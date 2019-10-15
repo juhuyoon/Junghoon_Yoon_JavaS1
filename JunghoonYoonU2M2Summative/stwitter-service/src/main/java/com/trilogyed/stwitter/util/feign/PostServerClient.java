@@ -10,14 +10,14 @@ import java.util.List;
 @FeignClient("post-server-service")
 public interface PostServerClient {
 
+    @PostMapping("/posts")
+    public Post createPost(@RequestBody Post post);
+
     @GetMapping("/posts/{id}")
     public Post getPost(@PathVariable("id") int id);
 
-    @GetMapping("/posts")
+    @GetMapping("/posts/")
     public List<Post> getAllPosts();
-
-    @PostMapping("/posts")
-    public Post createPost(@RequestBody Post post);
 
     @PutMapping("/posts/{id}")
     public void updatePost(@RequestBody Post post, @PathVariable("id") int id);
@@ -25,6 +25,6 @@ public interface PostServerClient {
     @DeleteMapping("/posts/{id}")
     public void deletePost(@PathVariable("id") int id);
 
-    @RequestMapping(value = "/posts/{poster_name}", method = RequestMethod.GET)
-    public List<Post> getPostsByPosterName(@PathVariable String posterName);
+    @GetMapping(value = "/posts/{poster_name}")
+    public List<Post> getPostsByPosterName(@PathVariable("poster_name") String posterName);
 }

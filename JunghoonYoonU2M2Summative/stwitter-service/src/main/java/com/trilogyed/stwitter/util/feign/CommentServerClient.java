@@ -16,7 +16,7 @@ public interface CommentServerClient {
     @GetMapping("/comments")
     public List<Comment> getAllComments();
     @GetMapping("/comments/post/{post_id}")
-    public List<Comment> getCommentsByPostId(@PathVariable int post_id);
+    public List<Comment> getCommentsByPostId(@PathVariable("post_id") int post_id);
     @DeleteMapping("/comments/{id}")
     public void deleteComment(@PathVariable("id") int id);
 }

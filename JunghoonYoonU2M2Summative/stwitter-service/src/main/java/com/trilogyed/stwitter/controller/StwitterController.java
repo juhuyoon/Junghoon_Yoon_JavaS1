@@ -5,9 +5,6 @@ import com.trilogyed.stwitter.servicelayer.ServiceLayer;
 import com.trilogyed.stwitter.util.messages.Comment;
 import com.trilogyed.stwitter.viewmodel.PostViewModel;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.annotation.CacheConfig;
-import org.springframework.cache.annotation.CachePut;
-import org.springframework.cache.annotation.Cacheable;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,22 +13,22 @@ import java.util.List;
 
 @RestController
 //@RefreshScope
-@CacheConfig(cacheNames = {"posts"})
+//@CacheConfig(cacheNames = {"posts"})
 public class StwitterController {
 
     @Autowired
-    private ServiceLayer service;
+    ServiceLayer service;
 
     /**
      * Creating the post Route with Cache put to prepare the data for return
      * @param pvm
      * @return
      */
-    @CachePut(key = "#result.getPostId()")
+    //@CachePut(key = "#result.getPostId()")
     @PostMapping("/posts")
+    @ResponseStatus(HttpStatus.CREATED)
     public PostViewModel createPost(@RequestBody PostViewModel pvm) {
-        pvm = service.addPost(pvm);
-        return pvm;
+        return service.addPost(pvm);
     }
 
     /**
@@ -39,10 +36,14 @@ public class StwitterController {
      * @param postId
      * @return
      */
-    @Cacheable
+    //@Cacheable
     @GetMapping("/posts/{id}")
-    public PostViewModel getPost(@PathVariable int postId) {
-        return service.getPost(postId);
+    public PostViewModel getPost(@PathVariable("id") int postId) {
+        PostViewModel post = service.getPost(postId);
+        if(post == null) {
+            throw new IllegalArgumentException("Post does not exist for that post id" + postId);
+        }
+         return post;
     }
 
     /**
@@ -50,22 +51,26 @@ public class StwitterController {
      * @param poster_name
      * @return
      */
-    @Cacheable
+    //@Cacheable
     @GetMapping("posts/user/{poster_name}")
-    public List<PostViewModel> getAllPostsByPoster(@PathVariable String poster_name) {
-        return service.getAllPostsByPoster(poster_name);
+    public List<PostViewModel> getAllPostsByPoster(@PathVariable("poster_name") String poster_name) {
+        List<PostViewModel> pvmList = service.getAllPostsByPoster(poster_name);
+        if(pvmList == null) {
+            throw new IllegalArgumentException("Post does not exist for that poster name " + poster_name);
+        }
+        return pvmList;
     }
 
     @PostMapping("/comments/post/{post_id}")
     @ResponseStatus(HttpStatus.CREATED)
-    public void createComment(@PathVariable int post_id, @RequestBody @Valid Comment comment) {
+    public void createComment(@PathVariable("post_id") int post_id, @RequestBody @Valid Comment comment) {
         comment.setPostId(post_id);
         service.createComment(comment);
     }
 
     @PutMapping("/comments/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public void updateComment(@PathVariable int id, @RequestBody @Valid Comment comment) {
+    public void updateComment(@PathVariable("id") int id, @RequestBody @Valid Comment comment) {
         comment.setCommentId(id);
         service.updateComment(comment);
     }

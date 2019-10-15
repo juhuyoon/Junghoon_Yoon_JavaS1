@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1d9c4ffa-bfb9-4312-bd14-a05c3b8d0a3c" name="Default Changelist" comment="">
+    <list default="true" id="a81df817-3393-40af-bbee-0f7505b990a9" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/../20191015/REST-Consumer/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../20191015/REST-Consumer/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../20191015/REST-Consumer/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
@@ -24,7 +24,7 @@
       <change afterPath="$PROJECT_DIR$/../JunghoonYoonU1Capstone/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/DTO/sumMultiples.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../JunghoonYoonU1Capstone/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/ServiceLayer/QServiceLayer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JunghoonYoonU1Capstone/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/JunghoonYoonU1CapstoneApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JunghoonYoonU1Capstone/JunghoonYoonU1Capstone/src/main/java/com/company/JunghoonYoonU1Capstone/JunghoonYoonU1CapstoneApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JunghoonYoonU2M1Summative/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JunghoonYoonU2M1Summative/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JunghoonYoonU2M2Summative/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JunghoonYoonU2M2Summative/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JunghoonYoonU2M2Summative/comment-queue-consumer/src/main/java/com/trilogyed/commentqueueconsumer/MessageListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JunghoonYoonU2M2Summative/comment-queue-consumer/src/main/java/com/trilogyed/commentqueueconsumer/MessageListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JunghoonYoonU2M2Summative/post-service/src/main/java/com/trilogyed/post/DAO/PostDaoTempImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JunghoonYoonU2M2Summative/post-service/src/main/java/com/trilogyed/post/DAO/PostDaoTempImpl.java" afterDir="false" />
@@ -39,23 +39,23 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CodeInsightWorkspaceSettings">
-    <option name="optimizeImportsOnTheFly" value="true" />
-  </component>
-  <component name="FavoritesManager">
-    <favorites_list name="JunghoonYoonU2M1Summative" />
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
-        <option value="Interface" />
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\Users\juhuyoon\Desktop\Junghoon_Yoon_JavaS1\TESTRUN\.idea" />
+      </set>
+    </option>
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -64,23 +64,20 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectId" id="1RZKLaqg9I10HnhDQeExVel43wl" />
+  <component name="ProjectId" id="1SDOOCGKOhKwohr3vVYnIRMAoK1" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../TDD/CREDITCARD" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="com.trilogyed.tasker.service" />
-      <recent name="com.trilogyed.tasker.controller" />
-      <recent name="com.trilogyed.tasker.dao" />
+      <recent name="" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -98,93 +95,19 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TaskerServiceLayerTest">
-    <configuration name="TaskerServiceLayerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="tasker-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.trilogyed.tasker.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.trilogyed.tasker.service" />
-      <option name="MAIN_CLASS_NAME" value="com.trilogyed.tasker.service.TaskerServiceLayerTest" />
+  <component name="RunManager">
+    <configuration name="CalculatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TESTRUN" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CalculatorTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TaskerServiceLayerTest.deleteTask" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="tasker-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.trilogyed.tasker.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.trilogyed.tasker.service" />
-      <option name="MAIN_CLASS_NAME" value="com.trilogyed.tasker.service.TaskerServiceLayerTest" />
-      <option name="METHOD_NAME" value="deleteTask" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TaskerServiceLayerTest.fetchAllTasks" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="tasker-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.trilogyed.tasker.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.trilogyed.tasker.service" />
-      <option name="MAIN_CLASS_NAME" value="com.trilogyed.tasker.service.TaskerServiceLayerTest" />
-      <option name="METHOD_NAME" value="fetchAllTasks" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TaskerServiceLayerTest.fetchTasksByCategory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="tasker-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.trilogyed.tasker.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.trilogyed.tasker.service" />
-      <option name="MAIN_CLASS_NAME" value="com.trilogyed.tasker.service.TaskerServiceLayerTest" />
-      <option name="METHOD_NAME" value="fetchTasksByCategory" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TaskerServiceLayerTest.updateTask" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="tasker-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.trilogyed.tasker.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.trilogyed.tasker.service" />
-      <option name="MAIN_CLASS_NAME" value="com.trilogyed.tasker.service.TaskerServiceLayerTest" />
-      <option name="METHOD_NAME" value="updateTask" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TaskerServiceLayerTest" />
-        <item itemvalue="JUnit.TaskerServiceLayerTest.updateTask" />
-        <item itemvalue="JUnit.TaskerServiceLayerTest.deleteTask" />
-        <item itemvalue="JUnit.TaskerServiceLayerTest.fetchTasksByCategory" />
-        <item itemvalue="JUnit.TaskerServiceLayerTest.fetchAllTasks" />
+        <item itemvalue="JUnit.CalculatorTest" />
       </list>
     </recent_temporary>
   </component>
@@ -193,11 +116,11 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="1d9c4ffa-bfb9-4312-bd14-a05c3b8d0a3c" name="Default Changelist" comment="" />
-      <created>1569869122308</created>
+      <changelist id="a81df817-3393-40af-bbee-0f7505b990a9" name="Default Changelist" comment="" />
+      <created>1571094665612</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1569869122308</updated>
+      <updated>1571094665612</updated>
     </task>
     <servers />
   </component>
@@ -206,9 +129,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
