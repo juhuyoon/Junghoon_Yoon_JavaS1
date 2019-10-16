@@ -1,4 +1,4 @@
-package com.company.JunghoonYoonU1Capstone;
+package com.company.JunghoonYoonGameStore;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,11 +6,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @SpringBootApplication
-public class JunghoonYoonU1CapstoneApplication {
+public class JunghoonYoonGameStoreApplication {
 	public static void main(String[] args) throws IOException {
-		SpringApplication.run(JunghoonYoonU1CapstoneApplication.class, args);
+		SpringApplication.run(JunghoonYoonGameStoreApplication.class, args);
 	}
 }
