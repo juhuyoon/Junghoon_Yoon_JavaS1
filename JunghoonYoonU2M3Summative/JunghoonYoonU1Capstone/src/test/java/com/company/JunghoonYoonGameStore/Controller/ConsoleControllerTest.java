@@ -2,6 +2,7 @@ package com.company.JunghoonYoonGameStore.Controller;
 
 import com.company.JunghoonYoonGameStore.DAO.ConsoleDao;
 import com.company.JunghoonYoonGameStore.DTO.Console;
+import com.company.JunghoonYoonGameStore.security.SecurityConfig;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Before;
 import org.junit.Test;
@@ -10,25 +11,35 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
+import org.springframework.mock.web.MockCookie;
+import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
+import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+import org.springframework.web.context.WebApplicationContext;
 
+import javax.sql.DataSource;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
 import static org.mockito.Mockito.when;
+import static org.springframework.security.test.web.servlet.setup.SecurityMockMvcConfigurers.springSecurity;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.*;
 
-@RunWith(SpringRunner.class)
-@ContextConfiguration
+@RunWith(SpringJUnit4ClassRunner.class)
 @WebMvcTest(ConsoleController.class)
 public class ConsoleControllerTest {
+
+    @Autowired
+    private WebApplicationContext context;
 
     @Autowired
     private MockMvc mockMvc;
@@ -36,15 +47,27 @@ public class ConsoleControllerTest {
     @MockBean
     private ConsoleDao consoleDao;
 
+    @MockBean
+    private DataSource dataSource;
+
+    @Autowired
+    private SecurityConfig securityConfig;
+
     private ObjectMapper mapper = new ObjectMapper();
 
     @Before
     public void setUp() throws Exception {
-
+//        MockCookie cookie = MockCookie.parse(
+//
+//        )
+        mockMvc = MockMvcBuilders
+                .webAppContextSetup(context)
+                .apply(springSecurity())
+                .build();
     }
 
     @Test
-    public void getConsole() throws Exception {
+    public void shouldGetConsole() throws Exception {
         Console console = new Console();
         console.setModel("XBOX");
         console.setManufacturer("Windows");
@@ -66,7 +89,7 @@ public class ConsoleControllerTest {
     }
 
     @Test
-    public void getConsoleThatDoesNotExistReturns404() throws Exception {
+    public void shouldGetConsoleAndReturns404IfNotExist() throws Exception {
         when(consoleDao.getConsole(100)).thenThrow(new IllegalArgumentException("Message must not be null or empty!"));
 
         this.mockMvc.perform(get("/Console/get/100"))
@@ -75,7 +98,7 @@ public class ConsoleControllerTest {
     }
 
     @Test
-    public void getAllConsoles() throws Exception {
+    public void shouldGetAllConsoles() throws Exception {
         Console console = new Console();
         console.setModel("XBOX");
         console.setManufacturer("Windows");
@@ -112,7 +135,8 @@ public class ConsoleControllerTest {
     }
 
     @Test
-    public void addConsole() throws Exception{
+    @WithMockUser(username = "adminUser", roles={"STAFF", "MANAGER", "ADMIN"})
+    public void shouldAddConsole() throws Exception{
         Console console = new Console();
         console.setModel("XBOX");
         console.setManufacturer("Windows");
@@ -136,6 +160,7 @@ public class ConsoleControllerTest {
         when(consoleDao.addConsole(console)).thenReturn(console2);
 
         this.mockMvc.perform(post("/Console")
+                    .with(csrf().asHeader())
                     .content(inputJson)
                     .contentType(MediaType.APPLICATION_JSON))
                     .andDo(print())
@@ -144,7 +169,8 @@ public class ConsoleControllerTest {
     }
 
     @Test
-    public void updateConsole() throws Exception {
+    @WithMockUser(username = "adminUser", roles={"STAFF", "MANAGER", "ADMIN"})
+    public void shouldUpdateConsole() throws Exception {
         Console console = new Console();
         console.setModel("XBOX");
         console.setManufacturer("Windows");
@@ -158,14 +184,17 @@ public class ConsoleControllerTest {
         String outputJson = mapper.writeValueAsString(console);
 
         this.mockMvc.perform(put("/Console/update/")
+                    .with(csrf().asHeader())
                     .content(inputJson)
                     .contentType(MediaType.APPLICATION_JSON))
                     .andDo(print()).andExpect(status().isAccepted());
     }
 
     @Test
-    public void deleteConsole() throws Exception {
-        this.mockMvc.perform(MockMvcRequestBuilders.delete("/Console/delete/1"))
+    @WithMockUser(username = "adminUser", roles={"STAFF", "MANAGER", "ADMIN"})
+    public void shouldDeleteConsole() throws Exception {
+        this.mockMvc.perform(MockMvcRequestBuilders.delete("/Console/delete/1")
+                    .with(csrf().asHeader()))
                     .andDo(print())
                 .andExpect(status().isOk())
                     .andExpect(content().string("Console has been deleted!"));
@@ -173,7 +202,7 @@ public class ConsoleControllerTest {
     }
 
     @Test
-    public void getConsolesByManufacturer() throws Exception {
+    public void shouldGetConsolesByManufacturer() throws Exception {
         Console console = new Console();
         console.setModel("XBOX");
         console.setManufacturer("Windows");

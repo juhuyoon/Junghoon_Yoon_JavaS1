@@ -2,6 +2,7 @@ package com.company.JunghoonYoonGameStore.Controller;
 
 import com.company.JunghoonYoonGameStore.DAO.GameDao;
 import com.company.JunghoonYoonGameStore.DTO.Game;
+import com.company.JunghoonYoonGameStore.security.SecurityConfig;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Before;
 import org.junit.Test;
@@ -10,39 +11,59 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
+import org.springframework.security.test.context.support.WithMockUser;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.MockMvcBuilder;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
+import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+import org.springframework.web.context.WebApplicationContext;
 
+import javax.sql.DataSource;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
 import static org.mockito.Mockito.when;
+import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.csrf;
+import static org.springframework.security.test.web.servlet.setup.SecurityMockMvcConfigurers.springSecurity;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-@RunWith(SpringRunner.class)
+@RunWith(SpringJUnit4ClassRunner.class)
 @WebMvcTest(GameController.class)
 public class GameControllerTest {
 
     @Autowired
+    private WebApplicationContext context;
+
+    @Autowired
     private MockMvc mockMvc;
+
+    @Autowired
+    private SecurityConfig securityConfig;
 
     @MockBean
     private GameDao gameDao;
+
+    @MockBean
+    private DataSource dataSource;
 
     private ObjectMapper mapper = new ObjectMapper();
 
     @Before
     public void setUp() throws Exception {
 
+        mockMvc = MockMvcBuilders.webAppContextSetup(context)
+                                 .apply(springSecurity())
+                                 .build();
     }
 
     @Test
-    public void getGame() throws Exception {
+    public void shouldGetGame() throws Exception {
         Game game = new Game();
         game.setTitle("Starcraft");
         game.setEsrb_rating("T");
@@ -64,7 +85,7 @@ public class GameControllerTest {
     }
 
     @Test
-    public void getGameThatDoesNotExistReturns404() throws Exception {
+    public void shouldReturn404ForGameThatDoesNotExist() throws Exception {
         when(gameDao.getGame(100)).thenThrow(new IllegalArgumentException("Message must not be null or empty!"));
 
         this.mockMvc.perform(get("/Console/get/100"))
@@ -73,7 +94,7 @@ public class GameControllerTest {
     }
 
     @Test
-    public void getAllGames() throws Exception {
+    public void shouldGetAllGames() throws Exception {
         Game game = new Game();
         game.setGame_id(1);
         game.setTitle("Starcraft");
@@ -109,7 +130,8 @@ public class GameControllerTest {
     }
 
     @Test
-    public void addGame() throws Exception {
+    @WithMockUser(username = "adminUser", roles={"STAFF", "MANAGER", "ADMIN"})
+    public void shouldAddGame() throws Exception {
         Game game = new Game();
         game.setTitle("Starcraft");
         game.setEsrb_rating("T");
@@ -133,6 +155,7 @@ public class GameControllerTest {
         when(gameDao.addGame(game)).thenReturn(game2);
 
         this.mockMvc.perform(post("/Game")
+                .with(csrf().asHeader())
                 .content(inputJson)
                 .contentType(MediaType.APPLICATION_JSON))
                 .andDo(print())
@@ -142,7 +165,8 @@ public class GameControllerTest {
     }
 
     @Test
-    public void updateGame() throws Exception {
+    @WithMockUser(username = "adminUser", roles={"STAFF", "MANAGER", "ADMIN"})
+    public void shouldUpdateGame() throws Exception {
         Game game = new Game();
         game.setGame_id(1);
         game.setTitle("Starcraft");
@@ -157,6 +181,7 @@ public class GameControllerTest {
         String outputJson = mapper.writeValueAsString(game);
 
         this.mockMvc.perform(put("/Game/update")
+                    .with(csrf().asHeader())
                     .content(inputJson)
                     .contentType(MediaType.APPLICATION_JSON))
                     .andDo(print())
@@ -164,14 +189,16 @@ public class GameControllerTest {
     }
 
     @Test
-    public void deleteGame() throws Exception {
-        this.mockMvc.perform(MockMvcRequestBuilders.delete("/Game/delete/1"))
+    @WithMockUser(username = "adminUser", roles={"STAFF", "MANAGER", "ADMIN"})
+    public void shouldDeleteGame() throws Exception {
+        this.mockMvc.perform(MockMvcRequestBuilders.delete("/Game/delete/1")
+                    .with(csrf().asHeader()))
                     .andDo(print()).andExpect(status().isOk())
                     .andExpect(content().string("Game deleted."));
     }
 
     @Test
-    public void getGamesByStudio() throws Exception {
+    public void shouldGetGamesByStudio() throws Exception {
         Game game = new Game();
         game.setGame_id(1);
         game.setTitle("Starcraft");
@@ -194,7 +221,7 @@ public class GameControllerTest {
     }
 
     @Test
-    public void getGamesByRating() throws Exception {
+    public void shouldGetGamesByRating() throws Exception {
         Game game = new Game();
         game.setGame_id(1);
         game.setTitle("Starcraft");
@@ -217,7 +244,7 @@ public class GameControllerTest {
     }
 
     @Test
-    public void getGamesByTitle() throws Exception{
+    public void shouldGetGamesByTitle() throws Exception{
         Game game = new Game();
         game.setTitle("Starcraft");
         game.setEsrb_rating("T");

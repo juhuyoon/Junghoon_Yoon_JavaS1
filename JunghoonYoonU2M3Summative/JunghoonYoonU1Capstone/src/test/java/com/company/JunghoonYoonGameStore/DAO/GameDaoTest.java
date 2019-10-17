@@ -57,7 +57,7 @@ public class GameDaoTest {
     }
 
     @Test
-    public void getGame() {
+    public void shouldGetGame() {
         game1 = gameDao.addGame(game1);
         Game gameTest = gameDao.getGame(game1.getGame_id());
 
@@ -65,7 +65,7 @@ public class GameDaoTest {
     }
 
     @Test
-    public void getAllGames() {
+    public void shouldGetAllGames() {
         gameDao.addGame(game1);
         gameDao.addGame(game2);
 
@@ -74,7 +74,7 @@ public class GameDaoTest {
     }
 
     @Test
-    public void updateGame() {
+    public void shouldUpdateGame() {
         gameDao.addGame(game1);
         game1.setDescription("NEW DESC");
         Game newGame = gameDao.getGame(game1.getGame_id());
@@ -83,7 +83,7 @@ public class GameDaoTest {
     }
 
     @Test
-    public void deleteGame() {
+    public void shouldDeleteGame() {
         gameDao.addGame(game1);
         gameDao.deleteGame(game1.getGame_id());
 
@@ -93,7 +93,7 @@ public class GameDaoTest {
     }
 
     @Test
-    public void getGamesByStudio() {
+    public void shouldGetGamesByStudio() {
         gameDao.addGame(game1);
         gameDao.getGamesByStudio(game1.getStudio());
 
@@ -103,7 +103,7 @@ public class GameDaoTest {
     }
 
     @Test
-    public void getGamesByRating() {
+    public void shouldGetGamesByRating() {
         gameDao.addGame(game1);
         gameDao.getGamesByRating(game1.getEsrb_rating());
 
@@ -112,7 +112,7 @@ public class GameDaoTest {
     }
 
     @Test
-    public void getGamesByTitle() {
+    public void shouldGetGamesByTitle() {
         gameDao.addGame(game1);
         gameDao.getGamesByTitle(game1.getTitle());
 

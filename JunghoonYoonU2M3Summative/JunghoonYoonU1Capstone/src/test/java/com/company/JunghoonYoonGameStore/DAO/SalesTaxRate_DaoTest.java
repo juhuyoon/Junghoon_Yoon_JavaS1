@@ -43,20 +43,20 @@ public class SalesTaxRate_DaoTest {
     }
 
     @Test
-    public void getSalesTaxRate() {
+    public void shouldGetSalesTaxRate() {
         sales_tax_rate = salesTaxRate_dao.addSalesTaxRate(sales_tax_rate);
         Sales_Tax_Rate salesTest = salesTaxRate_dao.getSalesTaxRate(sales_tax_rate.getState());
         assertEquals(salesTest, sales_tax_rate);
     }
 
     @Test
-    public void addSalesTaxRate() {
+    public void shouldAddSalesTaxRate() {
         sales_tax_rate = salesTaxRate_dao.addSalesTaxRate(sales_tax_rate);
         assertEquals(1, salesTaxRate_dao.getAllSalesTaxRate().size());
     }
 
     @Test
-    public void getAllSalesTaxRate() {
+    public void shouldGetAllSalesTaxRate() {
         salesTaxRate_dao.addSalesTaxRate(sales_tax_rate);
         salesTaxRate_dao.addSalesTaxRate(sales_tax_rate2);
 
@@ -66,7 +66,7 @@ public class SalesTaxRate_DaoTest {
     }
 
     @Test
-    public void updateSalesTaxRate() {
+    public void shouldUpdateSalesTaxRate() {
         salesTaxRate_dao.addSalesTaxRate(sales_tax_rate);
         sales_tax_rate.setRate(new BigDecimal("0.01"));
 
@@ -76,7 +76,7 @@ public class SalesTaxRate_DaoTest {
 
 
     @Test
-    public void deleteSalesTaxRate() {
+    public void shouldDeleteSalesTaxRate() {
         salesTaxRate_dao.addSalesTaxRate(sales_tax_rate);
         salesTaxRate_dao.deleteSalesTaxRate(sales_tax_rate.getState());
 

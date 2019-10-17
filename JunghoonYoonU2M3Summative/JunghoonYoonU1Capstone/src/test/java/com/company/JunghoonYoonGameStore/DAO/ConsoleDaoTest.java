@@ -53,13 +53,13 @@ public class ConsoleDaoTest {
     }
 
     @Test
-    public void addConsole() {
+    public void shouldAddConsole() {
         console = consoleDao.addConsole(console);
         assertEquals(1, consoleDao.getAllConsoles().size());
     }
 
     @Test
-    public void getConsole() {
+    public void shouldGetConsole() {
         console = consoleDao.addConsole(console);
         Console consoleTest = consoleDao.getConsole(console.getConsole_id());
 
@@ -67,7 +67,7 @@ public class ConsoleDaoTest {
     }
 
     @Test
-    public void getAllConsoles() {
+    public void shouldGetAllConsoles() {
         consoleDao.addConsole(console);
         consoleDao.addConsole(console2);
 
@@ -76,7 +76,7 @@ public class ConsoleDaoTest {
     }
 
     @Test
-    public void updateConsole() {
+    public void shoulUpdateConsole() {
         consoleDao.addConsole(console);
         console.setProcessor("SOMETHING ELSE");
         Console consoleTest = consoleDao.getConsole(console.getConsole_id());
@@ -85,7 +85,7 @@ public class ConsoleDaoTest {
     }
 
     @Test
-    public void deleteConsole() {
+    public void shouldDeleteConsole() {
         consoleDao.addConsole(console);
         consoleDao.deleteConsole(console.getConsole_id());
 
@@ -95,7 +95,7 @@ public class ConsoleDaoTest {
     }
 
     @Test
-    public void getConsolesByManufacturer() {
+    public void shouldGetConsolesByManufacturer() {
         consoleDao.addConsole(console);
         consoleDao.getConsolesByManufacturer(console.getManufacturer());
 

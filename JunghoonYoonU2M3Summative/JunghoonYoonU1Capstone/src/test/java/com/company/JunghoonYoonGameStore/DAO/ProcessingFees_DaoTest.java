@@ -44,7 +44,7 @@ public class ProcessingFees_DaoTest {
     }
 
     @Test
-    public void getProcessingFees() {
+    public void shouldGetProcessingFees() {
         pFees = processingFees_dao.addProcessingFees(pFees);
         Processing_Fee pTest = processingFees_dao.getProcessingFees(pFees.getProduct_type());
 
@@ -52,7 +52,7 @@ public class ProcessingFees_DaoTest {
     }
 
     @Test
-    public void getAllProcessingFees() {
+    public void shouldGetAllProcessingFees() {
         processingFees_dao.addProcessingFees(pFees);
         processingFees_dao.addProcessingFees(pFees2);
 
@@ -61,13 +61,13 @@ public class ProcessingFees_DaoTest {
     }
 
     @Test
-    public void addProcessingFees() {
+    public void shouldAddProcessingFees() {
         pFees = processingFees_dao.addProcessingFees(pFees);
         assertEquals(1, processingFees_dao.getAllProcessingFees().size());
     }
 
     @Test
-    public void updateProcessingFees() {
+    public void shouldUpdateProcessingFees() {
         processingFees_dao.addProcessingFees(pFees);
         pFees.setFee(new BigDecimal("5.55"));
         Processing_Fee pTest = processingFees_dao.getProcessingFees(pFees.getProduct_type());
@@ -76,7 +76,7 @@ public class ProcessingFees_DaoTest {
     }
 
     @Test
-    public void deleteProcessingFees() {
+    public void shouldlDeleteProcessingFees() {
         processingFees_dao.addProcessingFees(pFees);
         processingFees_dao.deleteProcessingFees(pFees.getProduct_type());
 

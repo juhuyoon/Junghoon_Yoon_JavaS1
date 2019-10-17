@@ -52,13 +52,13 @@ public class TshirtDaoTest {
     }
 
     @Test
-    public void addTShirt() {
+    public void shouldAddTShirt() {
         tShirt = tshirtDao.addTShirt(tShirt);
         assertEquals(1, tshirtDao.getAllTShirts().size());
     }
 
     @Test
-    public void getTShirt() {
+    public void shouldGetTShirt() {
         tShirt = tshirtDao.addTShirt(tShirt);
         TShirt tShirtTest = tshirtDao.getTShirt(tShirt.getT_shirt_id());
 
@@ -66,7 +66,7 @@ public class TshirtDaoTest {
     }
 
     @Test
-    public void getAllTShirts() {
+    public void shouldGetAllTShirts() {
         tshirtDao.addTShirt(tShirt);
         tshirtDao.addTShirt(tShirt2);
 
@@ -75,7 +75,7 @@ public class TshirtDaoTest {
     }
 
     @Test
-    public void updateTShirt() {
+    public void shouldUpdateTShirt() {
         tshirtDao.addTShirt(tShirt);
         tShirt.setDescription("SOMETHING NEW");
         TShirt tShirtTest = tshirtDao.getTShirt(tShirt.getT_shirt_id());
@@ -86,7 +86,7 @@ public class TshirtDaoTest {
 
 
     @Test
-    public void deleteTShirt() {
+    public void shouldDeleteTShirt() {
         tshirtDao.addTShirt(tShirt);
         tshirtDao.deleteTShirt(tShirt.getT_shirt_id());
 
@@ -96,7 +96,7 @@ public class TshirtDaoTest {
     }
 
     @Test
-    public void getTShirtsByColor() {
+    public void shouldGetTShirtsByColor() {
         tshirtDao.addTShirt(tShirt);
         tshirtDao.getTShirtsByColor(tShirt.getColor());
 
@@ -107,7 +107,7 @@ public class TshirtDaoTest {
     }
 
     @Test
-    public void getTShirtsBySize() {
+    public void shouldGetTShirtsBySize() {
         tshirtDao.addTShirt(tShirt);
         tshirtDao.getTShirtsBySize(tShirt.getSize());
 

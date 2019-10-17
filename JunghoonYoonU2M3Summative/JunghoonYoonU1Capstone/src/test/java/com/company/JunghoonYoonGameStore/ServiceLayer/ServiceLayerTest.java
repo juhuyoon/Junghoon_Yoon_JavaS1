@@ -10,6 +10,7 @@ import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 
 import java.math.BigDecimal;
@@ -56,7 +57,7 @@ public class ServiceLayerTest {
     }
 
     @Test
-    public void addGetOrder() {
+    public void shouldAddGetOrder() {
         OrderViewModel ovm = new OrderViewModel();
         ovm.setName("Jung");
         ovm.setStreet("123 Kappa ST");
@@ -91,7 +92,7 @@ public class ServiceLayerTest {
     }
 
     @Test
-    public void addGetGetAllConsole() {
+    public void shouldAddGetGetAllConsole() {
         Console console = new Console();
         console.setModel("XBox");
         console.setManufacturer("Windows");
@@ -110,7 +111,7 @@ public class ServiceLayerTest {
     }
 
     @Test
-    public void updateConsole() {
+    public void shouldUpdateConsole() {
         Console console = new Console();
         console.setConsole_id(2);
 
@@ -124,7 +125,7 @@ public class ServiceLayerTest {
     }
 
     @Test
-    public void deleteConsole() {
+    public void shouldDeleteConsole() {
         ArgumentCaptor<Integer> integerArgumentCaptor = ArgumentCaptor.forClass(Integer.class);
         doNothing().when(consoleDao).deleteConsole(integerArgumentCaptor.capture());
         service.deleteConsole(1);
@@ -135,7 +136,7 @@ public class ServiceLayerTest {
     }
 
     @Test
-    public void addGetGetAllGame() {
+    public void shouldAddGetGetAllGame() {
         Game game = new Game();
         game.setTitle("Starcraft");
         game.setEsrb_rating("T");
@@ -154,7 +155,7 @@ public class ServiceLayerTest {
     }
 
     @Test
-    public void updateGame() {
+    public void shouldUpdateGame() {
         Game game = new Game();
         game.setGame_id(14);
 
@@ -169,7 +170,7 @@ public class ServiceLayerTest {
     }
 
     @Test
-    public void deleteGame() {
+    public void shouldDeleteGame() {
         ArgumentCaptor<Integer> integerArgumentCaptor = ArgumentCaptor.forClass(Integer.class);
         doNothing().when(gameDao).deleteGame(integerArgumentCaptor.capture());
         service.deleteGame(1);
@@ -179,7 +180,7 @@ public class ServiceLayerTest {
     }
 
     @Test
-    public void addGetGetAllTShirt() {
+    public void shouldAddGetGetAllTShirt() {
         TShirt tShirt = new TShirt();
         tShirt.setSize("M");
         tShirt.setColor("Orange");
@@ -197,7 +198,7 @@ public class ServiceLayerTest {
     }
 
     @Test
-    public void updateTShirt() {
+    public void shouldUpdateTShirt() {
         TShirt tShirt = new TShirt();
         tShirt.setT_shirt_id(5);
 
@@ -211,7 +212,7 @@ public class ServiceLayerTest {
     }
 
     @Test
-    public void deleteShirt() {
+    public void shouldDeleteShirt() {
         ArgumentCaptor<Integer> integerArgumentCaptor = ArgumentCaptor.forClass(Integer.class);
         doNothing().when(tshirtDao).deleteTShirt(integerArgumentCaptor.capture());
         service.deleteShirt(5);
@@ -221,7 +222,7 @@ public class ServiceLayerTest {
     }
 
     @Test
-    public void addGetGetAllPFees() {
+    public void shouldAddGetGetAllPFees() {
         Processing_Fee pFee = new Processing_Fee();
         pFee.setProduct_type("Games");
         pFee.setFee(new BigDecimal("1.49"));
@@ -237,7 +238,7 @@ public class ServiceLayerTest {
 
 
     @Test
-    public void updatePFees() {
+    public void shouldUpdatePFees() {
         Processing_Fee pFee = new Processing_Fee();
         pFee.setProduct_type("TYPE");
 
@@ -251,7 +252,7 @@ public class ServiceLayerTest {
     }
 
     @Test
-    public void deletePFees() {
+    public void shouldDeletePFees() {
         ArgumentCaptor<String> stringArgumentCaptor = ArgumentCaptor.forClass(String.class);
         doNothing().when(pFeesDao).deleteProcessingFees(stringArgumentCaptor.capture());
 
@@ -261,7 +262,7 @@ public class ServiceLayerTest {
     }
 
     @Test
-    public void addGetGetAllSalesTax() {
+    public void shouldAddGetGetAllSalesTax() {
         Sales_Tax_Rate salesTax = new Sales_Tax_Rate();
         salesTax.setState("CA");
         salesTax.setRate(new BigDecimal("0.07"));
@@ -276,7 +277,7 @@ public class ServiceLayerTest {
     }
 
     @Test
-    public void updateSalesTax() {
+    public void shouldUpdateSalesTax() {
         Sales_Tax_Rate salesTax = new Sales_Tax_Rate();
         salesTax.setState("CA");
 
@@ -290,7 +291,7 @@ public class ServiceLayerTest {
     }
 
     @Test
-    public void deleteSalesTax() {
+    public void shouldDeleteSalesTax() {
         ArgumentCaptor<String> stringArgumentCaptor = ArgumentCaptor.forClass(String.class);
         doNothing().when(salesTaxDao).deleteSalesTaxRate(stringArgumentCaptor.capture());
         service.deleteSalesTax("CA");

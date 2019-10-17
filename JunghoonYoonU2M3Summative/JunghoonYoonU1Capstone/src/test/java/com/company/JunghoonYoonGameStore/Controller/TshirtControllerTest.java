@@ -2,6 +2,7 @@ package com.company.JunghoonYoonGameStore.Controller;
 
 import com.company.JunghoonYoonGameStore.DAO.TshirtDao;
 import com.company.JunghoonYoonGameStore.DTO.TShirt;
+import com.company.JunghoonYoonGameStore.security.SecurityConfig;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Before;
 import org.junit.Test;
@@ -10,15 +11,22 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
+import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.MockMvcBuilder;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
+import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+import org.springframework.web.context.WebApplicationContext;
 
+import javax.sql.DataSource;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
 import static org.mockito.Mockito.when;
+import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.csrf;
+import static org.springframework.security.test.web.servlet.setup.SecurityMockMvcConfigurers.springSecurity;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
@@ -29,19 +37,33 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 public class TshirtControllerTest {
 
     @Autowired
+    private WebApplicationContext context;
+
+    @Autowired
     private MockMvc mockMvc;
+
+    @Autowired
+    private SecurityConfig securityConfig;
 
     @MockBean
     private TshirtDao tshirtDao;
+
+    @MockBean
+    private DataSource dataSource;
 
     private ObjectMapper mapper = new ObjectMapper();
 
     @Before
     public void setUp() throws Exception {
+
+        mockMvc = MockMvcBuilders
+                    .webAppContextSetup(context)
+                    .apply(springSecurity())
+                    .build();
     }
 
     @Test
-    public void getTshirt() throws Exception {
+    public void shouldGetTshirt() throws Exception {
         TShirt tShirt = new TShirt();
         tShirt.setT_shirt_id(1);
         tShirt.setSize("M");
@@ -64,7 +86,7 @@ public class TshirtControllerTest {
     }
 
     @Test
-    public void getTShirtThatDoesNotExistReturns404() throws Exception {
+    public void shouldGetTShirtThatDoesNotExistReturns404() throws Exception {
         when(tshirtDao.getTShirt(100)).thenThrow(new IllegalArgumentException("Message must not be null or empty!"));
 
         this.mockMvc.perform(get("/Console/get/100"))
@@ -73,7 +95,7 @@ public class TshirtControllerTest {
     }
 
     @Test
-    public void getAllTShirts() throws Exception{
+    public void shouldGetAllTShirts() throws Exception{
         TShirt tShirt = new TShirt();
         tShirt.setT_shirt_id(1);
         tShirt.setSize("M");
@@ -110,7 +132,8 @@ public class TshirtControllerTest {
     }
 
     @Test
-    public void addTShirt() throws Exception {
+    @WithMockUser(username = "adminUser", roles={"STAFF", "MANAGER", "ADMIN"})
+    public void shouldAddTShirt() throws Exception {
         TShirt tShirt = new TShirt();
         tShirt.setSize("M");
         tShirt.setColor("Orange");
@@ -133,6 +156,7 @@ public class TshirtControllerTest {
         when(tshirtDao.addTShirt(tShirt)).thenReturn(tShirt2);
 
         this.mockMvc.perform(post("/TShirt")
+                    .with(csrf().asHeader())
                     .content(inputJson)
                     .contentType(MediaType.APPLICATION_JSON))
                     .andDo(print())
@@ -143,7 +167,8 @@ public class TshirtControllerTest {
     }
 
     @Test
-    public void updateTShirt() throws Exception {
+    @WithMockUser(username = "adminUser", roles={"STAFF", "MANAGER", "ADMIN"})
+    public void shouldUpdateTShirt() throws Exception {
         TShirt tShirt = new TShirt();
         tShirt.setT_shirt_id(1);
         tShirt.setSize("M");
@@ -157,6 +182,7 @@ public class TshirtControllerTest {
         String outputJson = mapper.writeValueAsString(tShirt);
 
         this.mockMvc.perform(put("/TShirt/update/")
+                    .with(csrf().asHeader())
                     .content(inputJson)
                     .contentType(MediaType.APPLICATION_JSON))
                     .andDo(print())
@@ -164,15 +190,17 @@ public class TshirtControllerTest {
     }
 
     @Test
-    public void deleteTShirt() throws Exception {
-        this.mockMvc.perform(MockMvcRequestBuilders.delete("/TShirt/delete/1"))
+    @WithMockUser(username = "adminUser", roles={"STAFF", "MANAGER", "ADMIN"})
+    public void shouldDeleteTShirt() throws Exception {
+        this.mockMvc.perform(MockMvcRequestBuilders.delete("/TShirt/delete/1")
+                    .with(csrf().asHeader()))
                     .andDo(print())
                     .andExpect(status().isOk())
                     .andExpect(content().string("T Shirt deleted"));
     }
 
     @Test
-    public void getTShirtBySize() throws Exception {
+    public void shouldGetTShirtBySize() throws Exception {
         TShirt tShirt = new TShirt();
         tShirt.setT_shirt_id(1);
         tShirt.setSize("M");
@@ -194,7 +222,7 @@ public class TshirtControllerTest {
     }
 
     @Test
-    public void getTShirtByColor() throws Exception {
+    public void shouldGetTShirtByColor() throws Exception {
         TShirt tShirt = new TShirt();
         tShirt.setT_shirt_id(1);
         tShirt.setSize("M");

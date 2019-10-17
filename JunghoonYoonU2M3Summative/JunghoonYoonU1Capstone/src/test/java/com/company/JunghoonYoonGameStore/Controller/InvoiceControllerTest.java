@@ -4,31 +4,43 @@ import com.company.JunghoonYoonGameStore.DAO.InvoiceDao;
 import com.company.JunghoonYoonGameStore.DTO.Invoice;
 import com.company.JunghoonYoonGameStore.ServiceLayer.ServiceLayer;
 import com.company.JunghoonYoonGameStore.ViewModel.OrderViewModel;
+import com.company.JunghoonYoonGameStore.security.SecurityConfig;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.context.runner.WebApplicationContextRunner;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
+import org.springframework.security.test.context.support.WithMockUser;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+import org.springframework.web.context.WebApplicationContext;
 
+import javax.sql.DataSource;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
 import static org.mockito.Mockito.when;
+import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.csrf;
+import static org.springframework.security.test.web.servlet.setup.SecurityMockMvcConfigurers.springSecurity;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-@RunWith(SpringRunner.class)
+@RunWith(SpringJUnit4ClassRunner.class)
 @WebMvcTest(InvoiceController.class)
 public class InvoiceControllerTest {
+
+    @Autowired
+    private WebApplicationContext webApplicationContext;
 
     @Autowired
     private MockMvc mockMvc;
@@ -39,16 +51,25 @@ public class InvoiceControllerTest {
     @MockBean
     private ServiceLayer serviceLayer;
 
+    @MockBean
+    private DataSource dataSource;
+
+    @Autowired
+    private SecurityConfig securityConfig;
 
     private ObjectMapper mapper = new ObjectMapper();
 
     @Before
     public void setUp() throws Exception {
-
+        mockMvc = MockMvcBuilders
+                .webAppContextSetup(webApplicationContext)
+                .apply(springSecurity())
+                .build();
     }
 
     @Test
-    public void addOrderViewModel() throws Exception {
+    @WithMockUser(username = "adminUser", roles={"STAFF", "MANAGER", "ADMIN"})
+    public void shouldAddOrderViewModel() throws Exception {
         OrderViewModel ovm = new OrderViewModel();
         ovm.setName("Jung");
         ovm.setStreet("123 Kappa ST");
@@ -83,6 +104,7 @@ public class InvoiceControllerTest {
         when(serviceLayer.addOrder(ovm)).thenReturn(ovm2);
 
         this.mockMvc.perform(post("/Invoice/")
+                    .with(csrf().asHeader())
                     .content(inputJson)
                     .contentType(MediaType.APPLICATION_JSON))
                     .andDo(print())
@@ -92,7 +114,7 @@ public class InvoiceControllerTest {
     }
 
     @Test
-    public void getInvoiceThatDoesNotExistReturns404() throws Exception {
+    public void shouldGetInvoiceThatDoesNotExistReturns404() throws Exception {
         when(invoiceDao.getInvoice(100)).thenThrow(new IllegalArgumentException("Message must not be null or empty!"));
 
         this.mockMvc.perform(get("/Console/get/100"))
@@ -101,7 +123,7 @@ public class InvoiceControllerTest {
     }
 
     @Test
-    public void getInvoice() throws Exception{
+    public void shouldGetInvoice() throws Exception{
         Invoice invoice = new Invoice();
         invoice.setInvoice_id(1);
         invoice.setName("Jung");
@@ -132,7 +154,7 @@ public class InvoiceControllerTest {
     }
 
     @Test
-    public void getAllInvoice() throws Exception {
+    public void shouldGetAllInvoice() throws Exception {
         Invoice invoice = new Invoice();
         invoice.setInvoice_id(1);
         invoice.setName("Jung");

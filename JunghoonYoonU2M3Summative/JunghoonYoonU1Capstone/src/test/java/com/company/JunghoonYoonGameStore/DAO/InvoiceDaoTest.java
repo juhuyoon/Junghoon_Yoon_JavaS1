@@ -160,13 +160,13 @@ public class InvoiceDaoTest {
     }
 
     @Test
-    public void addInvoice() {
+    public void shouldAddInvoice() {
         invoice = invoiceDao.addInvoice(invoice);
         assertEquals(1, invoiceDao.getAllInvoice().size());
     }
 
     @Test
-    public void getInvoice() {
+    public void shouldGetInvoice() {
         invoice = invoiceDao.addInvoice(invoice);
         Invoice invoiceTest = invoiceDao.getInvoice(invoice.getInvoice_id());
 
@@ -177,7 +177,7 @@ public class InvoiceDaoTest {
     }
 
     @Test
-    public void getAllInvoice() {
+    public void shouldGetAllInvoice() {
         invoiceDao.addInvoice(invoice);
         invoiceDao.addInvoice(invoice2);
 
@@ -186,7 +186,7 @@ public class InvoiceDaoTest {
     }
 
     @Test
-    public void updateInvoice() {
+    public void shouldUpdateInvoice() {
         invoiceDao.addInvoice(invoice);
         invoice.setQuantity(15);
 
@@ -194,7 +194,7 @@ public class InvoiceDaoTest {
     }
 
     @Test
-    public void deleteInvoice() {
+    public void shouldDeleteInvoice() {
         invoiceDao.addInvoice(invoice);
         invoiceDao.deleteInvoice(invoice.getInvoice_id());
 
