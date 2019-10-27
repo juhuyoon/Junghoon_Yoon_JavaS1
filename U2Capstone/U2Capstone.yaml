@@ -1,0 +1,489 @@
+openapi: 3.0.0
+info:
+  title: Game Store Retail API
+  description:
+    API available for customers to access the game store database
+  version: 0.0.1
+servers: 
+  - url: 'http://localhost:8080'
+    description: Local dev server
+    
+paths:
+  /customer:
+    post:
+      summary: Saves a new customer in the database.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Customer'
+      responses:
+        '201':
+          description: Customer successfully added
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Customer'
+    get:
+      summary: Retrieve all customers from the database.
+      responses:
+        '201':
+         description: Customer information succesfully retrieved from the database.
+         content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/Customer'
+      
+  /customer/{customer_id}:
+    put:
+      summary: Update the customer entry with provided data where customer ID matches the one provided.
+      parameters: 
+        - name: customer_id
+          in: path
+          required: true
+          description: ID of the customer to update.
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+           schema:
+             $ref: '#/components/schemas/Customer'
+      responses:
+        '200':
+          description: Customer successfully updated. 
+    get:
+      summary: Retrieves the entry for the customer with the given ID.
+      parameters:
+        - name: customer_id
+          in: path
+          required: true
+          description: ID of the customer you would like to retrieve. 
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200': 
+          description: Customer information succesfully found by provided ID.
+          content: 
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Customer'
+    delete:
+      summary: Delete the customer entry where customer ID matches the one provided.
+      parameters: 
+        - name: customer_id
+          in: path
+          required: true
+          description: ID of the customer to delete.
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Customer successfully deleted. 
+  /product:
+    post:
+      summary: Saves a new product in the database.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Product'
+      responses:
+        '201':
+          description: Product successfully added
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+    get:
+      summary: Retrieve all Products from the database.
+      responses:
+        '201':
+         description: Product information succesfully retrieved from the database.
+         content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/Product'
+      
+  /product/{product_id}:
+    put:
+      summary: Update the Product entry with provided data where Product ID matches the one provided.
+      parameters: 
+        - name: product_id
+          in: path
+          required: true
+          description: ID of the Product to update.
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+           schema:
+             $ref: '#/components/schemas/Product'
+      responses:
+        '200':
+          description: Product successfully updated. 
+    get:
+      summary: Retrieves the entry for the Product with the given ID.
+      parameters:
+        - name: product_id
+          in: path
+          required: true
+          description: ID of the Product you would like to retrieve. 
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200': 
+          description: Product information succesfully found by provided ID.
+          content: 
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+    delete:
+      summary: Delete the Product entry where Product ID matches the one provided.
+      parameters: 
+        - name: product_id
+          in: path
+          required: true
+          description: ID of the product to delete.
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Product successfully deleted.
+ 
+  /inventory:
+    post:
+      summary: Saves a new Inventory in the database.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Inventory'
+      responses:
+        '201':
+          description: Inventory successfully added
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Inventory'
+    get:
+      summary: Retrieve all Inventories from the database.
+      responses:
+        '201':
+         description: Inventory information succesfully retrieved from the database.
+         content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/Inventory'
+      
+  /inventory/{inventory_id}:
+    put:
+      summary: Update the Inventory entry with provided data where inventory ID matches the one provided.
+      parameters: 
+        - name: inventory_id
+          in: path
+          required: true
+          description: ID of the Inventory to update.
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+           schema:
+             $ref: '#/components/schemas/Inventory'
+      responses:
+        '200':
+          description: Inventory successfully updated. 
+    get:
+      summary: Retrieves the entry for the inventory with the given ID.
+      parameters:
+        - name: inventory_id
+          in: path
+          required: true
+          description: ID of the Inventory you would like to retrieve. 
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200': 
+          description: Inventory information succesfully found by provided ID.
+          content: 
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Inventory'
+    delete:
+      summary: Delete the Inventory entry where Inventory ID matches the one provided.
+      parameters: 
+        - name: inventory_id
+          in: path
+          required: true
+          description: ID of the Inventory to delete.
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Inventory successfully deleted.
+  
+  /invoice:
+    post:
+      summary: Saves a new Invoice in the database.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Invoice'
+      responses:
+        '201':
+          description: Invoice successfully added
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Invoice'
+    get:
+      summary: Retrieve all Invoices from the database.
+      responses:
+        '201':
+         description: Invoice information succesfully retrieved from the database.
+         content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/Invoice'
+      
+  /invoice/{invoice_id}:
+    put:
+      summary: Update the Invoice entry with provided data where Invoice ID matches the one provided.
+      parameters: 
+        - name: invoice_id
+          in: path
+          required: true
+          description: ID of the customer to update.
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+           schema:
+             $ref: '#/components/schemas/Invoice'
+      responses:
+        '200':
+          description: Customer successfully updated. 
+    get:
+      summary: Retrieves the entry for the invoice with the given ID.
+      parameters:
+        - name: invoice_id
+          in: path
+          required: true
+          description: ID of the Invoice you would like to retrieve. 
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200': 
+          description: Invoice information succesfully found by provided ID.
+          content: 
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Invoice'
+    delete:
+      summary: Delete the Invoice entry where Invoice ID matches the one provided.
+      parameters: 
+        - name: invoice_id
+          in: path
+          required: true
+          description: ID of the Invoice to delete.
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Invoice successfully deleted.
+          
+  /level_up:
+    post:
+      summary: Saves a new Level_Up rewards for that customer in the database.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Level_Up'
+      responses:
+        '201':
+          description: Level_Up successfully added
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Level_Up'
+    get:
+      summary: Retrieve all Level_Ups for that customer from the database.
+      responses:
+        '201':
+         description: Level_Up information succesfully retrieved from the database.
+         content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/Level_Up'
+      
+  /level_up/{level_up_id}:
+    put:
+      summary: Update the Level_Up entry with provided data where level_up ID matches the one provided.
+      parameters: 
+        - name: level_up_id
+          in: path
+          required: true
+          description: ID of the Level_Up to update.
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+           schema:
+             $ref: '#/components/schemas/Level_Up'
+      responses:
+        '200':
+          description: Level_Up successfully updated. 
+    get:
+      summary: Retrieves the entry for the Level_Up with the given ID associated with customer id.
+      parameters:
+        - name: level_up_id
+          in: path
+          required: true
+          description: ID of the Level_Up of that customer you would like to retrieve. 
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200': 
+          description: Level_Up information succesfully found by provided ID.
+          content: 
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Level_Up'
+    delete:
+      summary: Delete the Level_Up entry where Level_Up ID matches the one provided.
+      parameters: 
+        - name: level_up_id
+          in: path
+          required: true
+          description: ID of the Level_Up to delete.
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Level_Up entry successfully deleted.        
+          
+components:
+  schemas:
+    Customer:
+      type: object
+      properties:
+        customer_id:
+          type: integer
+        first_name:
+          type: string
+        last_name:
+          type: string
+        street: 
+          type: string
+        city: 
+          type: string
+        zip:
+          type: string
+        email:
+          type: string
+        phone:
+          type: string
+      required: 
+        - first_name
+        - last_name
+        - street
+        - city
+        - zip
+        - email
+        - phone
+        
+    Product:
+      type: object
+      properties:
+        product_id:
+          type: integer
+        product_name:
+          type: string
+        product_description:
+          type: string
+        list_price:
+          type: integer
+        unit_cost:
+          type: integer
+      required:
+        - product_id
+        - product_name
+        - product_description
+        - list_price
+        - unit_cost
+        
+    Inventory:
+      type: object
+      properties:
+        inventory_id:
+          type: integer
+        product_id:
+          type: integer
+        quantity:   
+          type: integer
+      required:
+        - inventory_id
+        - product_id
+        - quantity
+    
+    Invoice:
+      type: object
+      properties:
+        invoice_id:
+          type: integer
+        customer_id:
+          type: integer
+        purchase_date:
+          type: string
+      required:
+        - invoice_id
+        - product_id
+        - quantity
+    
+    Level_Up:
+      type: object
+      properties:
+        level_up_id: 
+          type: integer
+        customer_id:
+          type: integer
+        points: 
+          type: integer
+        member_date:
+          type: string
+      required:
+        - level_up_id
+        - customer_id
+        - points
+        - member_date

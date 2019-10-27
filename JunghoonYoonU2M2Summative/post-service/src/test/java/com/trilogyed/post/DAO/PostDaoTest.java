@@ -1,5 +1,6 @@
 package com.trilogyed.post.DAO;
 
+import com.trilogyed.post.model.Post;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

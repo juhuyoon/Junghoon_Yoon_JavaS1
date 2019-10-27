@@ -35,7 +35,6 @@ public class PostDaoTempImpl implements PostDao {
             "DELETE FROM POST where post_id = ?";
 
     @Autowired
-
     public PostDaoTempImpl(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
     }

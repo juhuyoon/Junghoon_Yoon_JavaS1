@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="circuit-breaker" />
+        <module name="admin-api" />
+        <module name="game-store-retail" />
+        <module name="customer-service" />
+        <module name="product-service" />
+        <module name="level-up-service" />
+        <module name="game-store" />
+        <module name="game-store-config-server" />
+        <module name="inventory-service" />
+        <module name="game-store-invoice-server" />
+        <module name="game-store-eureka-server" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="admin-api" target="1.8" />
+      <module name="circuit-breaker" target="1.8" />
+      <module name="customer-service" target="1.8" />
+      <module name="game-store" target="1.8" />
+      <module name="game-store-config-server" target="1.8" />
+      <module name="game-store-eureka-server" target="1.8" />
+      <module name="game-store-invoice-server" target="1.8" />
+      <module name="game-store-retail" target="1.8" />
+      <module name="inventory-service" target="1.8" />
+      <module name="level-up-service" target="1.8" />
+      <module name="product-service" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="admin-api" options="-parameters" />
+      <module name="circuit-breaker" options="-parameters" />
+      <module name="customer-service" options="-parameters" />
+      <module name="game-store" options="-parameters" />
+      <module name="game-store-config-server" options="-parameters" />
+      <module name="game-store-eureka-server" options="-parameters" />
+      <module name="game-store-invoice-server" options="-parameters" />
+      <module name="game-store-retail" options="-parameters" />
+      <module name="inventory-service" options="-parameters" />
+      <module name="level-up-service" options="-parameters" />
+      <module name="product-service" options="-parameters" />
+    </option>
+  </component>
+</project>
